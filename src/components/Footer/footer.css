@@ -1,0 +1,82 @@
+.newsletter {
+  background: #f6f9ff;
+  border-top: 1px solid #e1ecff;
+  padding: 50px 0;
+}
+.newsletter h4 {
+  color: #012970;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.newsletter form {
+  background: #fff;
+  border: 1px solid #e1ecff;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 6px 10px;
+  position: relative;
+}
+.newsletter form input[type="email"] {
+  border: 0;
+  padding: 8px;
+  width: calc(100% - 140px);
+}
+.newsletter form input[type="submit"] {
+  background: #4154f1;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.footer-span {
+  color: #012970;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.social-links a i {
+  color: #7e7ec9;
+}
+.footer-info p {
+  color: #4e4e4e;
+}
+
+.footer .footer-top {
+  background: #fff url(../../assets/footer-bg.png) no-repeat 100% 0;
+  border-bottom: 1px solid #e1ecff;
+  border-top: 1px solid #e1ecff;
+  padding: 60px 0 30px;
+}
+
+.footer .footer-top h4 {
+  color: #012970;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.footer .footer-top .footer-links ul a {
+  color: #013289;
+  display: inline-block;
+  line-height: 1;
+}
+.footer-links p i {
+  color: #4e4e4e;
+  font-size: 12px;
+}
+.footer-links a {
+  color: #013289;
+}
+.footer .footer-top .footer-contact p {
+  line-height: 26px;
+  font-size: 14px;
+}

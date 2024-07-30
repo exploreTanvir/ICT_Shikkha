@@ -6,5 +6,31 @@
 }
 a {
   text-decoration: none;
+}
+span {
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(0, 12, 143);
+  position: relative;
 
+  &::before {
+    content: "";
+    height: 4px;
+    width: 100px;
+    background: rgb(69, 0, 143);
+    position: absolute;
+    left: -7rem;
+    border-radius: 5px;
+    top: 17px;
+  }
+  &::after {
+    content: "";
+    height: 4px;
+    width: 100px;
+    background: rgb(69, 0, 143);
+    position: absolute;
+    right: -7rem;
+    border-radius: 5px;
+    top: 17px;
+  }
 }

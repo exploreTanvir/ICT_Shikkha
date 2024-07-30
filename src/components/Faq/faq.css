@@ -1,0 +1,50 @@
+.faq {
+  background: url(../../assets/faqBG2.png);
+
+  .faqImg {
+    height: 30rem;
+    width: 39rem;
+    width: 100%;
+  }
+}
+.accordion-item {
+  background: transparent;
+  .accordion-button {
+    background: rgb(243, 242, 255);
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .faqTitle {
+    width: 100%;
+    span {
+      font-size: 2rem;
+      width: 100%;
+
+      &::before {
+        content: "";
+        height: 3px;
+        width: 70px;
+        background: rgb(69, 0, 143);
+        position: absolute;
+        left: -5rem;
+        border-radius: 5px;
+        top: 14px;
+      }
+      &::after {
+        content: "";
+        height: 3px;
+        width: 70px;
+        background: rgb(69, 0, 143);
+        position: absolute;
+        right: -5rem;
+        border-radius: 5px;
+        top: 14px;
+      }
+    }
+  }
+
+  .faqImg {
+    margin-bottom: 10px;
+  }
+}
