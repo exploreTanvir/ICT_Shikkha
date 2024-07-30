@@ -1,0 +1,142 @@
+.hero {
+  height: 93vh;
+  width: 100%;
+  background: url(../../../src/assets/startup-hero-03.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .img1 {
+    position: absolute;
+    left: 0;
+    top: 8rem;
+  }
+  .img2 {
+    position: absolute;
+    right: 5rem;
+    top: 8rem;
+  }
+  .img3 {
+    position: absolute;
+    right: 40rem;
+    top: 4rem;
+  }
+
+  h1 {
+    color: rgb(69, 0, 143);
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  h1:hover {
+    .title::after {
+      left: 70px;
+      top: 5px;
+      transition: all 0.7s ease;
+    }
+  }
+  .fbGrpBtn {
+    border: 1px solid gray;
+    font-weight: 400;
+    color: rgb(69, 0, 143);
+    transition: all 0.7s ease;
+  }
+
+  .course {
+    background: rgb(69, 0, 143);
+    color: white;
+    font-weight: 400;
+    border: 1px solid gray;
+    transition: all 0.7s ease;
+  }
+
+  .fbGrpBtn:hover {
+    background: rgb(0, 12, 143);
+    color: white;
+  }
+
+  .course:hover {
+    color: rgb(69, 0, 143);
+    background: white;
+    border: 1px solid gray;
+  }
+  .desc {
+    color: rgb(71, 71, 71);
+  }
+  .title {
+    position: relative;
+    width: 53%;
+    &:hover {
+      &::after {
+        left: 70px;
+        top: 5px;
+        transition: all 0.7s ease;
+      }
+    }
+  }
+
+  .title::before {
+    content: "";
+    height: 4px;
+    width: 80px;
+    background: rgb(69, 0, 143);
+    position: absolute;
+    left: 2px;
+    top: 9px;
+  }
+  .title::after {
+    content: "";
+    height: 13px;
+    width: 13px;
+    background: rgb(69, 0, 143);
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 575px) {
+  .hero .title {
+    font-size: 25px;
+  }
+  .title {
+    width: 35%;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+.animated1 {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+.animated2 {
+  animation: up-down 1.7s ease-in-out infinite alternate-reverse both;
+}
+
+.animated3 {
+  animation: up-down 2.2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.cont:hover {
+  p::after {
+    left: 70px;
+    top: 5px;
+    transition: all 2s ease;
+  }
+}
