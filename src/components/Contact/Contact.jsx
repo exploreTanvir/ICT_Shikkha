@@ -9,16 +9,16 @@ const Contact = () => {
         <div className="container">
         <div className="row mt-2 pb-5 mb-5">
           <div className="left-form col-md-12 col-lg-6 col-sm-12">
-            <div className="row gap-4 mb-4">
+            <div className="row gap-4 mb-4 contactRow">
 
-              <div className="sub-form col-5">
+              <div className="sub-form col-md-5 col-sm-12">
                 <i className="fa-solid fa-location-dot"></i>
                 <h3>ঠিকানা</h3>
                 <p>
                   মাগুরা পুলিশ লাইন,মাগুরা
                 </p>
               </div>
-              <div className="sub-form col-5">
+              <div className="sub-form col-md-5 col-sm-12">
                 <i className="fa-solid fa-phone"></i>
                 <h3>ফোন করো</h3>
                 <p>
@@ -29,19 +29,19 @@ const Contact = () => {
                 </p>
               </div>
           </div>
-            <div className="row gap-4">
+            <div className="row gap-4 contactRow">
 
-              <div className="sub-form col-5">
+              <div className="sub-form col-md-5 col-sm-12">
                 <i className="fa-solid fa-envelope"></i>
                 <h3>ইমেইল করো</h3>
                 <p>
                   ictshikkha@gmail.com
                 </p>
                 <p>
-                  onneshon@gmail.com
+                  anneshon@gmail.com
                 </p>
               </div>
-              <div className="sub-form col-5">
+              <div className="sub-form col-md-5 col-sm-12">
                 <i className="fa-regular fa-clock"></i>
                 <h3>অফিস টাইম</h3>
                 <p>

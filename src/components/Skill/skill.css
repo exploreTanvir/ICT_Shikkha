@@ -143,10 +143,10 @@
     background: rgb(0, 7, 69);
     color: rgb(0, 7, 69);
     text-decoration: none;
-    border-radius: 5px;
   }
   a:hover {
     color: rgb(254, 254, 255);
+    border-radius: 5px;
   }
   a::before {
     content: "";

@@ -1,8 +1,6 @@
 .hero {
-  height: 50rem;
   width: 100%;
-  background:
-    url(../../../src/assets/startup-hero-03.webp);
+  background: url(../../../src/assets/startup-hero-03.webp);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -51,7 +49,7 @@
     font-weight: 700;
     font-size: 3rem;
     @media (max-width: 575px) {
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
     }
   }
@@ -192,13 +190,6 @@
 }
 @media (max-width: 575px) {
   .title {
-    width: 94%;
-    text-align: center;
-  }
-  .title::before {
-    display: none;
-  }
-  .title::after {
     display: none;
   }
 }
@@ -242,6 +233,9 @@
   }
 }
 
+.cont {
+  padding: 12rem 0;
+}
 .cont:hover {
   p::after {
     left: 70px;

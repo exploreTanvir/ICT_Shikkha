@@ -5,6 +5,9 @@
     height: 30rem;
     width: 39rem;
     width: 100%;
+    @media (max-width: 575px) {
+      display: none;
+    }
   }
 }
 .accordion-item {
