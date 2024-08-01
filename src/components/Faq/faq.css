@@ -1,5 +1,6 @@
 .faq {
   background: url(../../assets/faqBG2.png);
+ 
 
   .faqImg {
     height: 30rem;
@@ -15,6 +16,7 @@
   .accordion-button {
     background: rgb(243, 242, 255);
     margin-bottom: 5px;
+    
   }
 }
 @media (max-width: 767px) {

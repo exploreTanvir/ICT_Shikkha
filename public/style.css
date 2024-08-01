@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Tiro Bangla", roboto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -33,4 +34,21 @@ span {
     border-radius: 5px;
     top: 17px;
   }
+}
+.topArrow {
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white !important;
+  background: rgb(79, 4, 255);
+  border: 0;
+  bottom: 3rem;
+  right: 3rem;
+  border-radius: 8px;
+  z-index: 999;
+  position: fixed;
 }

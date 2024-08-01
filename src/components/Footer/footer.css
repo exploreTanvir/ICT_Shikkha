@@ -1,9 +1,5 @@
 #footer {
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.811),
-      rgba(0, 0, 2, 0.331)
-    ),
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.811), rgba(0, 0, 2, 0.331)),
     url(../../assets/2660738-rad-programs-opps-3.avif);
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,7 +17,7 @@
   }
 }
 .footerLogo {
-  width: 70px;
+  width: 120px;
   height: 70px;
 }
 .copy {

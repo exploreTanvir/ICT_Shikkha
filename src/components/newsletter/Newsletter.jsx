@@ -9,7 +9,7 @@ const Newsletter = () => {
                 <p>নতুন এক্সপার্ট টিপস পেতে এখনই সাবস্ক্রাইব করুন! আপনার ইমেইল দিয়ে সহজেই যোগ দিন।</p>
                 <form className="d-flex justify-content-end">
                     <input type="email" placeholder="আপনার ইমেইল" />
-                <a href="/" className='fs-5 newsBtn  d-flex justify-content-around align-items-center gap-2 course'>সাবস্ক্রাইব<i class="fa fa-arrow-right "></i></a>
+                <a href="/" className='fs-5 newsBtn  d-flex  justify-content-around align-items-center gap-2 course'>সাবস্ক্রাইব<i class="fa fa-arrow-right "></i></a>
                 </form>
             </div>
         </div>

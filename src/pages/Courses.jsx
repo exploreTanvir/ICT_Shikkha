@@ -1,4 +1,4 @@
-import Course from '../components/Course/Course';
+import AllCourse from '../components/AllCourse/AllCourse';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import Newsletter from '../components/newsletter/Newsletter';
@@ -9,7 +9,7 @@ const Courses = () => {
     <div>
          <TopBar/>
         <Navbar/>
-        <Course/>
+        <AllCourse/>
       <Newsletter/>
       <Footer/>
     </div>

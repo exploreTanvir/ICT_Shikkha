@@ -1,5 +1,10 @@
 .contact {
-  background: url(../../assets/bg3.png) no-repeat;
+  background: linear-gradient(
+      90deg,
+      rgba(212, 218, 255, 0.5),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../../assets/bg3.png) no-repeat;
   background-size: cover;
 }
 .sub-form {
@@ -92,5 +97,4 @@
       justify-content: center;
     }
   }
-
 }

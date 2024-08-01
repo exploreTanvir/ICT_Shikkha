@@ -10,6 +10,24 @@
     bottom: 0;
     width: 100%;
   }
+  .topArrow {
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    background: rgb(79, 4, 255);
+    border: 0;
+    bottom: 3rem;
+    right: 3rem;
+    border-radius: 8px;
+    z-index: 999;
+    position: fixed;
+  }
+
   .img1 {
     position: absolute;
     left: 0;
@@ -58,7 +76,7 @@
     height: 60px;
   }
 
-  .btn1 {
+  .fbCoursebtn {
     position: relative;
     z-index: 1;
     padding: 13px 30px;
@@ -68,30 +86,30 @@
     text-decoration: none;
     border-radius: 5px;
   }
-  .btn1:hover {
+  .fbCoursebtn:hover {
     color: white;
   }
-  .btn1::before {
+  .fbCoursebtn::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0, 12, 143);
+    background: rgb(43, 0, 143);
     z-index: -1;
     transform-origin: left;
     transition: transform 0.5s ease;
     transform: scaleX(1);
   }
 
-  .btn1:hover::before {
+  .fbCoursebtn:hover::before {
     transform-origin: right;
     transition: transform 0.5s ease;
     transform: scaleX(0);
   }
 
-  .btn2 {
+  .course {
     position: relative;
     z-index: 1;
     padding: 13px 30px;
@@ -102,10 +120,10 @@
     border-radius: 5px;
     border: 1px solid gray;
   }
-  .btn2:hover {
+  .course:hover {
     color: white;
   }
-  .btn2::before {
+  .course::before {
     content: "";
     position: absolute;
     top: 0;
@@ -119,7 +137,7 @@
     transform: scaleX(1);
   }
 
-  .btn2:hover::before {
+  .course:hover::before {
     transform-origin: right;
     transition: transform 0.5s ease;
     transform: scaleX(0);
@@ -234,7 +252,7 @@
 }
 
 .cont {
-  padding: 12rem 0;
+  padding: 7rem 0;
 }
 .cont:hover {
   p::after {

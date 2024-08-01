@@ -1,0 +1,63 @@
+.allCoursesBtn {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 13px 30px;
+  transition: 0.5s;
+  background: rgb(0, 7, 69);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.allCoursesBtn:hover {
+  color: white;
+}
+.allCoursesBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 12, 143);
+  z-index: -1;
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  transform: scaleX(1);
+}
+
+.allCoursesBtn:hover::before {
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  transition: all 0.6s ease;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.cardImg {
+  background: url(../../assets/Free-Online-Course-1.jpg);
+  height: 14rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+.cardImg2 {
+  background: url(../../assets/2022_08_MicrosoftTeams-image-13-2-1.jpg);
+  height: 14rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+.cardImg3 {
+  background: url(../../assets/1708681424phpGBuKdU.jpeg);
+  height: 14rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}

@@ -1,8 +1,8 @@
 import React from 'react'
+import heroFooter from "../../assets/clouds.png"
 import img1 from "../../assets/elements1.png"
 import img2 from "../../assets/lite-icons1.svg"
 import img3 from "../../assets/sound-icons1.svg"
-import heroFooter from "../../assets/clouds.png"
 import "./hero.css"
 
 const Hero = () => {
@@ -21,8 +21,8 @@ const Hero = () => {
                     <p className='d-flex align-items-center gap-2'><i class="fa-regular fa-circle-check bg-danger rounded-circle text-white"></i> MentorShip</p>
                 </div>
                 <div className="btn-grp d-flex mt-3 ">
-                    <a href="/" className='fbCoursebtn btn1  d-flex align-items-center gap-2 fs-5 course me-4'>আমাদের গ্রুপে যুক্ত হোন <i class="fa fa-arrow-right"></i></a>
-                    <a href="/" className='fs-5 btn2  d-flex align-items-center gap-2 course'>আমাদের কোর্সসমূহ <i class="fa fa-arrow-right "></i></a>
+                    <a href="/" className='fbCoursebtn d-flex align-items-center gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i class="fa fa-arrow-right"></i></a>
+                    <a href="/" className='fs-5 d-flex align-items-center gap-2 course'>আমাদের কোর্সসমূহ <i class="fa fa-arrow-right "></i></a>
                 </div>
             </div>
         </div>
@@ -30,6 +30,7 @@ const Hero = () => {
     <div className="img1 animated1"><img src={img1} alt="" /></div>
     <div className="img2 animated2"><img src={img2} alt="" /></div>
     <div className="img3 animated3"><img className='w-75' src={img3} alt="" /></div>
+    <a href="/"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a>
     <img src={heroFooter} className='heroFooter' alt="" />
     
    </section>
