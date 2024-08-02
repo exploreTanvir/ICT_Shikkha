@@ -1,0 +1,78 @@
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background: #0128ec;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(4px);
+  background: #d1ebff;
+  border-radius: 10px;
+}
+.swiper-slide-active {
+  filter: blur(0);
+  background: white;
+}
+.testimonialBox {
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  padding-top: 90px;
+  color: #5e5e5e;
+}
+.quote {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  opacity: 0.2;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.detail h3 {
+  flex: 16;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #2196f3;
+  line-height: 1.1em;
+}
+.detail span {
+  font-size: 12px;
+}
+.imgBox {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.swiper-slide-shadow-right,
+.swiper-slide-shadow-left {
+  background-image: none;
+}

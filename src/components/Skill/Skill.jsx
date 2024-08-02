@@ -17,7 +17,7 @@ const Skill = () => {
                         <img src={skillImg1} alt="" />
                         <h2 className="fw-bold">আইসিটি কুইজ</h2>
                         <div className="skillBtn py-1 d-flex align-items-center justify-content-center">
-                            <a href="#" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
+                            <a href="/quiz" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const Skill = () => {
                         <img src={skillImg2} alt="" />
                         <h2 className="fw-bold">আইসিটি ভিডিও</h2>
                         <div className="skillBtn py-1 d-flex align-items-center justify-content-center">
-                            <a href="#" className=" d-flex align-items-center gap-2 ">ভিডিও ক্লাস দেখো <i class="fa fa-arrow-right"></i></a>
+                            <a href="/" className=" d-flex align-items-center gap-2 ">ভিডিও ক্লাস দেখো <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Skill = () => {
                         <img src={skillImg3} alt="" />
                         <h2 className="fw-bold">আইসিটি কুইজ</h2>
                         <div className="skillBtn py-1 d-flex align-items-center justify-content-center">
-                            <a href="#" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
+                            <a href="/quiz" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const Skill = () => {
                         <img src={skillImg4} alt="" />
                         <h2 className="fw-bold">আইসিটি কুইজ</h2>
                         <div className="skillBtn py-1 d-flex align-items-center justify-content-center">
-                            <a href="#" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
+                            <a href="/quiz" className=" d-flex align-items-center gap-2 ">কুইজে অংশ নিন <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

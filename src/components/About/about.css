@@ -22,6 +22,9 @@
   }
   .touhidSirImg {
     box-shadow: 45px 40px 4px -6px rgb(236, 229, 255);
+    &:hover {
+      box-shadow: 50px 35px 4px -6px rgba(223, 212, 255, 0.795);
+    }
   }
   i,
   h4 {
@@ -48,7 +51,7 @@
       height: 2px;
       width: 60px;
       background: rgb(4, 2, 151);
-      right: 10rem;
+      right: 15rem;
       top: 14px;
     }
   }

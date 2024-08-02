@@ -24,31 +24,28 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/course">
+          <Route path="/course">
             <Courses />
           </Route>
-          <Route exact path="/contact">
+          <Route path="/contact">
             <Contacts />
           </Route>
-          <Route exact path="/login">
+          <Route path="/login">
             <LoginPage />
           </Route>
-          <Route exact path="/singUp">
+          <Route path="/singUp">
             <SingUpPage />
           </Route>
-          <Route exact path="/course">
-            <Courses />
-          </Route>
-          <Route exact path="/course/ict">
+          <Route path="/course/ict">
             <CourseDetail />
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <AboutPage />
           </Route>
-          <Route exact path="/gallery">
+          <Route path="/gallery">
             <GalleryPage />
           </Route>
-          <Route exact path="/quiz">
+          <Route exact path="/quiz" >
             <QuizPage />
           </Route>
                    

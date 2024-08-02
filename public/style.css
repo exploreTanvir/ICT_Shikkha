@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Tiro Bangla", roboto;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 a {

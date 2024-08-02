@@ -1,6 +1,4 @@
-import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
-import Login from '../components/login/Login';
 import Navbar from '../components/Navbar/Navbar';
 import Newsletter from '../components/newsletter/Newsletter';
 import Registration from '../components/Registration/Ragistration';

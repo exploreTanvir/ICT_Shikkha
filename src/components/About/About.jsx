@@ -102,7 +102,7 @@ const About = () => {
             <div className="col-5 px-5 d-flex flex-column aboutRight">
                 <img className="rounded touhidSirImg" src={touhidSir} alt="" />
                 <div className="touhidSirInfo">
-           <p className="text-end touhidSir fs-5">মো. তৌহিদ হোসেন</p>
+           <p className="text-end touhidSir fs-5">প্রকৌশলী মো. তৌহিদ হোসেন</p>
             <p className="text-end">প্রতিষ্ঠাতা আইসিটি শিক্ষা</p>
             <p className="text-end">ইনস্ট্রাক্টর কম্পিউটার, মাগুরা পলিটেকনিক ইন্সটিটিউট, মাগুরা</p>
            </div>
