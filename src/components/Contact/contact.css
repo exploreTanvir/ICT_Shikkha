@@ -97,4 +97,10 @@
       justify-content: center;
     }
   }
+  .sub-form {
+    text-align: center;
+    p {
+      text-align: center;
+    }
+  }
 }

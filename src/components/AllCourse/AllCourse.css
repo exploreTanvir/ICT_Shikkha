@@ -61,3 +61,25 @@
   background-size: cover;
   border-bottom: 1px solid gray;
 }
+
+@media (max-width: 575px) {
+  .courseDetails {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .cardImg,
+  .cardImg2,
+  .cardImg3 {
+    height: 10rem;
+    width: 100%;
+  }
+  .allCoursesBtn {
+    z-index: 1;
+    padding: 5px 20px;
+    transition: 0.5s;
+    background: rgb(0, 7, 69);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+  }
+}

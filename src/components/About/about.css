@@ -1,68 +1,87 @@
-.about {
-  .aboutLeft {
-    padding: 0 6rem;
-  }
-  .touhidSirInfo {
-    p {
-      margin-bottom: 5px;
-      &:first-child {
-        margin-top: 40px;
-      }
+.aboutLeft {
+  padding: 0 6rem;
+}
+.touhidSirInfo {
+  p {
+    margin-bottom: 5px;
+    &:first-child {
+      margin-top: 40px;
     }
   }
-  .advice {
-    background: url(../../assets/faqBG2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+.advice {
+  background: url(../../assets/faqBG2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.writing {
+  background: url(../../assets/faqBG3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.touhidSirImg {
+  box-shadow: 45px 40px 4px -6px rgb(236, 229, 255);
+  &:hover {
+    box-shadow: 50px 35px 4px -6px rgba(223, 212, 255, 0.795);
   }
-  .writing {
-    background: url(../../assets/faqBG3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+i,
+h4 {
+  color: rgb(69, 0, 143);
+}
+p {
+  color: rgb(70, 70, 70);
+  text-align: justify;
+}
+.writing {
+  p {
+    color: black;
+  }
+}
+.topArrow i {
+  color: white;
+}
+.touhidSir {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 60px;
+    background: rgb(4, 2, 151);
+    right: 15rem;
+    top: 14px;
+  }
+}
+.writing {
+  position: relative;
+}
+.aboutIcon {
+  position: absolute;
+  right: 5rem;
+  width: 70px;
+  height: 70px;
+  top: 6rem;
+}
+
+@media (max-width: 575px) {
+  .aboutImg {
+    display: none;
+  }
+  .faqTitle span {
+    font-size: 24px !important;
+  }
+  .aboutLeft {
+    padding: 15px;
+  }
+  .about .advice h4 {
+    font-size: 19px;
   }
   .touhidSirImg {
-    box-shadow: 45px 40px 4px -6px rgb(236, 229, 255);
+    box-shadow: 35px 30px 4px -6px rgb(236, 229, 255);
     &:hover {
-      box-shadow: 50px 35px 4px -6px rgba(223, 212, 255, 0.795);
+      box-shadow: 39px 35px 4px -6px rgba(223, 212, 255, 0.795);
     }
-  }
-  i,
-  h4 {
-    color: rgb(69, 0, 143);
-  }
-  p {
-    color: rgb(70, 70, 70);
-    text-align: justify;
-  }
-  .writing {
-    p {
-      color: black;
-    }
-  }
-  .topArrow i {
-    color: white;
-  }
-  .touhidSir {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 60px;
-      background: rgb(4, 2, 151);
-      right: 15rem;
-      top: 14px;
-    }
-  }
-  .writing {
-    position: relative;
-  }
-  .aboutIcon {
-    position: absolute;
-    right: 5rem;
-    width: 70px;
-    height: 70px;
-    top: 6rem;
   }
 }

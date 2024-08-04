@@ -15,7 +15,7 @@ const Hero = () => {
                 <h1 className='overflow-hidden py-2'>বাংলাদেশে আইসিটি শিক্ষায় <br />
                     অন্যতম অনলাইন প্ল্যাটফর্ম</h1>
                     <p className='desc fs-5 py-2'>আমাদের প্রতিষ্ঠান আইসিটি শিক্ষার ক্ষেত্রে অনলাইন ও অফলাইন শিক্ষাদান ও প্রশিক্ষণ প্রদানের জন্য অগ্রণী ভূমিকা পালন করছে। আমাদের মূল লক্ষ্য হলো শিক্ষার্থীদের তথ্যপ্রযুক্তির সর্বশেষ জ্ঞান ও দক্ষতা অর্জনে সহায়তা করা এবং তাদেরকে ভবিষ্যতের প্রযুক্তি-নির্ভর চাকরির বাজারের জন্য প্রস্তুত করা।</p>
-                <div className='d-flex gap-4 fs-5 align-items-center'>
+                <div className='shortIcon d-flex gap-4 fs-5 align-items-center'>
                     <p className='d-flex align-items-center gap-2'><i class="fa-regular fa-circle-check bg-black rounded-circle text-white"></i> Online</p>
                     <p className='d-flex align-items-center gap-2'><i class="fa-regular fa-circle-check bg-primary rounded-circle text-white"></i> Offline</p>
                     <p className='d-flex align-items-center gap-2'><i class="fa-regular fa-circle-check bg-danger rounded-circle text-white"></i> MentorShip</p>

@@ -34,6 +34,7 @@ span {
     top: 17px;
   }
 }
+
 .topArrow {
   position: absolute;
   width: 3.2rem;
@@ -50,4 +51,7 @@ span {
   border-radius: 8px;
   z-index: 999;
   position: fixed;
+}
+li {
+  list-style: none !important;
 }

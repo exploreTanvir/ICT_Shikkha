@@ -9,12 +9,18 @@ import "./Review.css";
 
 // import required modules
 import { EffectCoverflow } from 'swiper/modules';
-import userImg from "../../assets/1000_F_315907715_vkJPxeMzlh59tE2k6DYxfN9ffYFQihGT.jpg";
 import swipIMG from "../../assets/157248-removebg-preview.png";
+
+import { ReviewText } from '../ReviewText';
+
 const Review = () => {
   return (
+    <>
+    <div className="faqTitle text-center mt-5 mb-4">
+         <span>আমাদের সম্পর্কে ছাত্রদের মন্তব্য</span> 
+         </div>
     <section className="review">
-
+      
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -29,82 +35,37 @@ const Review = () => {
         }}
         loop={true}
         modules={[EffectCoverflow]}
-      >
-        <SwiperSlide>
+      > 
+      
+{ReviewText.map((item,index)=>{
+          return(
+         <SwiperSlide>
        <div className="testimonialBox">
-        <img src={swipIMG} className='w-25' alt="" />
-        <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ab, repudiandae vel iusto aspernatur asperiores optio maxime, quos vero quod voluptates distinctio magni eum.</p>
-          <div className="detail">
+        <img src={swipIMG} className='testimonialImg' alt="" />
+        
+            <div className="content">
+          <p>{item.title}</p>
+          <div className="detail d-flex justify-content-between">
             <div className="imgBox">
-              <img src={userImg} alt="" />
-              <h3>Someone Famous <br /><span>Creative Designer</span></h3>
+              <img src={item.img} alt="" />
             </div>
+          <div className="text-end">
+          <h4>{item.name}</h4>
+          <p>{item.work}</p>
+          </div>
+
           </div>
         </div>
+        
        </div>
         </SwiperSlide>
-        <SwiperSlide>
-       <div className="testimonialBox">
-        <img src={swipIMG} className='w-25' alt="" />
-        <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ab, repudiandae vel iusto aspernatur asperiores optio maxime, quos vero quod voluptates distinctio magni eum.</p>
-          <div className="detail">
-            <div className="imgBox">
-              <img src={userImg} alt="" />
-              <h3>Someone Famous <br /><span>Creative Designer</span></h3>
-            </div>
-          </div>
-        </div>
-       </div>
-        </SwiperSlide>
-        <SwiperSlide>
-       <div className="testimonialBox">
-        <img src={swipIMG} className='w-25' alt="" />
-        <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ab, repudiandae vel iusto aspernatur asperiores optio maxime, quos vero quod voluptates distinctio magni eum.</p>
-          <div className="detail">
-            <div className="imgBox">
-              <img src={userImg} alt="" />
-              <h3>Someone Famous <br /><span>Creative Designer</span></h3>
-            </div>
-          </div>
-        </div>
-       </div>
-        </SwiperSlide>
-        <SwiperSlide>
-       <div className="testimonialBox">
-        <img src={swipIMG} className='w-25 quote' alt="" />
-        <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ab, repudiandae vel iusto aspernatur asperiores optio maxime, quos vero quod voluptates distinctio magni eum.</p>
-          <div className="detail">
-            <div className="imgBox">
-              <img src={userImg} alt="" />            
-            </div>
-            <h3>Someone Famous <br /><span>Creative Designer</span></h3>
-          </div>
-        </div>
-       </div>
-        </SwiperSlide>
-        <SwiperSlide>
-       <div className="testimonialBox">
-        <img src={swipIMG} className='w-25' alt="" />
-        <div className="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi ab, repudiandae vel iusto aspernatur asperiores optio maxime, quos vero quod voluptates distinctio magni eum.</p>
-          <div className="detail">
-            <div className="imgBox">
-              <img src={userImg} alt="" />
-              <h3>Someone Famous <br /><span>Creative Designer</span></h3>
-            </div>
-          </div>
-        </div>
-       </div>
-        </SwiperSlide>
+          )
+        })}
+       
 
        
-      </Swiper>
-
-    </section>
+       </Swiper>
+    </section></>
   )
 }
 
