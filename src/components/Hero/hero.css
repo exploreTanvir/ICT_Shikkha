@@ -76,163 +76,146 @@
     height: 60px;
   }
 
-  .fbCoursebtn {
+  .desc {
+    color: rgb(71, 71, 71);
+  }
+  .title {
     position: relative;
-    z-index: 1;
-    padding: 13px 30px;
-    transition: 0.5s;
-    background: rgb(0, 7, 69);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border-radius: 5px;
+    width: 53%;
+    text-align: right;
+    &:hover {
+      &::after {
+        left: 70px;
+        top: 5px;
+        transition: all 0.7s ease;
+      }
+    }
   }
-  .fbCoursebtn:hover {
-    color: white;
-  }
-  .fbCoursebtn::before {
+
+  .title::before {
     content: "";
+    height: 4px;
+    width: 80px;
+    background: rgb(69, 0, 143);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(43, 0, 143);
-    z-index: -1;
-    transform-origin: left;
-    transition: transform 0.5s ease;
-    transform: scaleX(1);
+    left: 2px;
+    top: 9px;
   }
-
-  .fbCoursebtn:hover::before {
-    transform-origin: right;
-    transition: transform 0.5s ease;
-    transform: scaleX(0);
-  }
-
-  .course {
-    position: relative;
-    z-index: 1;
-    padding: 13px 30px;
-    transition: 0.5s;
-    background: rgb(0, 7, 69);
-    color: rgb(0, 12, 143);
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid gray;
-  }
-  .course:hover {
-    color: white;
-  }
-  .course::before {
+  .title::after {
     content: "";
+    height: 13px;
+    width: 13px;
+    background: rgb(69, 0, 143);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 255, 255);
-    z-index: -1;
-    transform-origin: left;
-    transition: transform 0.5s ease;
-    transform: scaleX(1);
+    left: 3px;
+    top: 5px;
+    transform: rotate(45deg);
+  }
+  @media (max-width: 991px) {
+    .title {
+      width: 49%;
+    }
+    .title::before {
+      left: 2px;
+      top: 9px;
+      height: 3px;
+    }
+    .title::after {
+      left: 3px;
+      top: 4px;
+    }
+  }
+  @media (max-width: 767px) {
+    .title {
+      width: 66%;
+    }
+    .title::before {
+      left: 2px;
+      top: 9px;
+      height: 3px;
+    }
+    .title::after {
+      left: 3px;
+      top: 4px;
+    }
   }
 
-  .course:hover::before {
-    transform-origin: right;
-    transition: transform 0.5s ease;
-    transform: scaleX(0);
+  @media (max-width: 575px) {
+    .hero .title {
+      font-size: 25px;
+    }
+    .fbBtn {
+      margin-right: 0 !important;
+    }
+    .title {
+      width: 35%;
+    }
+    .topArrow {
+      display: none;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    .heroFooter {
+      display: none;
+    }
+    .cont {
+      padding: 1rem 1rem !important;
+      h1 {
+        font-size: 26px;
+      }
+      .title {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .title::before {
+        display: none;
+      }
+      .title::after {
+        display: none;
+      }
+      .shortIcon {
+        p {
+          font-size: 18px;
+          gap: 5px !important;
+        }
+      }
+      .desc {
+        text-align: justify;
+      }
+      .btn-grp {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+      .fbBtn,
+      .fbBtn2 {
+        margin-right: 5px 10px !important;
+        margin-bottom: 10px;
+      }
+    }
   }
-}
-.desc {
-  color: rgb(71, 71, 71);
-}
-.title {
-  position: relative;
-  width: 53%;
-  text-align: right;
-  &:hover {
-    &::after {
+
+  .cont {
+    padding: 8rem 0;
+  }
+  .cont:hover {
+    p::after {
       left: 70px;
       top: 5px;
-      transition: all 0.7s ease;
+      transition: all 2s ease;
     }
   }
 }
-
-.title::before {
-  content: "";
-  height: 4px;
-  width: 80px;
-  background: rgb(69, 0, 143);
-  position: absolute;
-  left: 2px;
-  top: 9px;
-}
-.title::after {
-  content: "";
-  height: 13px;
-  width: 13px;
-  background: rgb(69, 0, 143);
-  position: absolute;
-  left: 3px;
-  top: 5px;
-  transform: rotate(45deg);
-}
-@media (max-width: 991px) {
-  .title {
-    width: 49%;
-  }
-  .title::before {
-    left: 2px;
-    top: 9px;
-    height: 3px;
-  }
-  .title::after {
-    left: 3px;
-    top: 4px;
-  }
-}
-@media (max-width: 767px) {
-  .title {
-    width: 66%;
-  }
-  .title::before {
-    left: 2px;
-    top: 9px;
-    height: 3px;
-  }
-  .title::after {
-    left: 3px;
-    top: 4px;
-  }
-}
-@media (max-width: 575px) {
-  .title {
-    display: none;
-  }
-}
-
-@media (max-width: 575px) {
-  .hero .title {
-    font-size: 25px;
-  }
-  .title {
-    width: 35%;
-  }
-  h1 {
-    font-size: 6rem;
-  }
-}
-
 .animated1 {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 .animated2 {
-  animation: up-down 1.7s ease-in-out infinite alternate-reverse both;
+  animation: up-down 1.6s ease-in-out infinite alternate-reverse both;
 }
 
 .animated3 {
-  animation: up-down 2.2s ease-in-out infinite alternate-reverse both;
+  animation: up-down 2.3s ease-in-out infinite alternate-reverse both;
 }
 @-webkit-keyframes up-down {
   0% {
@@ -248,38 +231,5 @@
   }
   100% {
     transform: translateY(-20px);
-  }
-}
-
-.cont {
-  padding: 7rem 0;
-}
-.cont:hover {
-  p::after {
-    left: 70px;
-    top: 5px;
-    transition: all 2s ease;
-  }
-}
-@media (max-width: 575px) {
-  .cont {
-    padding: 10px 20px;
-    h1 {
-      font-size: 26px;
-    }
-    .shortIcon {
-      p {
-        font-size: 18px;
-        gap: 0 !important;
-      }
-    }
-    .btn-grp {
-      flex-direction: column;
-      margin-bottom: 40px;
-    }
-    .fbCoursebtn {
-      margin-right: 0 !important;
-      margin-bottom: 10px;
-    }
   }
 }

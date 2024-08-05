@@ -63,6 +63,9 @@
 }
 
 @media (max-width: 575px) {
+  .heroFooter {
+    display: none;
+  }
   .courseDetails {
     flex-direction: column;
     align-items: start !important;

@@ -25,11 +25,10 @@
     box-shadow: 50px 35px 4px -6px rgba(223, 212, 255, 0.795);
   }
 }
-i,
-h4 {
+.about h4 {
   color: rgb(69, 0, 143);
 }
-p {
+.about p {
   color: rgb(70, 70, 70);
   text-align: justify;
 }
@@ -66,6 +65,13 @@ p {
 }
 
 @media (max-width: 575px) {
+  .heroFooter {
+    display: none;
+  }
+  .aboutIcon {
+    display: none;
+  }
+
   .aboutImg {
     display: none;
   }

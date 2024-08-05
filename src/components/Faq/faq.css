@@ -1,6 +1,5 @@
 .faq {
   background: url(../../assets/faqBG2.png);
- 
 
   .faqImg {
     height: 30rem;
@@ -16,7 +15,6 @@
   .accordion-button {
     background: rgb(243, 242, 255);
     margin-bottom: 5px;
-    
   }
 }
 @media (max-width: 767px) {
@@ -29,27 +27,40 @@
       &::before {
         content: "";
         height: 3px;
-        width: 70px;
+        width: 30px;
         background: rgb(69, 0, 143);
         position: absolute;
-        left: -5rem;
+        left: -40px;
         border-radius: 5px;
-        top: 14px;
+        top: 12px;
       }
       &::after {
         content: "";
         height: 3px;
-        width: 70px;
+        width: 30px;
         background: rgb(69, 0, 143);
         position: absolute;
-        right: -5rem;
+        right: -40px;
         border-radius: 5px;
-        top: 14px;
+        top: 12px;
       }
     }
   }
 
   .faqImg {
     margin-bottom: 10px;
+  }
+}
+.accordion-header .accordion-button {
+  border-radius: 7px !important;
+  &:focus {
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: none;
+  }
+}
+@media (max-width: 575px) {
+  .accordion-header .accordion-button {
+    font-size: 18px !important;
   }
 }

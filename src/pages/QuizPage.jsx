@@ -1,5 +1,5 @@
 import Footer from '../components/Footer/Footer';
-import Navbar from '../components/Navbar/Navbar';
+import Nav from '../components/Nav/Nav';
 import Newsletter from '../components/newsletter/Newsletter';
 import Quiz from '../components/Quiz/Quiz';
 import TopBar from '../components/topbar/TopBar';
@@ -8,7 +8,7 @@ const QuizPage = () => {
   return (
     <div>
         <TopBar/>
-        <Navbar/>
+        <Nav/>
       <Quiz/>
       <Newsletter/>
       <Footer/>

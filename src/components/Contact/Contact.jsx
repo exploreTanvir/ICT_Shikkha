@@ -3,11 +3,11 @@ import "./contact.css"
 const Contact = () => {
   return (
     <section className="contact">
-      <div className="faqTitle text-center mt-5 mb-4">
+      <div className="faqTitle text-center mt-5 pb-4">
          <span>আমাদের সাথে যোগাযোগের মাধ্যম</span> 
          </div>
         <div className="container">
-        <div className="row mt-2 pb-5 mb-5">
+        <div className="row mt-2 pb-5">
           <div className="left-form col-md-12 col-lg-6 col-sm-12">
             <div className="row gap-4 mb-4 contactRow">
 

@@ -80,6 +80,7 @@
     transform-origin: left;
     transition: transform 0.5s ease;
     transform: scaleX(1);
+    border-radius: 5px;
   }
   &:hover::before {
     transform-origin: right;
@@ -103,4 +104,9 @@
       text-align: center;
     }
   }
+}
+.form-control:focus {
+  outline: none !important;
+  border: 0;
+  box-shadow: none;
 }

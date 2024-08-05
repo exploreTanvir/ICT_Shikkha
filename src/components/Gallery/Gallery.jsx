@@ -21,6 +21,9 @@ import "./Gallery.css"
 const Gallery = () => {
   return (
     <section>
+            <div className="faqTitle text-center mt-5 mb-4">
+            <span>আমাদের দেওয়াল</span> 
+            </div>
         <div className="container">
             
             <div className="row justify-content-around">

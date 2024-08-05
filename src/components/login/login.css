@@ -127,3 +127,37 @@ input:focus + label {
   color: lightgray;
   font-size: 18px;
 }
+@media (max-width: 575px) {
+  .loginform main {
+    width: 22rem;
+    padding: 20px 15px;
+  }
+  .form_wrapper input {
+    padding: 10px 5px;
+  }
+  .loginform button {
+    padding: 8px 0;
+  }
+  #register {
+    left: 25%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 10px;
+  }
+  #login {
+    left: 38%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px 20px;
+  }
+  #register h4 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  #login h4 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  .loginform {
+    min-height: 0 !important;
+    padding: 4rem 0;
+  }
+}

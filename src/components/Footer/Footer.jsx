@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row footerRow py-5 justify-content-around gap-md-5" >
           
           <div className="col-lg-4 col-md-5">
-          <div className='d-flex align-items-center  gap-3  mt-4'>
+          <div className='d-flex footerTop align-items-center  gap-3  mt-4'>
           <img src={logo} alt="" className='footerLogo'  />
           <h4 >"বাংলাদেশে আইসিটি শিক্ষায়,<br />
           অন্যতম অনলাইন প্ল্যাটফর্ম"</h4>
@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="py-3">
             এইচএসসি আইসিটি বিষয়কে সবাই থিওরি সাবজেক্ট হিসেবে বিবেচনা করে। কিন্তু এটি একটি সম্পূর্ণ ব্যবহারিক বিষয় তাই সকল শিক্ষার্থীর এই বিষয় পড়া উচিত এবং তাদের কম্পিউটার দক্ষতা উন্নত করতে হবে, অন্যথায় তারা বর্তমান যুগের সাথে তাল মিলিয়ে চলতে পারবে না।
             </p>
-            <div className="last_icon d-flex align-items-center gap-3 fs-5 ">
+            <div className="lastIcon d-flex align-items-center gap-3 fs-5 ">
               <a href="#"><i className="fa-brands fa-facebook-f "></i></a>
               <a href="#"><i className="fa-brands fa-twitter "></i></a>
               <a href="#"><i className="fa-brands fa-linkedin "></i></a>
