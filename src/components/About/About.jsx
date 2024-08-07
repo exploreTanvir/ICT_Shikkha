@@ -100,7 +100,7 @@ const About = () => {
            
             </div>
             <div className="col-lg-5 col-sm-12 px-5 d-flex flex-column aboutRight">
-                <img className="rounded touhidSirImg" src={touhidSir} alt="" />
+                <img className="touhidSirImg" src={touhidSir} alt="" />
                 <div className="touhidSirInfo">
            <p className="text-end touhidSir fs-5">প্রকৌশলী মো. তৌহিদ হোসেন</p>
             <p className="text-end">প্রতিষ্ঠাতা আইসিটি শিক্ষা</p>
