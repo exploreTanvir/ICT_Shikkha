@@ -10,7 +10,7 @@ const Course = () => {
      
     <div className="container">
     
-      <div className="row">
+      <div className="row courseRow">
         <div className="col-lg-8">
           
           <div className="course">
@@ -25,7 +25,7 @@ const Course = () => {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    <b>কোর্সের জন্য কি পূর্ববর্তী কোনো অভিজ্ঞতা প্রয়োজন?</b>
+                    কোর্সের জন্য কি পূর্ববর্তী কোনো অভিজ্ঞতা প্রয়োজন?
                   </button>
                 </h2>
                 <div
@@ -61,7 +61,7 @@ const Course = () => {
                     aria-expanded="true"
                     aria-controls="collapseTwo"
                   >
-                    <b>কোর্সটি যাদের জন্য:</b>
+                    কোর্সটি যাদের জন্য:
                   </button>
                 </h2>
                 <div
@@ -99,7 +99,7 @@ const Course = () => {
                     aria-expanded="true"
                     aria-controls="collapseThree"
                   >
-                    <b>কোর্স শেষ করতে যদি সমস্যা হয়, তাহলে কী করা উচিত?</b>
+                    কোর্স শেষ করতে যদি সমস্যা হয়, তাহলে কী করা উচিত?
                   </button>
                 </h2>
                 <div
@@ -128,7 +128,7 @@ const Course = () => {
                     aria-expanded="true"
                     aria-controls="collapseFour"
                   >
-                    <b> কোর্সের সময় অনলাইন পরীক্ষার জন্য প্রস্তুতি কিভাবে নিব?</b>
+                     কোর্সের সময় অনলাইন পরীক্ষার জন্য প্রস্তুতি কিভাবে নিব?
                   </button>
                 </h2>
                 <div
@@ -160,7 +160,7 @@ const Course = () => {
                     aria-expanded="true"
                     aria-controls="collapseFive"
                   >
-                    <b>কিভাবে আপনি ক্যারিয়ার গাইডেন্স পেতে পারেন?</b>
+                   কিভাবে আপনি ক্যারিয়ার গাইডেন্স পেতে পারেন?
                   </button>
                 </h2>
                 <div
@@ -185,21 +185,21 @@ const Course = () => {
               <video controls width="380px" src={jsVdo}>
                 <source />
               </video>
-              <h5 className="card-title my-3">৳ ৫০০০</h5>
+              <h5 className="card-title my-3">৳ ****</h5>
               <div><a href="#" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>এনরোল করুন</a></div>
               <div className="desc mt-4">
                 <p>
-                  <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ১০৪৫
+                  <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ***
                   জন
                 </p>
                 <p>
-                  <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে ৯৫ ঘন্টা
+                  <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে ** ঘন্টা
                 </p>
                 <p>
-                  <i className="fa-regular fa-circle-play me-2"></i>২১৫ টি ভিডিও
+                  <i className="fa-regular fa-circle-play me-2"></i>*** টি ভিডিও
                 </p>
                 <p>
-                  <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা ৩ মাস
+                  <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা * মাস
                 </p>
               </div>
             </div>
@@ -207,7 +207,7 @@ const Course = () => {
         </div>
       </div>
     </div>
-    <a href="/course/ict"><div className='topArrow'><i className="fa-solid fa-arrow-up"></i></div></a>
+    
   </section>
   )
 }

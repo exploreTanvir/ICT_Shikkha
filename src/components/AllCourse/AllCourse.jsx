@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min"
 import "./AllCourse.css"
 import { AllCourseMenu } from "./AllCourseMenu"
 
@@ -5,7 +6,8 @@ const AllCourse = () => {
   return (
     <section className="allCourse ">
         <div className="container">
-        <div className="faqTitle text-center mt-5 mb-4">
+        
+         <div className="faqTitle text-center mt-5 mb-4">
          <span>আমাদের সকল কোর্সসমূহ</span> 
          </div>
             <div className="row">
@@ -18,7 +20,7 @@ const AllCourse = () => {
                  <div class="card-body">
                  <h5 className="text-center">{item.tilte}</h5>
                   <h5 class="card-title my-3">{item.price}</h5>
-                  <div><a href="/course/ict" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন</a></div>
+                  <Link to="/courseDetail" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন</Link>
                   <div class="desc mt-4">
                     <div className="d-flex courseDetails justify-content-between align-items-center">
                     <p>
@@ -48,7 +50,7 @@ const AllCourse = () => {
            })}
             </div>
         </div>
-        <a href="/course"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a>
+        {/* <a href="/course"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a> */}
     </section>
   )
 }

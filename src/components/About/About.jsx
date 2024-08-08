@@ -111,7 +111,7 @@ const About = () => {
         </div>
     </div>
    </div>
-   <a href="/about"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a>
+   {/* <a href="/about"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a> */}
 
    
     </section>

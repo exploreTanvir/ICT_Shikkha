@@ -6,15 +6,15 @@ import {
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
-import AboutPage from "./pages/AboutPage";
-import Contacts from "./pages/Contact";
-import CourseDetail from "./pages/CourseDetail";
-import Courses from "./pages/Courses";
-import GalleryPage from "./pages/GalleryPage";
-import Home from './pages/Home';
-import LoginPage from "./pages/LoginPage";
-import QuizPage from "./pages/QuizPage";
-import SingUpPage from "./pages/SingUpPage";
+import AboutPage from "./components/pages/AboutPage";
+import Contacts from "./components/pages/Contact";
+import CourseDetail from "./components/pages/CourseDetail";
+import Courses from "./components/pages/Courses";
+import GalleryPage from "./components/pages/GalleryPage";
+import Home from './components/pages/Home';
+import LoginPage from "./components/pages/LoginPage";
+import QuizPage from "./components/pages/QuizPage";
+import SingUpPage from "./components/pages/SingUpPage";
 
 const App = () => {
   return (
@@ -36,16 +36,16 @@ const App = () => {
           <Route path="/singUp">
             <SingUpPage />
           </Route>
-          <Route path="/course/ict">
+          <Route path="/courseDetail">
             <CourseDetail />
           </Route>
           <Route path="/about">
-            <AboutPage />
+            <AboutPage/>
           </Route>
           <Route path="/gallery">
             <GalleryPage />
           </Route>
-          <Route exact path="/quiz" >
+          <Route path="/quiz" >
             <QuizPage />
           </Route>
                    

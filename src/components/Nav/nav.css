@@ -83,6 +83,9 @@
     transform: scaleX(0);
   }
 }
+.link {
+  text-decoration: none !important;
+}
 .nav-item {
   padding: 0 5px;
 }
@@ -123,10 +126,10 @@
     align-items: start !important;
   }
   .btnGRP a {
-    padding: 10px 70px !important;
+    padding: 10px 60px !important;
   }
   .btnGRP a:last-child {
-    padding: 10px 74px !important;
+    padding: 10px 60px !important;
     margin-top: 10px;
   }
 }

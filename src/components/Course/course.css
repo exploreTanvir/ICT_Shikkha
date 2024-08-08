@@ -32,3 +32,17 @@
   transition: transform 0.5s ease;
   transform: scaleX(0);
 }
+.course li {
+  text-align: justify;
+}
+@media (max-width: 575px) {
+  video {
+    width: 332px;
+  }
+  .courseRow {
+    flex-direction: column-reverse;
+  }
+  .course .card {
+    margin-bottom: 30px;
+  }
+}

@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import heroFooter from "../../assets/clouds.png"
 import img1 from "../../assets/elements1.png"
 import img2 from "../../assets/lite-icons1.svg"
 import img3 from "../../assets/sound-icons1.svg"
 import "./hero.css"
+
 
 const Hero = () => {
   return (
@@ -21,8 +23,8 @@ const Hero = () => {
                     <p className='d-flex align-items-center gap-2'><i class="fa-regular fa-circle-check bg-danger rounded-circle text-white"></i> MentorShip</p>
                 </div>
                 <div className="btn-grp d-flex mt-3 ">
-                    <a href="/" className='fbBtn d-flex align-items-center btn1 gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i class="fa fa-arrow-right"></i></a>
-                    <a href="/" className='fs-5 btn1 d-flex align-items-center gap-2 fbBtn2'>আমাদের কোর্সসমূহ <i class="fa fa-arrow-right "></i></a>
+                    <a href="https://web.facebook.com/ictshikkha" className='fbBtn d-flex align-items-center btn1 gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i class="fa fa-arrow-right"></i></a>
+                    <Link to="/course" className='fs-5 btn1 d-flex align-items-center gap-2 fbBtn2'>আমাদের কোর্সসমূহ <i class="fa fa-arrow-right "></i></Link>
                 </div>
             </div>
         </div>
@@ -30,7 +32,8 @@ const Hero = () => {
     <div className="img1 animated1"><img src={img1} alt="" /></div>
     <div className="img2 animated2"><img src={img2} alt="" /></div>
     <div className="img3 animated3"><img className='w-75' src={img3} alt="" /></div>
-    <a href="/"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a>
+    
+    <Link href="/"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></Link>
     <img src={heroFooter} className='heroFooter' alt="" />
     
    </section>
