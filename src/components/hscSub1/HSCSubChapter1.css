@@ -1,0 +1,34 @@
+.subChapter {
+  background: url(../../assets/smart-city-and-wireless-communication-network-5g-wireless-network-and-smart-city-concept-vector2.jpg);
+
+  @media (max-width: 575px) {
+    h3 {
+      font-size: 18px;
+    }
+    width: 95%;
+    margin: auto;
+  }
+}
+.subChapterdetail {
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.2)),
+    url(../../assets/2660738-rad-programs-opps-3.avif);
+  background-size: cover;
+  padding: 2rem 0;
+  border-radius: 5px;
+  width: 26rem;
+  &:hover {
+    transform: translateY(-7px);
+    transition: all 0.5s ease;
+  }
+  @media (max-width: 575px) {
+    width: 24rem;
+    padding: 1rem 0;
+  }
+}
+.jcc {
+  @media (max-width: 575px) {
+    justify-content: center !important;
+  }
+}

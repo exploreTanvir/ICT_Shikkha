@@ -6,6 +6,12 @@ export const Menu=[
         icon:"fa-solid fa-house-user"
     },
     {
+        title:"HSC",
+        url:"/HSC",
+        cName:"navLinks",
+        icon:"fa-solid fa-book-atlas"
+    },
+    {
         title:"আমাদের সম্পর্কে",
         url:"/about",
         cName:"navLinks",

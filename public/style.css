@@ -58,9 +58,6 @@ span {
   }
 }
 
-li {
-  list-style: none !important;
-}
 .btn2 {
   position: relative;
   z-index: 1;

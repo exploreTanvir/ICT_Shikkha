@@ -6,6 +6,9 @@ import {
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
+import FirstChapter from "./components/FirstChapter/FirstChapter";
+import HSC from "./components/HSC/HSC";
+import HSCSubChapter1 from "./components/hscSub1/HSCSubChapter1";
 import AboutPage from "./components/pages/AboutPage";
 import Contacts from "./components/pages/Contact";
 import CourseDetail from "./components/pages/CourseDetail";
@@ -47,6 +50,15 @@ const App = () => {
           </Route>
           <Route path="/quiz" >
             <QuizPage />
+          </Route>
+          <Route path="/HSC" >
+            <HSC />
+          </Route>
+          <Route path="/chapter1" >
+            <HSCSubChapter1 />
+          </Route>
+          <Route path="/Global_village" >
+            <FirstChapter />
           </Route>
                    
         </Switch>

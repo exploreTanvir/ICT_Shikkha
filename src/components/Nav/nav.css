@@ -110,6 +110,9 @@
     justify-content: start !important;
     padding-left: 2rem;
   }
+  .navImg img {
+    width: 45% !important;
+  }
   .navbar-nav {
     margin-top: 2rem;
     gap: 10px !important;

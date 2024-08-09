@@ -1,0 +1,56 @@
+.chapterCard {
+  background-repeat: no-repeat;
+  height: 15rem;
+  width: 26rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-7px);
+    transition: all 0.5s ease;
+  }
+  @media (max-width: 575px) {
+    width: 22rem;
+    height: 12rem;
+  }
+  @media (max-width: 400px) {
+    width: 20rem;
+    height: 10rem;
+  }
+}
+.chapter1 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/ict1.jpg);
+  background-size: cover;
+}
+.chapter2 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/sattelite.jpg);
+  background-size: cover;
+}
+.chapter3 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/Digital+Devices.png);
+  background-size: cover;
+}
+.chapter4 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 85%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/web.avif);
+  background-size: cover;
+}
+.chapter5 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 85%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/different-languages.png);
+  background-size: cover;
+}
+.chapter6 {
+  background: linear-gradient(120deg, rgb(0 0 0 / 85%), rgba(4, 8, 4, 0.4)),
+    url(../../assets/database.jpg);
+  background-size: cover;
+}

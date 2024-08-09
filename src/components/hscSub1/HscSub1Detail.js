@@ -1,0 +1,21 @@
+export const HscSub1Detail=[
+{title:"বিশ্বগ্রাম",
+    name:"Global_village"
+},
+{title:"ভার্চুয়াল রিয়েলিটি",
+    name:"Global_village"},
+{title:"আর্টিফিসিয়াল ইন্টেলিজেন্স",
+    name:"Global_village"},
+{title:"রোবটিক্স",
+    name:"Global_village"},
+{title:"ক্রায়োসার্জারি",
+    name:"Global_village"},
+{title:"জেনেটিক ইঞ্জিনিয়ারিং",
+    name:"Global_village"},
+{title:"ন্যানোটেকনোলজি",
+    name:"Global_village"},
+{title:"বায়োইনফরমেটিক্স",
+    name:"Global_village"},
+{title:"জেনেটিক ইঞ্জিনিয়ারিং",
+    name:"Global_village"},
+]
