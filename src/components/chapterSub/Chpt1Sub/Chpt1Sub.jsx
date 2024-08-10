@@ -1,21 +1,19 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import Footer from '../Footer/Footer';
-import Nav from '../Nav/Nav';
-import Newsletter from '../newsletter/Newsletter';
-import TopBar from '../topbar/TopBar';
-import "./HSCSubChapter1.css";
-import { HscSub1Detail } from './HscSub1Detail';
 
-const HSCSubChapter1 = () => {
+import Footer from '../../Footer/Footer';
+import Nav from '../../Nav/Nav';
+import Newsletter from '../../newsletter/Newsletter';
+import TopBar from '../../topbar/TopBar';
+import "./Chpt1Sub.css";
+import { Chpt1SubDetail } from './Chpt1SubDetail';
+
+const Chpt1Sub = () => {
   return (
-    <div className='HSCSubChapter'>
+    <div>
       <TopBar/>
         <Nav/>
 .
 <div className="container">
-{/* <div className="faqTitle text-center mt-5 mb-4">
-         <span>HSC ICT বই</span> 
-         </div> */}
     <div className="row">
     <div className="col-lg-12 subChapter py-3 text-center text-white rounded mb-5">
         <h2>প্রথম অধ্যায়</h2>
@@ -25,7 +23,7 @@ const HSCSubChapter1 = () => {
     </div>
     <div className="row justify-content-between jcc">
     {
-      HscSub1Detail.map((item,index)=>{
+      Chpt1SubDetail.map((item,index)=>{
         return(
           <Link to={item.name} className="col-lg-4 mb-4 subChapterdetail">
              <h2>{item.title}</h2>
@@ -42,4 +40,4 @@ const HSCSubChapter1 = () => {
   )
 }
 
-export default HSCSubChapter1
+export default Chpt1Sub

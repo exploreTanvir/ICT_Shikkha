@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import Footer from '../Footer/Footer'
-import { HscSub1Detail } from '../hscSub1/HscSub1Detail'
-import Nav from '../Nav/Nav'
-import Newsletter from '../newsletter/Newsletter'
-import TopBar from '../topbar/TopBar'
-import "./FirstChapter.css"
+import Footer from '../../../Footer/Footer'
+import Nav from '../../../Nav/Nav'
+import Newsletter from '../../../newsletter/Newsletter'
+import TopBar from '../../../topbar/TopBar'
+import "./GlobalVillage.css"
+import { Chpt1SubDetail } from '../../../chapterSub/Chpt1Sub/Chpt1SubDetail'
 
 const FirstChapter = () => {
   return (
@@ -17,7 +17,7 @@ const FirstChapter = () => {
                 <div className="booktop">
             <h1>প্রথম অধ্যায়</h1>
             <h3>তথ্য ও যোগাযোগ প্রযুক্তি : বিশ্ব ও বাংলাদেশ প্রেক্ষিত</h3>
-            <h2>বিশ্বগ্রাম (Global village)</h2>
+            <h2>বিশ্বগ্রাম (Global Village)</h2>
         </div>
         <p className='mt-4'>আমরা যারা শহরে বাস করি অধিকাংশ ক্ষেত্রে পাশের ফ্লাটে বসবাসরত মানুষদের সাথে তেমন যোগাযোগ থাকেনা, এমনকি কিছুক্ষেত্রে আমরা হয়তো জানিওনা পাশের ফ্লাটে আসলে কারা থাকে! তবে গ্রামের মানুষদের মধ্যে বিষয়টা ঠিক বিপরীত। গ্রামের মানুষজন সংঘবদ্ধ, একই গ্রামের সবাই সবাইকে চিনে এবং তারা ভাবের আদান-প্রদান খুব বেশি করে থাকে। যারফলে তাদের মধ্যে সাহায্য-সহযোগিতা ও সম্প্রীতির সম্পর্ক গড়ে ওঠে। </p>
         <p>একে অন্যের সাথে সংযুক্ত থাকার কারনে কোন তথ্য খুব সহজে সবার মাঝে ছড়িয়ে পড়ে এবং সাহায্য-সহযোগিতার মাধ্যমে তারা সুখ-দুঃখ ভাগাভাগি করে।</p>
@@ -79,9 +79,10 @@ const FirstChapter = () => {
                 <li>সাংস্কৃতিক বিনিময়</li>
             </ul>
                 </div>
-                <div className="col-lg-3 chapterLeft">
+                <div className="col-lg-3 ">
+                <div className="chapterLeft">
                 {
-      HscSub1Detail.map((item,index)=>{
+      Chpt1SubDetail.map((item,index)=>{
         return(
           <Link to={item.name} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>
@@ -89,6 +90,7 @@ const FirstChapter = () => {
         )
       })
     }
+                </div>
                 </div>
         </div>
       </div>

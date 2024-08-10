@@ -1,0 +1,30 @@
+.booktop {
+  background: linear-gradient(90deg, rgb(0 0 0 / 70%), rgba(4, 8, 4, 0.3)),
+    url(../../../../assets/smart-city-and-wireless3.jpg);
+  background-size: cover;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 5px;
+}
+.chapterOne {
+  background: url(../../../../assets/2660738-rad-programs-opps-3.avif);
+  color: white;
+  padding: 1rem 10px;
+  text-align: center;
+  border-radius: 5px;
+  &:hover {
+    background: rgb(19, 0, 124);
+    /* transition: all 0.5s ease-ou; */
+  }
+}
+
+.chapterLeft {
+  position: sticky;
+  top: 6rem;
+  z-index: 99;
+}
+.chapterOneMain p,
+li {
+  text-align: justify;
+  font-size: 18px;
+}

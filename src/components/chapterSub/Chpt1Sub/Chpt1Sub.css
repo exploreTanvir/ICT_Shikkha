@@ -1,5 +1,5 @@
 .subChapter {
-  background: url(../../assets/smart-city-and-wireless-communication-network-5g-wireless-network-and-smart-city-concept-vector2.jpg);
+  background: url(../../../assets/smart-city-and-wireless-communication-network-5g-wireless-network-and-smart-city-concept-vector2.jpg);
 
   @media (max-width: 575px) {
     h3 {
@@ -13,7 +13,7 @@
   text-align: center;
   color: white;
   background: linear-gradient(90deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.2)),
-    url(../../assets/2660738-rad-programs-opps-3.avif);
+    url(../../../assets/2660738-rad-programs-opps-3.avif);
   background-size: cover;
   padding: 2rem 0;
   border-radius: 5px;

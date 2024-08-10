@@ -17,7 +17,6 @@ import galleryImg10 from "../../assets/stock-photo-group-of-happy-students.jpg"
 import galleryImg15 from "../../assets/students-learning-education-social-media-technology-60516066.jpg"
 import galleryImg16 from "../../assets/students-sitting-learning-education-cheerful-social-media-70116298.webp"
 import "./Gallery.css"
-import { Link } from 'react-router-dom';
 
 
 const Gallery = () => {

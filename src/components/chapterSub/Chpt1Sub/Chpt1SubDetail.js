@@ -1,9 +1,9 @@
-export const HscSub1Detail=[
+export const Chpt1SubDetail=[
 {title:"বিশ্বগ্রাম",
     name:"Global_village"
 },
 {title:"ভার্চুয়াল রিয়েলিটি",
-    name:"Global_village"},
+    name:"virtual_reality"},
 {title:"আর্টিফিসিয়াল ইন্টেলিজেন্স",
     name:"Global_village"},
 {title:"রোবটিক্স",
