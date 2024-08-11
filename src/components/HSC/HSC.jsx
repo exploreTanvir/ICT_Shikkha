@@ -13,7 +13,7 @@ const HSC = () => {
         <Nav/>
 .
 <div className="container">
-<div className="faqTitle text-center mt-5 mb-4">
+<div className="faqTitle text-center mt-1 mb-4">
          <span>HSC ICT বই</span> 
          </div>
     <div className="row gap-4 pb-3 justify-content-center">

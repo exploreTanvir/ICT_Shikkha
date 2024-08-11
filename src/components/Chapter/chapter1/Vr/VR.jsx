@@ -4,10 +4,10 @@ import Footer from '../../../Footer/Footer'
 import Nav from '../../../Nav/Nav'
 import Newsletter from '../../../newsletter/Newsletter'
 import TopBar from '../../../topbar/TopBar'
-import "./VR.css"
+import "../GlobalVillage/GlobalVillage.css"
 import { Chpt1SubDetail } from '../../../chapterSub/Chpt1Sub/Chpt1SubDetail'
 
-const SecondChapter = () => {
+const VR = () => {
   return (
         <div>
             <TopBar/>
@@ -71,4 +71,4 @@ const SecondChapter = () => {
   )
 }
 
-export default SecondChapter
+export default VR

@@ -5,8 +5,10 @@ import {
 } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import FirstChapter from './components/Chapter/chapter1/GlobalVillage/GlobalVillage';
-import SecondChapter from "./components/Chapter/chapter1/Vr/VR";
+import AI from "./components/Chapter/chapter1/AI/AI";
+import Global_Village from "./components/Chapter/chapter1/GlobalVillage/GlobalVillage";
+import Robotics from "./components/Chapter/chapter1/Robotics/Robotics";
+import VR from "./components/Chapter/chapter1/Vr/VR";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
 import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
@@ -74,10 +76,16 @@ const App = () => {
             <Chpt5Sub />
           </Route>
           <Route path="/Global_village" >
-            <FirstChapter/>
+            <Global_Village/>
           </Route>
           <Route path="/virtual_reality" >
-            <SecondChapter/>
+            <VR/>
+          </Route>
+          <Route path="/AI" >
+            <AI/>
+          </Route>
+          <Route path="/Robotics" >
+            <Robotics/>
           </Route>
                    
         </Switch>
