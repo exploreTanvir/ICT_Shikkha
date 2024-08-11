@@ -11,7 +11,7 @@ const HSC = () => {
     <div>
         <TopBar/>
         <Nav/>
-.
+<div className="HSC">
 <div className="container">
 <div className="faqTitle text-center mt-1 mb-4">
          <span>HSC ICT বই</span> 
@@ -28,6 +28,7 @@ const HSC = () => {
             })
         }
     </div>
+</div>
 </div>
       
       <Newsletter/>

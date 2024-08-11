@@ -12,7 +12,7 @@ const Chpt2Sub = () => {
     <div>
       <TopBar/>
         <Nav/>
-.
+<div className="Sub">
 <div className="container">
     <div className="row">
     <div className="col-lg-12 subChapter py-3 text-center text-white rounded mb-5">
@@ -34,6 +34,7 @@ const Chpt2Sub = () => {
     </div>
 </div>
       
+</div>
       <Newsletter/>
       <Footer/>
     </div>

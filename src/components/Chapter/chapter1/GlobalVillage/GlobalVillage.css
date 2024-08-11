@@ -20,11 +20,24 @@
 
 .chapterLeft {
   position: sticky;
-  top: 6rem;
+  top: 5.5rem;
   z-index: 99;
 }
 .chapterOneMain p,
 li {
   text-align: justify;
-  font-size: 18px;
+  font-size: 19px;
+}
+.chapterOneMain p {
+  padding: 7px 0;
+}
+.chapterOneMain h4 {
+  color: #02026a;
+}
+.dataTransTitle {
+  color: #02026a;
+  margin-top: 1.5rem;
+}
+.chapterLeft h4 {
+  color: white;
 }

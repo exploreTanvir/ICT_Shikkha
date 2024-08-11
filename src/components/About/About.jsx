@@ -86,7 +86,7 @@ const About = () => {
 </div>
    <div className="writing">
    <div className="container ">
-    <div className="faqTitle text-center mt-5 mb-4">
+    <div className="faqTitle text-center pt-5 mb-4">
          <span>প্রতিষ্ঠাতার বক্তব্য</span> 
          </div>
         <div className="row">

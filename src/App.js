@@ -6,9 +6,14 @@ import {
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import AI from "./components/Chapter/chapter1/AI/AI";
+import BioInformatics from "./components/Chapter/chapter1/BioInformatics/Bio_Informatics";
+import CryoSurgery from "./components/Chapter/chapter1/CryoSurgery/CryoSurgery";
+import GeneticEngineering from "./components/Chapter/chapter1/GeneticEnginnering/GeneTicEngineering";
 import Global_Village from "./components/Chapter/chapter1/GlobalVillage/GlobalVillage";
+import NanoTechnology from "./components/Chapter/chapter1/NanoTechnology/NanoTechnology";
 import Robotics from "./components/Chapter/chapter1/Robotics/Robotics";
 import VR from "./components/Chapter/chapter1/Vr/VR";
+import Communication_system from "./components/Chapter/chapter2/Communication_System/Communication_system";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
 import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
@@ -24,6 +29,7 @@ import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
+import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
 
 const App = () => {
   return (
@@ -75,6 +81,9 @@ const App = () => {
           <Route path="/chapter5" >
             <Chpt5Sub />
           </Route>
+
+
+          {/* Chapter One Start  */}
           <Route path="/Global_village" >
             <Global_Village/>
           </Route>
@@ -86,7 +95,32 @@ const App = () => {
           </Route>
           <Route path="/Robotics" >
             <Robotics/>
+            </Route>
+          <Route path="/Cryosurgery" >
+            <CryoSurgery/>
           </Route>
+          <Route path="/Genetic_Engineering" >
+            <GeneticEngineering/>
+          </Route>
+          <Route path="/Nano_Technology" >
+            <NanoTechnology/>
+          </Route>
+          <Route path="/Bio_Informatics" >
+            <BioInformatics/>
+          </Route>
+
+          {/* Chapter one end  */}
+
+
+          {/* Chapter two Start  */}
+          <Route path="/Communication_system" >
+            <Communication_system/>
+          </Route>
+          <Route path="/Communication_method" >
+            <Communication_Method/>
+          </Route>
+          
+          {/* Chapter two end  */}
                    
         </Switch>
     </Router>

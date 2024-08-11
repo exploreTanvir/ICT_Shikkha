@@ -23,7 +23,7 @@ export const skillMenu=[
         img:skillImg3,
         class:"skillCard3 mt-3 card text-center p-3",
         btn:"বই পড়ে দেখো",
-        src:"/book"
+        src:"/HSC"
     },
     {
         title:"আইসিটি কোর্সসমূহ",

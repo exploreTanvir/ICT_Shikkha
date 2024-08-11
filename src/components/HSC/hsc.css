@@ -54,3 +54,8 @@
     url(../../assets/database.jpg);
   background-size: cover;
 }
+.HSC {
+  background: url(../../assets/bg3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
