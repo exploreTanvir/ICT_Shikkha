@@ -30,6 +30,8 @@ import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
 import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
+import Programming from "./components/Chapter/chapter5/Programming/Programming";
+import Language from "./components/Chapter/chapter5/Language/Language";
 
 const App = () => {
   return (
@@ -120,7 +122,16 @@ const App = () => {
             <Communication_Method/>
           </Route>
           
-          {/* Chapter two end  */}
+          {/* Chapter five end  */}
+          {/* Chapter two Start  */}
+          <Route path="/Program" >
+            <Programming/>
+          </Route>
+          <Route path="/Language" >
+            <Language/>
+          </Route>
+          
+          {/* Chapter five end  */}
                    
         </Switch>
     </Router>

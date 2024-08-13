@@ -3,7 +3,7 @@ export const Chpt5SubDetail=[
         name:"Program"
     },
     {title:"প্রোগ্রামিং ল্যাংগুয়েজ",
-        name:"Programming_Language"},
+        name:"Language"},
     {title:"অনুবাদক",
         name:"Translator"}
     ]
