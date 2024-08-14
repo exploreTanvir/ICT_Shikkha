@@ -13,7 +13,10 @@ import Global_Village from "./components/Chapter/chapter1/GlobalVillage/GlobalVi
 import NanoTechnology from "./components/Chapter/chapter1/NanoTechnology/NanoTechnology";
 import Robotics from "./components/Chapter/chapter1/Robotics/Robotics";
 import VR from "./components/Chapter/chapter1/Vr/VR";
+import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
 import Communication_system from "./components/Chapter/chapter2/Communication_System/Communication_system";
+import Language from "./components/Chapter/chapter5/Language/Language";
+import Programming from "./components/Chapter/chapter5/Programming/Programming";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
 import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
@@ -24,14 +27,12 @@ import AboutPage from "./components/pages/AboutPage";
 import Contacts from "./components/pages/Contact";
 import CourseDetail from "./components/pages/CourseDetail";
 import Courses from "./components/pages/Courses";
+import EditorPage from "./components/pages/EditorPage";
 import GalleryPage from "./components/pages/GalleryPage";
 import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
-import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
-import Programming from "./components/Chapter/chapter5/Programming/Programming";
-import Language from "./components/Chapter/chapter5/Language/Language";
 
 const App = () => {
   return (
@@ -67,6 +68,9 @@ const App = () => {
           </Route>
           <Route path="/HSC" >
             <HSC />
+          </Route>
+          <Route path="/editor" >
+            <EditorPage />
           </Route>
           <Route path="/chapter1" >
             <Chpt1Sub />

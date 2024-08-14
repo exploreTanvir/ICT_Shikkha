@@ -12,10 +12,22 @@ export const Menu=[
         icon:"fa-solid fa-book-atlas"
     },
     {
+        title:"কুইজ",
+        url:"/quiz",
+        cName:"navLinks",
+        icon:"fa-regular fa-pen-to-square"
+    },
+    {
         title:"আমাদের সম্পর্কে",
         url:"/about",
         cName:"navLinks",
         icon:"fa-solid fa-circle-info"
+    },
+    {
+        title:"এডিটর",
+        url:"/editor",
+        cName:"navLinks",
+        icon:"fa-solid fa-code"
     },
     {
         title:"কোর্সসমূহ",
@@ -29,12 +41,7 @@ export const Menu=[
         cName:"navLinks",
         icon:"fa-regular fa-image"
     },
-    {
-        title:"কুইজ",
-        url:"/quiz",
-        cName:"navLinks",
-        icon:"fa-regular fa-pen-to-square"
-    },
+   
     {
         title:"যোগাযোগ",
         url:"/contact",

@@ -1,8 +1,8 @@
 import Footer from '../../components/Footer/Footer';
-import Nav from '../../components/Nav/Nav';
 import Newsletter from '../../components/newsletter/Newsletter';
-import TopBar from '../../components/topbar/TopBar';
+import Nav from '../Nav/Nav';
 import Quiz from './../Quiz/Quiz';
+import TopBar from './../topbar/TopBar';
 
 const QuizPage = () => {
   return (

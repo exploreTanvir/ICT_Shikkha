@@ -5,8 +5,8 @@ import { skillMenu } from "./SkillMenu"
 
 const Skill = () => {
   return (
-    <section className="skill mb-5 pb-5">
-        <div className="faqTitle text-center mt-5 mb-4">
+    <section className="skill pb-5">
+        <div className="faqTitle text-center pt-5 ">
          <span>স্কিল ডেভেলপমেন্ট</span> 
          </div>
         <div className="container">

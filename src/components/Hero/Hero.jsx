@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="container">
         <div className="row align-items-center">
             <div className="col-lg-6 col-md-12 cont">
-                <p className='title ms-1' id='top'>Online & Offline e-learning course</p>
+                <p className='title ms-1' id='top'>অনলাইন এবং অফলাইন ই-লার্নিং প্ল্যাটফর্ম</p>
                 <h1 className='overflow-hidden pb-2'>বাংলাদেশে আইসিটি শিক্ষায় <br />
                     অন্যতম অনলাইন প্ল্যাটফর্ম</h1>
                     <p className='desc fs-5 py-2'>আমাদের প্রতিষ্ঠান আইসিটি শিক্ষার ক্ষেত্রে অনলাইন ও অফলাইন শিক্ষাদান ও প্রশিক্ষণ প্রদানের জন্য অগ্রণী ভূমিকা পালন করছে। আমাদের মূল লক্ষ্য হলো শিক্ষার্থীদের তথ্যপ্রযুক্তির সর্বশেষ জ্ঞান ও দক্ষতা অর্জনে সহায়তা করা এবং তাদেরকে ভবিষ্যতের প্রযুক্তি-নির্ভর চাকরির বাজারের জন্য প্রস্তুত করা।</p>

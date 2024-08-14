@@ -81,7 +81,7 @@
   }
   .title {
     position: relative;
-    width: 53%;
+    width: 57%;
     text-align: right;
     &:hover {
       &::after {
@@ -146,9 +146,6 @@
     }
     .fbBtn {
       margin-right: 0 !important;
-    }
-    .title {
-      width: 35%;
     }
     .topArrow {
       display: none;
