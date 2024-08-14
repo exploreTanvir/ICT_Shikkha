@@ -15,6 +15,10 @@ import Robotics from "./components/Chapter/chapter1/Robotics/Robotics";
 import VR from "./components/Chapter/chapter1/Vr/VR";
 import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
 import Communication_system from "./components/Chapter/chapter2/Communication_System/Communication_system";
+import Heading from "./components/Chapter/chapter4/Heading/Heading";
+import List from "./components/Chapter/chapter4/List/List";
+import SubSup from "./components/Chapter/chapter4/SubSup/SubSup";
+import TextFormetting from "./components/Chapter/chapter4/TextFormetting/TextFormetting";
 import Language from "./components/Chapter/chapter5/Language/Language";
 import Programming from "./components/Chapter/chapter5/Programming/Programming";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
@@ -125,16 +129,32 @@ const App = () => {
           <Route path="/Communication_method" >
             <Communication_Method/>
           </Route>
-          
-          {/* Chapter five end  */}
           {/* Chapter two Start  */}
+
+
+          {/* Chapter four start  */}    
+          <Route path="/Heading" >
+            <Heading/>
+          </Route>
+          <Route path="/Text_Formatting" >
+            <TextFormetting/>
+          </Route>
+          <Route path="/Sub_Sup" >
+            <SubSup/>
+          </Route>
+          <Route path="/List" >
+            <List/>
+          </Route>
+                
+          {/* Chapter four end  */}
+
+          {/* Chapter five start  */}    
           <Route path="/Program" >
             <Programming/>
           </Route>
           <Route path="/Language" >
             <Language/>
-          </Route>
-          
+          </Route>         
           {/* Chapter five end  */}
                    
         </Switch>

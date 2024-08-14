@@ -1,27 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import "./Editor.css";
 
-const Editor = () => {
-    const defaultHTML = `
-       <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Html Heading</title>
-            </head>
-            <body>
-            <p> (a+b)<sup>2</sup> = a<sup>2</sup>+ 2ab + b<sup>2</sup></p>
+const Editor = (props) => {
+    const defaultHTML = `${props.text}`;
 
-            <p> f<sub>n</sub> = f<sub>n-1</sub> + <sub>n-2</sub> </p>
-            </body>
-            </html
-    `;
+    // Create refs for the textarea and iframe
+    const textareaRef = useRef(null);
+    const iframeRef = useRef(null);
 
     const run = () => {
-        let HTML = document.getElementById("html").value;
-        let Output = document.getElementById("output");
+        let HTML = textareaRef.current.value;
+        let Output = iframeRef.current;
 
-        // Inject the HTML into the iframe
-        Output.contentDocument.body.innerHTML = HTML;
+        // Set the entire content of the iframe including the document structure
+        const iframeDocument = Output.contentDocument || Output.contentWindow.document;
+        iframeDocument.open();
+        iframeDocument.write(HTML);
+        iframeDocument.close();
     }
 
     useEffect(() => {
@@ -35,14 +30,23 @@ const Editor = () => {
                 <div className="row">
                     <div className="left col-lg-6">
                         <div className='d-flex flex-column'>
-                            <label className='rounded'><i className="fa-brands fa-html5 htmlIcon fs-5 ms-2 me-2"></i> HTML</label>
-                            <textarea rows={6} id="html" onKeyUp={run} defaultValue={defaultHTML}></textarea>
-                           
+                            <label className='rounded'>
+                                <i className="fa-brands fa-html5 htmlIcon fs-5 ms-2 me-2"></i> HTML
+                            </label>
+                            <textarea 
+                                rows={7} 
+                                ref={textareaRef} 
+                                placeholder="এখানে তোমার কোড লেখ..." 
+                                onKeyUp={run} 
+                                defaultValue={defaultHTML}>
+                            </textarea>
                         </div>
                     </div>
                     <div className="right col-lg-6">
-                        <label className='html rounded'><i className=" fs-5 ms-2 me-2 fa-solid fa-code"></i> Output</label>
-                        <iframe id='output'></iframe>
+                        <label className='html rounded'>
+                            <i className="fs-5 ms-2 me-2 fa-solid fa-code"></i> Output
+                        </label>
+                        <iframe title='output' ref={iframeRef}></iframe>
                     </div>
                 </div>
             </div>
