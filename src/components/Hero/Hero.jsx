@@ -24,7 +24,7 @@ const Hero = () => {
                 </div>
                 <div className="btn-grp d-flex mt-3 ">
                     <a href="https://web.facebook.com/ictshikkha" className='fbBtn d-flex align-items-center btn1 gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i class="fa fa-arrow-right"></i></a>
-                    <Link to="/course" className='fs-5 btn1 d-flex align-items-center gap-2 fbBtn2'>আমাদের কোর্সসমূহ <i class="fa fa-arrow-right "></i></Link>
+                    <Link to="/quiz" className='fs-5 btn1 d-flex align-items-center gap-2 fbBtn2'>কুইজে অংশ নিন<i class="fa fa-arrow-right "></i></Link>
                 </div>
             </div>
         </div>

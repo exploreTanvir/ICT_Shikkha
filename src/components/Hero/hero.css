@@ -113,39 +113,21 @@
   }
   @media (max-width: 991px) {
     .title {
-      width: 49%;
-    }
-    .title::before {
-      left: 2px;
-      top: 9px;
-      height: 3px;
-    }
-    .title::after {
-      left: 3px;
-      top: 4px;
+      display: none;
     }
   }
   @media (max-width: 767px) {
-    .title {
-      width: 66%;
-    }
-    .title::before {
-      left: 2px;
-      top: 9px;
-      height: 3px;
-    }
-    .title::after {
-      left: 3px;
-      top: 4px;
-    }
+    display: none;
   }
 
   @media (max-width: 575px) {
-    .hero .title {
-      font-size: 25px;
+    .title {
+      display: none;
     }
+    
     .fbBtn {
       margin-right: 0 !important;
+      display: block;
     }
     .topArrow {
       display: none;
@@ -160,17 +142,6 @@
       padding: 1rem 1rem !important;
       h1 {
         font-size: 26px;
-      }
-      .title {
-        width: 100%;
-        text-align: left;
-        padding-left: 20px;
-      }
-      .title::before {
-        display: none;
-      }
-      .title::after {
-        display: none;
       }
       .shortIcon {
         p {

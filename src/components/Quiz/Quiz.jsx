@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './quiz.css';
 import { question } from './QuizDetail';
 
@@ -12,6 +14,7 @@ const shuffleArray = (array) => {
 };
 
 function Quiz() {
+  const notify = () => toast("কুইজ শুরু হয়েছে সময় ২ মিনিট");
   
 
 
@@ -128,6 +131,7 @@ function Quiz() {
   };
 
   const handleStart = () => {
+    toast("কুইজ শুরু হয়েছে সময় ২ মিনিট");
     setQuizStarted(true);
     setTimerActive(true); 
   };
@@ -143,7 +147,7 @@ function Quiz() {
               {!quizStarted ? (
                 <div>
                   <h2>কুইজ শুরু করার জন্য "শুরু করুন" বাটন চাপুন</h2>
-                  <button onClick={handleStart} className="fs-3 start-btn reset-btn">শুরু করুন</button>
+                  <button onClick={handleStart} className="fs-3 start-btn reset-btn" >শুরু করুন</button>
                 </div>
               ) : !quizFinished ? (
                 <>
@@ -202,6 +206,7 @@ function Quiz() {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 }

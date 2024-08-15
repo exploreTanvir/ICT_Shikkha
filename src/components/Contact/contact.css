@@ -110,3 +110,12 @@
   border: 0;
   box-shadow: none;
 }
+.selected-Info {
+  border: none;
+  background: white;
+  border-radius: 5px;
+  padding: 0.35rem 4.7rem;
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
