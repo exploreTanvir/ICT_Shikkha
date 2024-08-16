@@ -154,7 +154,7 @@ function Quiz() {
                   <div className='d-flex justify-content-around align-items-center mb-3'>
                     <button onClick={handleReset} className="reset-btn">রিস্টার্ট কুইজ</button>
                     <p>স্কোর : {score} / {questions.length}</p>
-                    <p>মোট সময় বাকি: {Math.floor(totalTimeLeft / 60)}:{totalTimeLeft % 60 < 10 ? `0${totalTimeLeft % 60}` : totalTimeLeft % 60}</p>
+                    <p>সময় বাকি : {Math.floor(totalTimeLeft / 60)}:{totalTimeLeft % 60 < 10 ? `0${totalTimeLeft % 60}` : totalTimeLeft % 60}</p>
                   </div>
                   <h4 className='mb-3'>{questions[currentQuestion].question}</h4>
                   <div className='d-flex justify-content-around'>
@@ -187,7 +187,7 @@ function Quiz() {
                   {allCorrect && <h4 className="thumbs-up">👍 সাব্বাস, সবগুলো সঠিক উত্তর!</h4>}
                   <h4>👍বেশ ভালো আবার চেষ্টা করো</h4>
                   <div className="answers-summary">
-                    <h4>আপনার ভুল উত্তর এবং সঠিক উত্তর:</h4>
+                    <h4>ভুল উত্তরগুলোর প্রশ্ন এবং সঠিক উত্তর:</h4>
                     <ul>
                       {incorrectAnswers.map((answer, index) => (
                         <li key={index}>

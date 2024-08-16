@@ -1,163 +1,163 @@
 .loginform {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: url(../../assets/2660738-rad-programs-opps-3.avif) no-repeat
-      center center/cover;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(../../assets/2660738-rad-programs-opps-3.avif) no-repeat
+    center center/cover;
+}
+.loginform main {
+  width: 35rem;
+  padding: 46px 28px;
+  border-radius: 10px;
+  border: 2px solid wheat;
+  background-color: transparent;
+  backdrop-filter: blur(25px);
+  position: relative;
+}
+
+#login {
+  position: absolute;
+  top: 5%;
+  left: 38%;
+  padding: 2px 20px;
+  border-radius: 25px 0px 25px 0px;
+  border: 3px solid rgb(82, 82, 82);
+}
+#login h4 {
+  color: #fff;
+  font-size: 1.7rem;
+}
+#register {
+  position: absolute;
+  top: 5%;
+  left: 37%;
+  padding: 2px 20px;
+  border-radius: 20px 0px 20px 0px;
+  border: 3px solid rgb(82, 82, 82);
+}
+#register h4 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.loginform form {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.regName,
+.regEmail,
+.regPass,
+.resetPass,
+.loginName,
+.loginPass {
+  padding: 15px;
+  border: 2px solid white;
+  width: 100%;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.loginform .form_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.loginform label {
+  position: absolute;
+  left: 43px;
+  font-size: 19px;
+  color: white;
+  transition: 0.2s;
+}
+
+.loginform i {
+  position: absolute;
+  right: 24px;
+  color: white;
+  font-size: 20px !important;
+}
+
+.loginform .remember_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginform .remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.loginform a {
+  color: white;
+  font: 14px;
+}
+
+.loginform button {
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input:valid + label,
+input:focus + label {
+  background-color: rgb(223, 247, 255);
+  color: black;
+  transform: translate(10px, -23px);
+  padding: 2px 6px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.new_account {
+  text-align: center;
+  color: lightgray;
+  font-size: 18px;
+}
+@media (max-width: 575px) {
   .loginform main {
-    width: 35rem;
-    padding: 46px 28px;
-    border-radius: 10px;
-    border: 2px solid wheat;
-    background-color: transparent;
-    backdrop-filter: blur(25px);
-    position: relative;
+    width: 22rem;
+    padding: 20px 15px;
   }
-  
-  #login {
-    position: absolute;
-    top: 5%;
-    left: 38%;
-    padding: 2px 20px;
-    border-radius: 25px 0px 25px 0px;
-    border: 3px solid rgb(82, 82, 82);
+  .form_wrapper input {
+    padding: 10px 5px;
   }
-  #login h4 {
-    color: #fff;
-    font-size: 1.7rem;
+  .loginform button {
+    padding: 8px 0;
   }
   #register {
-    position: absolute;
-    top: 5%;
-    left: 28%;
-    padding: 2px 20px;
-    border-radius: 20px 0px 20px 0px;
-    border: 3px solid rgb(82, 82, 82);
+    left: 37%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 10px;
+  }
+  #login {
+    left: 38%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px 20px;
   }
   #register h4 {
-    color: #fff;
-    font-size: 1.4rem;
+    margin-bottom: 0;
+    font-size: 1rem;
   }
-  
-  .loginform form {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  #login h4 {
+    margin-bottom: 0;
+    font-size: 1rem;
   }
-  
-  .regName,
-  .regEmail,
-  .regPass,
-  .resetPass,
-  .loginName,
-  .loginPass {
-    padding: 15px;
-    border: 2px solid white;
-    width: 100%;
-    border-radius: 25px;
-    outline: none;
-    background-color: transparent;
-    color: white;
+  .loginform {
+    min-height: 0 !important;
+    padding: 4rem 0;
   }
-  
-  .loginform .form_wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .loginform label {
-    position: absolute;
-    left: 43px;
-    font-size: 19px;
-    color: white;
-    transition: 0.2s;
-  }
-  
-  .loginform i {
-    position: absolute;
-    right: 24px;
-    color: white;
-    font-size: 20px !important;
-  }
-  
-  .loginform .remember_box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .loginform .remember {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: white;
-    font-size: 14px;
-  }
-  
-  .loginform a {
-    color: white;
-    font: 14px;
-  }
-  
-  .loginform button {
-    border: none;
-    padding: 14px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  input:valid + label,
-  input:focus + label {
-    background-color: rgb(223, 247, 255);
-    color: black;
-    transform: translate(10px, -23px);
-    padding: 2px 6px;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-  
-  .new_account {
-    text-align: center;
-    color: lightgray;
-    font-size: 18px;
-  }
-  @media (max-width: 575px) {
-    .loginform main {
-      width: 22rem;
-      padding: 20px 15px;
-    }
-    .form_wrapper input {
-      padding: 10px 5px;
-    }
-    .loginform button {
-      padding: 8px 0;
-    }
-    #register {
-      left: 25%;
-      border: 1px solid rgb(255, 255, 255);
-      padding: 10px 10px;
-    }
-    #login {
-      left: 38%;
-      border: 1px solid rgb(255, 255, 255);
-      padding: 8px 20px;
-    }
-    #register h4 {
-      margin-bottom: 0;
-      font-size: 1rem;
-    }
-    #login h4 {
-      margin-bottom: 0;
-      font-size: 1rem;
-    }
-    .loginform {
-      min-height: 0 !important;
-      padding: 4rem 0;
-    }
-  }
+}

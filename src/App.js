@@ -13,14 +13,23 @@ import Global_Village from "./components/Chapter/chapter1/GlobalVillage/GlobalVi
 import NanoTechnology from "./components/Chapter/chapter1/NanoTechnology/NanoTechnology";
 import Robotics from "./components/Chapter/chapter1/Robotics/Robotics";
 import VR from "./components/Chapter/chapter1/Vr/VR";
+import Cloud_Computing from "./components/Chapter/chapter2/Cloud_Computing/Cloud_Computing";
 import Communication_Method from "./components/Chapter/chapter2/ComMethod/Cmmunnicatio_Method";
 import Communication_system from "./components/Chapter/chapter2/Communication_System/Communication_system";
+import Computer_Network from "./components/Chapter/chapter2/Computer_Network/Computer_Network";
+import Mobile_Communication from "./components/Chapter/chapter2/Mobile/Mobile_Communication";
+import Topology from "./components/Chapter/chapter2/Topology/Topology";
+import Wireless from "./components/Chapter/chapter2/Wireless/Wireless";
 import Heading from "./components/Chapter/chapter4/Heading/Heading";
-import List from "./components/Chapter/chapter4/List/List";
+import HTMlImg from "./components/Chapter/chapter4/HTMLImg/HTMlImg";
+import HTMLList from "./components/Chapter/chapter4/HTMLList/HTMLList";
+import HyperLink from "./components/Chapter/chapter4/HyperLink/HyperLink";
 import SubSup from "./components/Chapter/chapter4/SubSup/SubSup";
+import Table from "./components/Chapter/chapter4/Table/Table";
 import TextFormetting from "./components/Chapter/chapter4/TextFormetting/TextFormetting";
 import Language from "./components/Chapter/chapter5/Language/Language";
 import Programming from "./components/Chapter/chapter5/Programming/Programming";
+import Translator from "./components/Chapter/chapter5/Translator/Translator";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
 import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
@@ -37,6 +46,7 @@ import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
+import LogicGate from "./components/Chapter/chapter3/LogicGate/LogicGate";
 
 const App = () => {
   return (
@@ -129,7 +139,30 @@ const App = () => {
           <Route path="/Communication_method" >
             <Communication_Method/>
           </Route>
-          {/* Chapter two Start  */}
+          <Route path="/Wireless" >
+            <Wireless/>
+          </Route>
+          <Route path="/Mobile_Communication" >
+            <Mobile_Communication/>
+          </Route>
+          <Route path="/Computer_Network" >
+            <Computer_Network/>
+          </Route>
+          <Route path="/Topology" >
+            <Topology/>
+          </Route>
+          <Route path="/Cloud_Computing" >
+            <Cloud_Computing/>
+          </Route>
+          {/* Chapter two end  */}
+
+
+          {/* Chapter three Start  */}
+          <Route path="/Logic_Gate" >
+            <LogicGate/>
+          </Route>
+          
+          {/* Chapter three end  */}
 
 
           {/* Chapter four start  */}    
@@ -143,9 +176,17 @@ const App = () => {
             <SubSup/>
           </Route>
           <Route path="/List" >
-            <List/>
+            <HTMLList/>
           </Route>
-                
+          <Route path="/HyperLink" >
+            <HyperLink/>
+          </Route>
+          <Route path="/Img" >
+            <HTMlImg/>
+          </Route>
+          <Route path="/Table" >
+            <Table/>
+          </Route>         
           {/* Chapter four end  */}
 
           {/* Chapter five start  */}    
@@ -154,6 +195,9 @@ const App = () => {
           </Route>
           <Route path="/Language" >
             <Language/>
+          </Route>         
+          <Route path="/Translator" >
+            <Translator/>
           </Route>         
           {/* Chapter five end  */}
                    

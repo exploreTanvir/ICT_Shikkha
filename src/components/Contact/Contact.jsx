@@ -143,14 +143,14 @@ const Contact = () => {
               <div className="col-lg-6">
                 <div className="select-wrapper">
                   <select name="division" id="divisions" className="selected-Info" value={formData.division} onChange={handleChange} >
-                    <option>-- Select Division --</option>
+                    <option>-- আপনার বিভাগ --</option>
                   </select>
                 </div>             
               </div>
               <div className="col-lg-6">
                 <div className="select-wrapper">
                   <select name="district" id="district" className="selected-Info" value={formData.district} onChange={handleChange}>
-                    <option>-- Select District --</option>
+                    <option>-- আপনার জেলা --</option>
                   </select>  
                  
                 </div>             

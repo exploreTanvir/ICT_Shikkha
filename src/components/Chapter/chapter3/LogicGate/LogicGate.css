@@ -1,0 +1,126 @@
+/* src/components/LogicGate.css */
+
+.logic-gate {
+  display: flex;
+  align-items: center;
+  background: #f2f2ff;
+  padding: 20px 0;
+  border-radius: 5px;
+  @media (max-width: 575px) {
+    flex-direction: column;
+  }
+}
+
+.not-gate-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  @media (max-width: 575px) {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+
+.input {
+  font-size: 21px;
+  cursor: pointer;
+  color: rgb(0, 0, 77);
+  background: white;
+  border: 1px solid navy;
+  @media (max-width: 575px) {
+    font-size: 13px;
+    padding: 5px 10px !important;
+  }
+}
+.inputClicked {
+  font-size: 21px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  border: 1px solid navy;
+  background: rgb(103, 103, 103);
+  @media (max-width: 575px) {
+    font-size: 13px;
+    padding: 5px 10px !important;
+  }
+}
+.notGateImg {
+  width: 6rem;
+  @media (max-width: 575px) {
+    width: 50px;
+  }
+}
+.bar {
+  width: 7rem;
+  height: 10px;
+  border: 2px solid black;
+  background: #ffffff;
+  border-radius: 10px;
+  @media (max-width: 575px) {
+    width: 4rem;
+    height: 6px;
+  }
+}
+.barClick {
+  background: rgb(103, 103, 103);
+  width: 7rem;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  @media (max-width: 575px) {
+    width: 4rem;
+    height: 6px;
+  }
+}
+
+.output {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  @media (max-width: 575px) {
+    gap: 5px;
+  }
+}
+
+.light-bulb {
+  width: 8rem;
+  height: auto;
+  margin-bottom: 10px;
+  @media (max-width: 575px) {
+    width: 5rem;
+  }
+}
+
+.truth-table {
+  margin-top: 20px;
+  @media (max-width: 575px) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 250px;
+  color: navy;
+  font-weight: bold;
+  @media (max-width: 575px) {
+    width: 300px;
+  }
+}
+
+th,
+td {
+  border: 2px solid navy;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+}
+
+.highlight {
+  background-color: rgb(186, 185, 255) !important;
+  color: navy;
+}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min"
 import "./login.css"
 
 const Login = () => {
@@ -6,30 +7,30 @@ const Login = () => {
         <div class="loginform">
       <main>
         <header id="login">
-          <h4>Login</h4>
+          <h4>লগ ইন</h4>
         </header>
         <form>
           <div class="form_wrapper">
             <input className="loginName" id="input" type="text" required />
-            <label for="input">Username</label>
+            <label for="input">ইউজার নেম</label>
             <i class="fa-solid fa-user"></i>
           </div>
           <div class="form_wrapper">
             <input className="loginPass" id="password" type="password" required />
-            <label for="password">Password</label>
+            <label for="password">পাসওয়ার্ড</label>
             <i class="fa-solid fa-lock"></i>
           </div>
 
           <div class="remember_box">
             <div class="remember">
               <input type="checkbox" />
-              Remember me
+              মনে রাখুন
             </div>
-            <a href="#">Forgot Password ?</a>
+            <a href="#">পাসওয়ার্ড ভুলে গেছেন ?</a>
           </div>
-          <button>LOGIN</button>
+          <button>লগ ইন</button>
           <div class="new_account">
-            Don't have account ? <a href="/singUP">Sign up</a>
+           কোন একাউন্ট নেই ? <Link to="/singUP">সাইন আপ</Link>
           </div>
         </form>
       </main>

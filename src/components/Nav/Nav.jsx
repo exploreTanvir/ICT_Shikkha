@@ -26,11 +26,11 @@ const Nav = () => {
                 })}
       </ul>
       <div className="col-2 btnGRP d-flex align-items-center justify-content-end">
-      <Link to="/singUp"className="link">
-      <a href="/singUp" className='course btn1  d-flex align-items-center gap-2 fs-6 course me-2 '>Sing up<i className="fa fa-arrow-right"></i></a>
+      <Link to="/singUp"className="link course btn1  d-flex align-items-center gap-2 fs-6 course me-2 ">
+     সাইন আপ<i className="fa fa-arrow-right"></i>
       </Link>
-      <Link to="/login"className="link">
-      <a href="/login" className='fs-6 btn1 d-flex align-items-center gap-2 course me-4'>Log in<i className="fa fa-arrow-right "></i></a>
+      <Link to="/login"className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4">
+     লগ ইন<i className="fa fa-arrow-right "></i>
       </Link>
             </div>
     </div>
