@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./newsletter.css";
 
 const Newsletter = () => {
-  const notify = () => toast("👌 Data sent successfully ! ");
+  const notify = () => toast("👌 সফলভাবে ডাটা প্রেরিত হয়েছে ! ");
   const [newsData, setNewsData] = useState({
     email: '',
   });

@@ -10,23 +10,7 @@
     bottom: 0;
     width: 100%;
   }
-  .topArrow {
-    position: absolute;
-    width: 3.2rem;
-    height: 3.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: white;
-    background: rgb(79, 4, 255);
-    border: 0;
-    bottom: 3rem;
-    right: 3rem;
-    border-radius: 8px;
-    z-index: 999;
-    position: fixed;
-  }
+  
 
   .img1 {
     position: absolute;

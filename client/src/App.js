@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Route,
   BrowserRouter as Router,
@@ -20,6 +21,7 @@ import Computer_Network from "./components/Chapter/chapter2/Computer_Network/Com
 import Mobile_Communication from "./components/Chapter/chapter2/Mobile/Mobile_Communication";
 import Topology from "./components/Chapter/chapter2/Topology/Topology";
 import Wireless from "./components/Chapter/chapter2/Wireless/Wireless";
+import LogicGate from "./components/Chapter/chapter3/LogicGate/LogicGate";
 import Heading from "./components/Chapter/chapter4/Heading/Heading";
 import HTMlImg from "./components/Chapter/chapter4/HTMLImg/HTMlImg";
 import HTMLList from "./components/Chapter/chapter4/HTMLList/HTMLList";
@@ -46,9 +48,32 @@ import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
-import LogicGate from "./components/Chapter/chapter3/LogicGate/LogicGate";
 
 const App = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) { // Show button when scrolled 200px down
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div>
       <Router>
@@ -203,7 +228,9 @@ const App = () => {
                    
         </Switch>
     </Router>
-     
+    {showScrollButton && (
+        <div className='topArrow' onClick={scrollToTop}><i className="fa-solid fa-arrow-up"></i></div>
+      )}
     </div>
   )
 }
