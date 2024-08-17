@@ -7,7 +7,6 @@
   background: rgb(0, 7, 69);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 5px;
 }
 .allCoursesBtn:hover {
   color: white;
@@ -24,6 +23,7 @@
   transform-origin: left;
   transition: transform 0.5s ease;
   transform: scaleX(1);
+  border-radius: 5px !important;
 }
 
 .allCoursesBtn:hover::before {
@@ -38,30 +38,28 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .cardImg {
-  background: url(../../assets/Free-Online-Course-1.jpg);
   height: 14rem;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   border-bottom: 1px solid gray;
+  border-radius: 5px;
+}
+.cardImg1 {
+  background: url(../../assets/Free-Online-Course-1.jpg) no-repeat;
 }
 .cardImg2 {
-  background: url(../../assets/2022_08_MicrosoftTeams-image-13-2-1.jpg);
-  height: 14rem;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid gray;
+  background: url(../../assets/2022_08_MicrosoftTeams-image-13-2-1.jpg)
+    no-repeat;
 }
 .cardImg3 {
-  background: url(../../assets/1708681424phpGBuKdU.jpeg);
-  height: 14rem;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid gray;
+  background: url(../../assets/1708681424phpGBuKdU.jpeg) no-repeat;
 }
-
+.pastPrice {
+  color: gray;
+}
+.courseInstructor {
+  width: 40px;
+}
 @media (max-width: 575px) {
   .heroFooter {
     display: none;
@@ -84,5 +82,28 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 5px;
+  }
+}
+.instructorName {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .instructorName {
+  opacity: 1;
+}
+.courseInstructor {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .courseInstructor {
+  opacity: 1;
+}
+
+@media (max-width: 575px) {
+  .courseInstructor,
+  .instructorName {
+    opacity: 1;
   }
 }

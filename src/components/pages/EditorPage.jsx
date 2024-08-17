@@ -16,7 +16,7 @@ const EditorPage = () => {
                         <title>Html Heading</title>
                     </head>
                     <body>
-                        <h1>Write your code here and try yourself</h1>
+                        <h2>পাশের বক্সে কোড লিখুন এবং এখানে আউটপুট দেখুন...</h2>
                     </body>
                     </html>"/>
         <Newsletter/>

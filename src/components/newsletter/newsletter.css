@@ -21,7 +21,7 @@
     /* position: relative; */
     width: 45%;
   }
-  form input[type="email"] {
+  .newsInput {
     border: 0;
     padding: 8px;
     width: 100%;

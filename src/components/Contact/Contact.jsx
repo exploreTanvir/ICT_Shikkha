@@ -6,7 +6,7 @@ import { divisionsDistrictInfo } from "./district";
 
 
 const Contact = () => {
-  const notify = () => toast("👌 Data sent successfully ! ");
+  const notify = () => toast("👌 সফলভাবে মেসেজ প্রেরন হয়েছে! ধন্যবাদ  ");
 
   const [formData, setFormData] = useState({
     name: '',

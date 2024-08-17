@@ -1,17 +1,17 @@
 export const Chpt2SubDetail=[
     {title:"কমিউনিকেশন সিস্টেম",
-        name:"Communication_system"
+        name:"communication-system"
     },
     {title:"ডাটা কমিউনিকেশন মাধ্যম",
-        name:"Communication_method"},  
+        name:"communication-method"},  
     {title:"ওয়্যারলেস কমিউনিকেশন",
-        name:"Wireless"},  
+        name:"wireless"},  
     {title:"মোবাইল যোগাযোগ",
-        name:"Mobile_Communication"},  
+        name:"mobile-communication"},  
     {title:"কম্পিউটার নেটওয়ার্কিং",
-        name:"Computer_Network"},  
+        name:"computer-network"},  
     {title:"নেটওয়ার্ক টপোলজি",
-        name:"Topology"},  
+        name:"topology"},  
     {title:"ক্লাউড কম্পিউটিং",
-        name:"Cloud_Computing"},  
+        name:"cloud-computing"},  
     ]

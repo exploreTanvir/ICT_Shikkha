@@ -81,7 +81,7 @@
   }
   .title {
     position: relative;
-    width: 57%;
+    width: 53%;
     text-align: right;
     &:hover {
       &::after {

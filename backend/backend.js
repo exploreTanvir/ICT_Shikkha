@@ -25,25 +25,47 @@ const formDataSchema=new mongoose.Schema({
   name: String,
   phone: String,
   message: String,
-  email: String,
+  email:{
+    type:String,
+    unique:true
+},
   subject: String,
   division: String,
   district: String,
+  date:{type:Date,
+    default:Date.now()
+},
 })
-
+const NewsDataSchema=new mongoose.Schema({
+  email: String
+}
+)
 //Create Model
 const FormData=mongoose.model("UserDetail",formDataSchema)
+const NewsData=mongoose.model("NewsLetter",NewsDataSchema)
 
 
 // Define a route to handle form submission
 app.post('/', (req, res) => {
   const formData = new FormData(req.body);
+
   console.log(req.body)
 
   formData.save()
     .then(() => res.json({ message: 'Data saved successfully!' }))
     .catch(err => res.status(400).json({ error: err.message }));
 });
+
+
+app.post('/d', (req, res) => {
+  const newsData = new NewsData(req.body);
+
+    newsData.save()
+    .then(() => res.json({ message: 'Data saved successfully!' }))
+    .catch(err => res.status(400).json({ error: err.message }));
+});
+
+
 
 app.listen(port, async() => {
   console.log(`Server running on port ${port}`);

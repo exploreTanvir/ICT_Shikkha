@@ -1,17 +1,17 @@
 export const Chpt3SubDetail=[
     {title:"সংখ্যা পদ্ধতি",
-        name:"Numbering_System"
+        name:"numbering-system"
     },
     {title:"কোড",
-        name:"Code"},
+        name:"code"},
     {title:"বুলিয়ান অ্যালজেবরা",
-        name:"Boolean_Algebra"},
+        name:"boolean-algebra"},
     {title:"লজিক গেট",
-        name:"Logic_Gate"},
+        name:"logic-gate"},
     {title:"এনকোডার ডিকোডার",
-        name:"Encoder_Decoder"},
+        name:"encoder-decoder"},
     {title:"অ্যাডার",
-        name:"Adder"},
+        name:"adder"},
     {title:"রেজিস্টার",
-        name:"Register"}
+        name:"register"}
     ]

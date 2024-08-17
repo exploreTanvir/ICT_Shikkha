@@ -1,9 +1,9 @@
 export const Chpt5SubDetail=[
     {title:"প্রোগ্রামের ধারণা",
-        name:"Program"
+        name:"program"
     },
     {title:"প্রোগ্রামিং ল্যাংগুয়েজ",
-        name:"Language"},
+        name:"language"},
     {title:"অনুবাদক",
-        name:"Translator"}
+        name:"translator"}
     ]

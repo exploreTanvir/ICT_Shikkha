@@ -65,10 +65,10 @@ const App = () => {
           <Route path="/login">
             <LoginPage />
           </Route>
-          <Route path="/singUp">
+          <Route path="/sing-up">
             <SingUpPage />
           </Route>
-          <Route path="/courseDetail">
+          <Route path="/course-detail">
             <CourseDetail />
           </Route>
           <Route path="/about">
@@ -80,52 +80,52 @@ const App = () => {
           <Route path="/quiz" >
             <QuizPage />
           </Route>
-          <Route path="/HSC" >
+          <Route path="/hsc" >
             <HSC />
           </Route>
           <Route path="/editor" >
             <EditorPage />
           </Route>
-          <Route path="/chapter1" >
+          <Route path="/chapter-1" >
             <Chpt1Sub />
           </Route>
-          <Route path="/chapter2" >
+          <Route path="/chapter-2" >
             <Chpt2Sub />
           </Route>
-          <Route path="/chapter3" >
+          <Route path="/chapter-3" >
             <Chpt3Sub />
           </Route>
-          <Route path="/chapter4" >
+          <Route path="/chapter-4" >
             <Chpt4Sub />
           </Route>
-          <Route path="/chapter5" >
+          <Route path="/chapter-5" >
             <Chpt5Sub />
           </Route>
 
 
           {/* Chapter One Start  */}
-          <Route path="/Global_village" >
+          <Route path="/global-village" >
             <Global_Village/>
           </Route>
-          <Route path="/virtual_reality" >
+          <Route path="/virtual-reality" >
             <VR/>
           </Route>
-          <Route path="/AI" >
+          <Route path="/artificial-intelligence" >
             <AI/>
           </Route>
-          <Route path="/Robotics" >
+          <Route path="/robotics" >
             <Robotics/>
             </Route>
-          <Route path="/Cryosurgery" >
+          <Route path="/cryosurgery" >
             <CryoSurgery/>
           </Route>
-          <Route path="/Genetic_Engineering" >
+          <Route path="/genetic-engineering" >
             <GeneticEngineering/>
           </Route>
-          <Route path="/Nano_Technology" >
+          <Route path="/nano-technology" >
             <NanoTechnology/>
           </Route>
-          <Route path="/Bio_Informatics" >
+          <Route path="/bio-informatics" >
             <BioInformatics/>
           </Route>
 
@@ -133,32 +133,32 @@ const App = () => {
 
 
           {/* Chapter two Start  */}
-          <Route path="/Communication_system" >
+          <Route path="/communication-system" >
             <Communication_system/>
           </Route>
-          <Route path="/Communication_method" >
+          <Route path="/communication-method" >
             <Communication_Method/>
           </Route>
-          <Route path="/Wireless" >
+          <Route path="/wireless" >
             <Wireless/>
           </Route>
-          <Route path="/Mobile_Communication" >
+          <Route path="/mobile-communication" >
             <Mobile_Communication/>
           </Route>
-          <Route path="/Computer_Network" >
+          <Route path="/computer-network" >
             <Computer_Network/>
           </Route>
-          <Route path="/Topology" >
+          <Route path="/topology" >
             <Topology/>
           </Route>
-          <Route path="/Cloud_Computing" >
+          <Route path="/cloud-computing" >
             <Cloud_Computing/>
           </Route>
           {/* Chapter two end  */}
 
 
           {/* Chapter three Start  */}
-          <Route path="/Logic_Gate" >
+          <Route path="/logic-gate" >
             <LogicGate/>
           </Route>
           
@@ -166,37 +166,37 @@ const App = () => {
 
 
           {/* Chapter four start  */}    
-          <Route path="/Heading" >
+          <Route path="/heading" >
             <Heading/>
           </Route>
-          <Route path="/Text_Formatting" >
+          <Route path="/text-formatting" >
             <TextFormetting/>
           </Route>
-          <Route path="/Sub_Sup" >
+          <Route path="/sub-sup" >
             <SubSup/>
           </Route>
-          <Route path="/List" >
+          <Route path="/list" >
             <HTMLList/>
           </Route>
-          <Route path="/HyperLink" >
+          <Route path="/hyper-link" >
             <HyperLink/>
           </Route>
-          <Route path="/Img" >
+          <Route path="/img" >
             <HTMlImg/>
           </Route>
-          <Route path="/Table" >
+          <Route path="/table" >
             <Table/>
           </Route>         
           {/* Chapter four end  */}
 
           {/* Chapter five start  */}    
-          <Route path="/Program" >
+          <Route path="/program" >
             <Programming/>
           </Route>
-          <Route path="/Language" >
+          <Route path="/language" >
             <Language/>
           </Route>         
-          <Route path="/Translator" >
+          <Route path="/translator" >
             <Translator/>
           </Route>         
           {/* Chapter five end  */}

@@ -19,8 +19,21 @@ const AllCourse = () => {
                  <div className={item.class}></div>
                  <div class="card-body">
                  <h5 className="text-center">{item.tilte}</h5>
-                  <h5 class="card-title my-3">{item.price}</h5>
-                  <Link to="/courseDetail" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন</Link>
+                 <div className="d-flex justify-content-between my-3">
+                 <div className="d-flex align-items-end gap-2"> 
+                 <h5 class="card-title">{item.price}
+                    </h5>
+                    <h6><s className="pastPrice">{item.pastPrice}</s></h6>
+                 </div>
+                 <div className="d-flex gap-2 align-items-end" >
+                 <div className="d-flex gap-2 align-items-end">
+                    <h6 className="instructorName">{item.instructorName}</h6>
+                    <img className="courseInstructor" src={item.instructor} alt="" />
+                  </div>
+
+                 </div>
+                 </div>
+                  <Link to="/course-detail" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন</Link>
                   <div class="desc mt-4">
                     <div className="d-flex courseDetails justify-content-between align-items-center">
                     <p>

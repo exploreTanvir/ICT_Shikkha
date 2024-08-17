@@ -7,7 +7,7 @@ export const Menu=[
     },
     {
         title:"HSC",
-        url:"/HSC",
+        url:"/hsc",
         cName:"navLinks",
         icon:"fa-solid fa-book-atlas"
     },

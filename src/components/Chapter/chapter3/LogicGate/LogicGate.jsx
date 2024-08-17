@@ -9,6 +9,8 @@ import notGate from '../../../../assets/Not-gate-en.svg.png'
 import norAnd from '../../../../assets/notAnd.jpg'
 import orGate from '../../../../assets/or.jpg'
 import orNot from '../../../../assets/orNot.jpg'
+import xnorGate from '../../../../assets/xnor.png'
+import xorGate from '../../../../assets/xor.png'
 import { Chpt3SubDetail } from '../../../chapterSub/Chpt3Sub/Chpt3SubDetail'
 import Footer from '../../../Footer/Footer'
 import Nav from '../../../Nav/Nav'
@@ -28,6 +30,10 @@ const LogicGate = () => {
     const [inputNandTwo, setInputNandTwo] = useState(0);
     const [inputNor, setInputNor] = useState(0);
     const [inputNorTwo, setInputNorTwo] = useState(0);
+    const [inputXor, setInputXor] = useState(0);
+    const [inputXorTwo, setInputXorTwo] = useState(0);
+    const [inputXnor, setInputXnor] = useState(0);
+    const [inputXnorTwo, setInputXnorTwo] = useState(0);
 
     const handleClick = () => {
       setInput(input === 0 ? 1 : 0);
@@ -55,6 +61,18 @@ const LogicGate = () => {
     };
     const handleClickNorTwo = () => {
       setInputNorTwo(inputNorTwo === 0 ? 1 : 0);
+    };
+    const handleClickXor = () => {
+      setInputXor(inputXor === 0 ? 1 : 0);
+    };
+    const handleClickXorTwo = () => {
+      setInputXorTwo(inputXorTwo === 0 ? 1 : 0);
+    };
+    const handleClickXnor = () => {
+      setInputXnor(inputXnor === 0 ? 1 : 0);
+    };
+    const handleClickXnorTwo = () => {
+      setInputXnorTwo(inputXnorTwo === 0 ? 1 : 0);
     };
   return (
         <div>
@@ -377,7 +395,7 @@ const LogicGate = () => {
       </div>
     </div>
         <h4 className='mt-5'><b>নর গেট (NOR Gate) : </b></h4>
-        <p>কটি OR গেট ও একটি NOT গেট এর সমন্বয়ে NOR গেট তৈরি হয়। সুতরাং NOR Gate এর আউটপুট হবে OR Gate এর ঠিক বিপরীত। এতে যেকোন একটি ইনপুট ১ হলেই আউটপুট ০ পাওয়া যায়। কেবলমাত্র সমস্ত ইনপুটের মান ০ হলেই আউটপুট এর মান ১ পাওয়া যায়। </p>
+        <p>একটি OR গেট ও একটি NOT গেট এর সমন্বয়ে NOR গেট তৈরি হয়। সুতরাং NOR Gate এর আউটপুট হবে OR Gate এর ঠিক বিপরীত। এতে যেকোন একটি ইনপুট ১ হলেই আউটপুট ০ পাওয়া যায়। কেবলমাত্র সমস্ত ইনপুটের মান ০ হলেই আউটপুট এর মান ১ পাওয়া যায়। </p>
        
           <div className='text-center mb-3'>
                <img src={orNot} className='w-50' alt="" />
@@ -453,6 +471,159 @@ const LogicGate = () => {
       </div>
     </div>
 
+    <h4 className='mt-5'><b>বিশেষ গেট(Special Gates) : </b></h4>
+    <p>বিশেষ বিশেষ কাজের জন্য আরো দুইটি গেট ব্যবহার করা হয়, এক্সর গেট (XOR Gate) এবং এক্সনর গেট (XNOR Gate)।</p>
+    <h4 className='mt-5'><b>এক্সর গেট (XOR Gate) : </b></h4>
+    <p>XOR এর পূর্ণরূপ Exclusive OR। এতে বিজোড় সংখ্যাক ১ ইনপুট দিলে আউটপুট ১, অন্যথায় আউটপুট ০ পাওয়া যায়।</p>
+
+
+    <div className="logic-gate justify-content-around">    
+      <div className="not-gate-container">  
+        <div className='d-flex flex-column gap-3'>
+        <div className='d-flex align-items-end'>
+        <div className={inputXor===0?"input px-3 rounded":"px-3 rounded inputClicked"} onClick={handleClickXor}>
+          X = {inputXor}
+        </div>
+        <div className={inputXor===0?"bar":"barClick"}></div>
+        </div>
+        <div className='d-flex align-items-start'>
+        <div className={inputXorTwo===0?"input px-3 rounded":" px-3 rounded inputClicked"} onClick={handleClickXorTwo}>
+          Y = {inputXorTwo}
+        </div>
+        <div className={inputXorTwo===0?"bar":"barClick"}></div>
+        </div>
+        </div>
+        <div className="d-flex align-items-center">
+          <img src={xorGate} alt="" className='notGateImg' />
+        <div className={inputXor+inputXorTwo === 1?"barClick":"bar"}></div>
+        </div>
+        
+        <div className="output d-flex">
+        <div className={inputXor+inputXorTwo === 1?"inputClicked px-3 rounded":" px-3 rounded input"}>
+        {inputXor+inputXorTwo === 1? 1 : 0}
+       </div> 
+          <img 
+            src={inputXor+inputXorTwo === 1 ? lightOn : lightOf} 
+            alt="Light Bulb" 
+            className="light-bulb"
+          />
+
+          
+        </div>
+      </div>
+      <div className="truth-table">
+        <p className='text-center'>সত্যক সারণী</p>
+        <table>
+          <thead>
+          <tr >
+              <th>X</th>
+           <th>Y</th>
+              <th>(X+Y)'</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr className={inputXor === 0 && inputXorTwo === 0 ? 'highlight' : ''}>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr className={inputXor === 0 && inputXorTwo === 1 ? 'highlight' : ''}>
+            <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr className={inputXor === 1 && inputXorTwo === 0 ? 'highlight' : ''}>
+            <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr className={inputXor === 1 && inputXorTwo === 1 ? 'highlight' : ''}>
+            <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+    <h4 className='mt-5'><b>এক্সনর গেট (XNOR Gate) : </b></h4>
+    <p>XNOR এর পূর্ণরূপ Exclusive NOR। এটি XOR এর বিপরীত আউটপুট দেয়। এতে বিজোড় সংখ্যাক ১ ইনপুট দিলে আউটপুট ০, অন্যথায় আউটপুট ১ পাওয়া যায়।</p>
+
+
+    <div className="logic-gate justify-content-around">    
+      <div className="not-gate-container">  
+        <div className='d-flex flex-column gap-3'>
+        <div className='d-flex align-items-end'>
+        <div className={inputXnor===0?"input px-3 rounded":"px-3 rounded inputClicked"} onClick={handleClickXnor}>
+          X = {inputXnor}
+        </div>
+        <div className={inputXnor===0?"bar":"barClick"}></div>
+        </div>
+        <div className='d-flex align-items-start'>
+        <div className={inputXnorTwo===0?"input px-3 rounded":" px-3 rounded inputClicked"} onClick={handleClickXnorTwo}>
+          Y = {inputXnorTwo}
+        </div>
+        <div className={inputXnorTwo===0?"bar":"barClick"}></div>
+        </div>
+        </div>
+        <div className="d-flex align-items-center">
+          <img src={xnorGate} alt="" className='notGateImg' />
+        <div className={inputXnor+inputXnorTwo === 0||inputXnor+inputXnorTwo === 2 ?"barClick":"bar"}></div>
+        </div>
+        
+        <div className="output d-flex">
+        <div className={inputXnor+inputXnorTwo === 0||inputXnor+inputXnorTwo === 2 ?"inputClicked px-3 rounded":" px-3 rounded input"}>
+        {inputXnor+inputXnorTwo === 0||inputXnor+inputXnorTwo === 2 ? 1 : 0}
+       </div> 
+          <img 
+            src={inputXnor+inputXnorTwo === 0||inputXnor+inputXnorTwo === 2 ? lightOn : lightOf} 
+            alt="Light Bulb" 
+            className="light-bulb"
+          />
+
+          
+        </div>
+      </div>
+      <div className="truth-table">
+        <p className='text-center'>সত্যক সারণী</p>
+        <table>
+          <thead>
+          <tr >
+              <th>X</th>
+           <th>Y</th>
+              <th>(X<i class="fa-solid fa-circle-plus"></i>Y)'</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr className={inputXnor === 0 && inputXnorTwo === 0 ? 'highlight' : ''}>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr className={inputXnor === 0 && inputXnorTwo === 1 ? 'highlight' : ''}>
+            <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr className={inputXnor === 1 && inputXnorTwo === 0 ? 'highlight' : ''}>
+            <td>1</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr className={inputXnor === 1 && inputXnorTwo === 1 ? 'highlight' : ''}>
+            <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
 
                 </div>
