@@ -86,10 +86,10 @@ const Contact = () => {
                 <i className="fa-solid fa-phone"></i>
                 <h3>ফোন করো</h3>
                 <p>
-                  016*********
+                  01818301681
                 </p>
                 <p>
-                  018*********
+                  01712700934
                 </p>
               </div>
           </div>
@@ -101,9 +101,6 @@ const Contact = () => {
                 <p>
                   ictshikkha@gmail.com
                 </p>
-                <p>
-                  anneshon@gmail.com
-                </p>
               </div>
               <div className="sub-form col-md-5 col-sm-12">
                 <i className="fa-regular fa-clock"></i>
@@ -111,9 +108,7 @@ const Contact = () => {
                 <p>
                   শনিবার - বৃহস্পতিবার
                 </p>
-                <p>
-                  সকাল ৮-৯ টা, বিকেল ৩-৬ টা
-                </p>
+
               </div>
           </div>
         </div>

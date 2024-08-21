@@ -186,7 +186,9 @@ const Course = () => {
                 <source />
               </video>
               <h5 className="card-title my-3">৳ ****</h5>
-              <div><a href="#" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>এনরোল করুন</a></div>
+              <div>
+                <button type="button" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>এনরোল করুন</button>
+                </div>
               <div className="desc mt-4">
                 <p>
                   <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ***

@@ -1,12 +1,15 @@
+import axios from "axios";
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 import Newsletter from '../../components/newsletter/Newsletter';
 import TopBar from '../../components/topbar/TopBar';
-import { HscChapterDetail } from './HscChapterDetail';
 import "./hsc.css";
+import { HscChapterDetail } from './HscChapterDetail';
 
 const HSC = () => {
+  
   return (
     <div>
         <TopBar/>

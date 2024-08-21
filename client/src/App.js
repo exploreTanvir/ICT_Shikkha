@@ -48,6 +48,7 @@ import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
+import Terms from "./components/FooterItem/Terms/Terms";
 
 const App = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -74,22 +75,20 @@ const App = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route exact path="/" component={Home}/>
+          
           <Route path="/course">
             <Courses />
           </Route>
-          <Route path="/contact">
-            <Contacts />
-          </Route>
-          <Route path="/login">
-            <LoginPage />
-          </Route>
+          <Route path="/contact" component={Contacts} />
+          <Route path="/login" component={LoginPage} />
+           
+
           <Route path="/sing-up">
             <SingUpPage />
           </Route>
@@ -224,8 +223,19 @@ const App = () => {
           <Route path="/translator" >
             <Translator/>
           </Route>         
+                  
           {/* Chapter five end  */}
-                   
+
+
+
+
+          {/* Footer Item start  */}
+
+          <Route path="/terms&condition" >
+            <Terms/>
+          </Route>  
+          {/* Footer Item end  */}
+                  
         </Switch>
     </Router>
     {showScrollButton && (

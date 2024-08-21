@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../../assets/logo.png";
 import "./footer.css";
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Footer = () => {
   return (
@@ -32,7 +33,7 @@ const Footer = () => {
 
           <div className="col-lg-2 col-md-5 mt-4 ">
           <h4 className='fw-bold'>নীতিমালা</h4>
-            <a href="#"><p className='mt-3'>টার্মস এবং শর্তাবলী</p></a>
+            <Link to="/terms&condition"><p className='mt-3'>টার্মস এবং শর্তাবলী</p></Link>
             <a href="#"><p>প্রাইভেসি পলিসি</p></a>
             <a href="#"><p>রিফান্ড পলিসি</p></a>
             <a href="#"><p>সাপোর্ট</p></a>
@@ -53,8 +54,8 @@ const Footer = () => {
           <p className='mt-3 d-flex align-items-center'>
               <i className="fa-location-dot fa-solid me-2"></i> মাগুরা পুলিশ লাইন, মাগুরা।
             </p>
-            <p className='d-flex align-items-center'><i className="fa-phone fa-solid me-2"></i> +0123-456789</p>
-            <p className='d-flex align-items-center'><i class="fa-solid fa-envelope me-2"></i>ictshikkha@gmail.com</p>
+            <p className='d-flex align-items-center'><i className="fa-phone fa-solid me-2"></i> +8801818301681</p>
+            <p className='d-flex align-items-center'><i class="fa-solid fa-envelope me-2"></i>anneshon@gmail.com</p>
             
           </div>
 

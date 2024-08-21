@@ -35,29 +35,6 @@ span {
     top: 17px;
   }
 }
-
-.topArrow {
-  position: absolute;
-  width: 3.2rem;
-  height: 3.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: white !important;
-  background: rgb(79, 4, 255);
-  border: 0;
-  bottom: 3rem;
-  right: 3rem;
-  border-radius: 8px;
-  z-index: 999;
-  position: fixed;
-
-  @media (max-width: 575px) {
-    display: none !important;
-  }
-}
-
 .btn2 {
   position: relative;
   z-index: 1;
@@ -146,4 +123,8 @@ span {
   border-radius: 8px;
   z-index: 999;
   position: fixed;
+}
+.topArrow:hover {
+  background: rgb(53, 14, 145);
+  transition: all 0.5s ease;
 }

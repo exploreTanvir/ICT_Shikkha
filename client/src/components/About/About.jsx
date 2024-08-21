@@ -113,7 +113,7 @@ const About = () => {
    </div>
    {/* <a href="/about"><div className='topArrow'><i class="fa-solid fa-arrow-up"></i></div></a> */}
 
-   
+   k
     </section>
   )
 }

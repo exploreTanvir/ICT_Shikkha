@@ -35,6 +35,7 @@ const Editor = (props) => {
                             </label>
                             <textarea 
                                 rows={7} 
+                                className='mt-2'
                                 ref={textareaRef} 
                                 placeholder="এখানে তোমার কোড লেখ..." 
                                 onKeyUp={run} 
@@ -44,9 +45,9 @@ const Editor = (props) => {
                     </div>
                     <div className="right col-lg-6">
                         <label className='html rounded'>
-                            <i className="fs-5 ms-2 me-2 fa-solid fa-code"></i> Output
+                            <i className="fs-5 mx-2 fa-solid fa-code"></i> Output
                         </label>
-                        <iframe title='output' ref={iframeRef}></iframe>
+                        <iframe className='mt-2' title='output' ref={iframeRef}></iframe>
                     </div>
                 </div>
             </div>

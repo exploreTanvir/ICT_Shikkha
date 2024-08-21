@@ -8,7 +8,7 @@ const TopBar = () => {
             <div className="row">
                 <div className="col-8 d-flex gap-5 align-items-center fs-5">
                     <div className="phone fs-5 ms-5" >                  
-                    <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-phone-volume"></i> +88 0125 255 255</div>
+                    <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-phone-volume"></i> +8801818301681</div>
                     </div>
                     <div className="mail fs-5">                   
                     <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-envelope"></i> ictsikkha@gmail.com</div>
@@ -21,7 +21,7 @@ const TopBar = () => {
                     <p className='my-auto'>Follow us</p>
                     <div className="socialIcon d-flex gap-1 fs-4">
                         <div className='p-1'>
-                            <a href="/">
+                            <a href="https://www.facebook.com/ictshikkha">
                                 <i class="fa-brands fa-square-facebook"></i>
                             </a>
                         </div>
@@ -31,7 +31,7 @@ const TopBar = () => {
                             </a>
                         </div>
                         <div className='p-1'>
-                            <a href="/">
+                            <a href="https://www.youtube.com/@ictshikkha">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>
