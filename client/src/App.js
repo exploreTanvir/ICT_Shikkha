@@ -37,6 +37,9 @@ import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
 import Chpt4Sub from "./components/chapterSub/Chpt4Sub/Chpt4Sub";
 import Chpt5Sub from "./components/chapterSub/Chpt5Sub/Chpt5Sub";
+import Privacy from "./components/FooterItem/Privacy/Privacy";
+import Refund from "./components/FooterItem/Refund/Refund";
+import Terms from "./components/FooterItem/Terms/Terms";
 import HSC from "./components/HSC/HSC";
 import AboutPage from "./components/pages/AboutPage";
 import Contacts from "./components/pages/Contact";
@@ -48,7 +51,6 @@ import Home from './components/pages/Home';
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import SingUpPage from "./components/pages/SingUpPage";
-import Terms from "./components/FooterItem/Terms/Terms";
 
 const App = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -75,6 +77,30 @@ const App = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+// inspact code 
+  // useEffect(() => {
+  //   // Disable right-click
+  //   document.addEventListener("contextmenu", (e) => {
+  //     e.preventDefault();
+  //   });
+
+  //   // Disable specific keyboard shortcuts
+  //   document.onkeydown = (e) => {
+  //     if (
+  //       e.keyCode === 123 || // F12 for Developer Tools
+  //       (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I for Developer Tools
+  //       (e.ctrlKey && e.keyCode === 85) // Ctrl+U for View Source
+  //     ) {
+  //       return false;
+  //     }
+  //   };
+    
+  //   return () => {
+  //     document.removeEventListener("contextmenu", () => {});
+  //     document.onkeydown = null;
+  //   };
+  // }, []);
 
   return (
     <div>
@@ -233,6 +259,12 @@ const App = () => {
 
           <Route path="/terms&condition" >
             <Terms/>
+          </Route>  
+          <Route path="/privacy-policy" >
+            <Privacy/>
+          </Route>  
+          <Route path="/refund" >
+            <Refund/>
           </Route>  
           {/* Footer Item end  */}
                   

@@ -10,7 +10,6 @@
     bottom: 0;
     width: 100%;
   }
-  
 
   .img1 {
     position: absolute;
@@ -100,6 +99,11 @@
       display: none;
     }
   }
+  @media (max-width: 1400px) {
+    .title {
+      width: 60%;
+    }
+  }
   @media (max-width: 767px) {
     display: none;
   }
@@ -108,7 +112,7 @@
     .title {
       display: none;
     }
-    
+
     .fbBtn {
       margin-right: 0 !important;
       display: block;

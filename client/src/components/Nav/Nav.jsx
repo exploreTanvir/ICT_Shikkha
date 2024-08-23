@@ -24,7 +24,7 @@ const Nav = () => {
               <i className="fa-solid fa-bars-staggered"></i>
             </button>
             <div className="collapse navbar-collapse col-lg-11" id="navbarSupportedContent">
-              <ul className="navbar-nav col-10 d-flex gap-4 justify-content-center">
+              <ul className="navbar-nav col-11 d-flex gap-4 justify-content-center">
                 {Menu.map((item, index) => (
                   <li className="nav-item" key={index}>
                     <NavLink
@@ -42,14 +42,14 @@ const Nav = () => {
                   </li>
                 ))}
               </ul>
-              <div className="col-2 btnGRP d-flex align-items-center justify-content-end">
-                <NavLink
+              <div className="col-1 btnGRP d-flex align-items-center justify-content-end">
+                {/* <NavLink
                   to="/sing-up"
                   className="link course btn1 d-flex align-items-center gap-2 fs-6 course me-2"
                 >
                   সাইন আপ
                   <i className="fa fa-arrow-right"></i>
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   to="/login"
                   className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4"

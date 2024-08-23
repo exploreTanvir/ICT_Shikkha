@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 // Connect to MongoDB
 const connectDB=async()=>{
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/ictshikkha_ictshikkha")
+        await mongoose.connect("mongodb://127.0.0.1:27017/IctShikkha")
         console.log("DB is connected")
     } catch (error) {
         console.log("DB is not connected")
@@ -40,10 +40,17 @@ const NewsDataSchema=new mongoose.Schema({
   email: String
 }
 )
+const ReviewsDataSchema=new mongoose.Schema({
+  name: String,
+  title:String,
+  work:String
+}
+)
 
 //Create Model
 const FormData=mongoose.model("UserDetail",formDataSchema)
 const NewsData=mongoose.model("NewsLetter",NewsDataSchema)
+const newReviewsData=mongoose.model("ReviewData",ReviewsDataSchema)
 
 
 // Define a route to handle form submission
@@ -62,6 +69,14 @@ app.post('/d', (req, res) => {
   const newsData = new NewsData(req.body);
 
     newsData.save()
+    .then(() => res.json({ message: 'Data saved successfully!' }))
+    .catch(err => res.status(400).json({ error: err.message }));
+});
+
+app.post('/reviews', (req, res) => {
+  const NewReviewData = new newReviewsData(req.body);
+
+    NewReviewData.save()
     .then(() => res.json({ message: 'Data saved successfully!' }))
     .catch(err => res.status(400).json({ error: err.message }));
 });

@@ -14,13 +14,14 @@ const Skill = () => {
                {skillMenu.map((item,index)=>{
                  return(
                     <div className="col-lg-3 skillCard col-md-6 col-sm-12 pt-3">
-                 <div className={item.class}>
+               <Link to={item.src}>
+               <div className={item.class}>
                      <img src={item.img} alt="" />
                      <h2 className="fw-bold">{item.title}</h2>
                      <div className="skillBtn py-1 d-flex align-items-center justify-content-center">
                          <Link to={item.src} className=" d-flex align-items-center gap-2 ">{item.btn} <i class="fa fa-arrow-right"></i></Link>
                      </div>
-                 </div>
+                 </div></Link>
              </div>
                  )
                })}

@@ -14,6 +14,7 @@ const AllCourse = () => {
             {AllCourseMenu.map((item,index)=>{
             return(
               <div class="col-lg-4 col-sm-12 col-md-6 py-4">
+              <Link to="/course-detail">
               <div class="card" id="card">
                 <div>
                  <div className={item.class}></div>
@@ -58,6 +59,7 @@ const AllCourse = () => {
                  </div>
                 </div>
               </div>
+              </Link>
             </div>
             )
            })}

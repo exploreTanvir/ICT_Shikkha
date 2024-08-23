@@ -134,7 +134,7 @@
     }
   }
 
-  a {
+  .card a {
     position: relative;
     z-index: 1;
     padding: 5px 10px;
@@ -143,11 +143,11 @@
     color: rgb(0, 7, 69);
     text-decoration: none;
   }
-  a:hover {
+  .card a:hover {
     color: rgb(254, 254, 255);
     border-radius: 5px;
   }
-  a::before {
+  .card a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -161,9 +161,14 @@
     transform: scaleX(1);
   }
 
-  a:hover::before {
+  .card a:hover::before {
     transform-origin: right;
     transition: transform 0.5s ease;
     transform: scaleX(0);
+  }
+}
+@media (max-width: 1400px) {
+  .skill h2 {
+    font-size: 23px;
   }
 }

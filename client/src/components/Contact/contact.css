@@ -119,3 +119,13 @@
     width: 100%;
   }
 }
+@media (max-width: 1400px) {
+  .selected-Info {
+    padding: 0.4rem 3.8rem;
+  }
+  .sendBtn {
+    width: 100%;
+    font-size: 18px !important;
+    padding: 5px 0;
+  }
+}

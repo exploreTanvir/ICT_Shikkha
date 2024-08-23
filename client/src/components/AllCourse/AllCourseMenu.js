@@ -12,7 +12,7 @@ export const AllCourseMenu=[
         class:"cardImg1 cardImg",
         pastPrice:"৪৫০০" ,
         instructor:user1,
-        instructorName:"মো. রহমান"
+        instructorName:"মো. শাহাদত"
     },
     {
         tilte:"ফুল স্ট্যাক ওয়েব ডেভেলপমেন্ট",

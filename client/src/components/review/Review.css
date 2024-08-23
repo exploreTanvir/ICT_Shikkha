@@ -6,7 +6,12 @@
   width: 100%;
   background: rgb(0, 12, 143);
 }
-
+.reviewModal {
+  background: #6f037b;
+  &:hover {
+    background: #a801ae;
+  }
+}
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -80,5 +85,13 @@
   }
   .content p {
     font-size: 14px;
+  }
+}
+
+.reviewModalBox {
+  max-width: 800px;
+  height: 100%;
+  .modal-content {
+    background: rgb(188, 213, 224) !important;
   }
 }
