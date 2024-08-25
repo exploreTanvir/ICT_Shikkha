@@ -1,19 +1,13 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 import Newsletter from '../../components/newsletter/Newsletter';
 import TopBar from '../../components/topbar/TopBar';
 import "./hsc.css";
+import { HscChapterDetail } from './HscChapterDetail';
 
 const HSC = () => {
-  const [chapter,setChapter]=useState([])
-  useEffect(()=>{
-    axios.get("http://localhost:5001/")
-    .then(chapter=>setChapter(chapter.data))
-    .catch(err=>console.log(err))
-  },[])
+  
   return (
     <div>
         <TopBar/>
@@ -25,7 +19,7 @@ const HSC = () => {
          </div>
     <div className="row gap-4 pb-3 justify-content-center">
         {
-            chapter.map((item,index)=>{
+            HscChapterDetail.map((item,index)=>{
                 return(
                     <Link to={item.chapter}  className={item.class}>
             <h2 >{item.title}</h2>

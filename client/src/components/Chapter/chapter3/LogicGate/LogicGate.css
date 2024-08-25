@@ -29,7 +29,9 @@
   border: 1px solid navy;
   @media (max-width: 575px) {
     font-size: 13px;
-    padding: 5px 10px !important;
+    padding: 5px 0 !important;
+    text-align: center;
+    width: 100%;
   }
 }
 .inputClicked {
@@ -40,7 +42,7 @@
   background: rgb(103, 103, 103);
   @media (max-width: 575px) {
     font-size: 13px;
-    padding: 5px 10px !important;
+    padding: 5px 0 !important;
   }
 }
 .notGateImg {

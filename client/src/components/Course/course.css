@@ -37,7 +37,10 @@
 }
 @media (max-width: 575px) {
   video {
-    width: 332px;
+    width: 100%;
+  }
+  p {
+    font-size: 17px;
   }
   .courseRow {
     flex-direction: column-reverse;

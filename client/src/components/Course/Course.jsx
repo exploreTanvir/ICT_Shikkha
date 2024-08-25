@@ -182,7 +182,7 @@ const Course = () => {
         <div className="col-lg-4 col-md-12">
           <div className="card" id="card">
             <div className="card-body">
-              <video controls width="380px" src={jsVdo}>
+              <video className="video" controls width="380px" src={jsVdo}>
                 <source />
               </video>
               <h5 className="card-title my-3">৳ ****</h5>
