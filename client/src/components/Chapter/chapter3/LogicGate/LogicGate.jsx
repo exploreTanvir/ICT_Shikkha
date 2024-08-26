@@ -595,7 +595,7 @@ const LogicGate = () => {
           <tr >
               <th>X</th>
            <th>Y</th>
-              <th>(X<i class="fa-solid fa-circle-plus"></i>Y)'</th>
+              <th>(X<i className="fa-solid fa-circle-plus"></i>Y)'</th>
             </tr>
           </thead>
           <tbody>

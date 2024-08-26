@@ -15,7 +15,7 @@ export const skillMenu=[
         img:skillImg2,
         class:"skillCard2 mt-3 card text-center p-3",
         btn:"ভিডিও ক্লাস দেখো",
-        src:"/class"
+        src:"/course"
 
     },
     {

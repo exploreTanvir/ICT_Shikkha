@@ -88,4 +88,8 @@
       box-shadow: 39px 35px 4px -6px rgba(223, 212, 255, 0.795);
     }
   }
+  .writing-about {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

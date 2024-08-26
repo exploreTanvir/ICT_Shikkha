@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { Menu } from "../Menu";
+import { Menu, subMenu } from "../Menu";
 import "./nav.css";
 
 const Nav = () => {
@@ -10,7 +10,7 @@ const Nav = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-1 d-flex navImg justify-content-end">
-              <img src={logo} className="w-100" alt="Logo" />
+              <a href="https://www.ictshikkha.com"><img src={logo} className="w-100" alt="Logo" /></a>
             </div>
             <button
               className="navbar-toggler"
@@ -41,15 +41,32 @@ const Nav = () => {
                     </NavLink>
                   </li>
                 ))}
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle  nav-link d-flex align-items-center gap-2 fs-5 btn2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i className="fa-brands fa-leanpub"></i>
+                  অডিও বুক
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {subMenu.map((item, index) => (
+                  <li className="nav-item" key={index}>
+                    <NavLink
+                      to={item.url}
+                      className={({ isActive }) =>
+                        `${item.cName} nav-link d-flex align-items-center gap-2 justify-content-center fs-5 btn2 ${
+                          isActive ? "active" : ""
+                        }`
+                      }
+                    >
+                      <i className={item.icon}></i>
+                      {item.title}
+                    </NavLink>
+                  </li>
+                ))}
+                  </ul>
+                </li>
               </ul>
               <div className="col-1 btnGRP d-flex align-items-center justify-content-end">
-                {/* <NavLink
-                  to="/sing-up"
-                  className="link course btn1 d-flex align-items-center gap-2 fs-6 course me-2"
-                >
-                  সাইন আপ
-                  <i className="fa fa-arrow-right"></i>
-                </NavLink> */}
+               
                 <NavLink
                   to="/login"
                   className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4"

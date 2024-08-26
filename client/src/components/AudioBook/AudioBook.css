@@ -1,0 +1,11 @@
+.audioText {
+  color: white;
+}
+.play-icon {
+  display: none;
+  color: #bcebfa;
+}
+
+.audioBook a:hover .play-icon {
+  display: block;
+}

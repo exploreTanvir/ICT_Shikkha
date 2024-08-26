@@ -35,3 +35,8 @@
 .htmlIcon {
   color: #ff8f17;
 }
+@media (max-width: 575px) {
+  .right {
+    margin-top: 10px;
+  }
+}

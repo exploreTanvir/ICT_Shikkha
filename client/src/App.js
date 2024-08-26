@@ -37,11 +37,13 @@ import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
 import Chpt4Sub from "./components/chapterSub/Chpt4Sub/Chpt4Sub";
 import Chpt5Sub from "./components/chapterSub/Chpt5Sub/Chpt5Sub";
+import Chpt1Audio from "./components/chptAudio/chpt1Audio/Chpt1Audio";
 import Privacy from "./components/FooterItem/Privacy/Privacy";
 import Refund from "./components/FooterItem/Refund/Refund";
 import Terms from "./components/FooterItem/Terms/Terms";
 import HSC from "./components/HSC/HSC";
 import AboutPage from "./components/pages/AboutPage";
+import AudioBookPage from "./components/pages/AudioBookPage";
 import Contacts from "./components/pages/Contact";
 import CourseDetail from "./components/pages/CourseDetail";
 import Courses from "./components/pages/Courses";
@@ -112,6 +114,7 @@ const App = () => {
             <Courses />
           </Route>
           <Route path="/contact" component={Contacts} />
+          <Route path="/audio-book" component={AudioBookPage} />
           <Route path="/login" component={LoginPage} />
            
 
@@ -267,6 +270,17 @@ const App = () => {
             <Refund/>
           </Route>  
           {/* Footer Item end  */}
+
+
+
+
+          {/* Audio chapter start  */}
+
+          <Route path="/chapter-audio-1" >
+            <Chpt1Audio/>
+          </Route>  
+           
+          {/* Audio chapter end  */}
                   
         </Switch>
     </Router>

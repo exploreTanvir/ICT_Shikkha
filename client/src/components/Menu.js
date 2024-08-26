@@ -35,18 +35,26 @@ export const Menu=[
         cName:"navLinks",
         icon:"fa-brands fa-algolia"
     },
+    
+    
+]
+export const subMenu=[
+    {
+        title:"অডিও বুক",
+        url:"/audio-book",
+        cName:"navLinks mb-2 text-center",
+        icon:"fa-brands fa-leanpub"
+    },
+    {
+        title:"যোগাযোগ",
+        url:"/contact",
+        cName:"navLinks mb-2",
+        icon:"fa-regular fa-paper-plane"
+    },
     {
         title:"গ্যালারি",
         url:"/gallery",
         cName:"navLinks",
         icon:"fa-regular fa-image"
-    },
-   
-    {
-        title:"যোগাযোগ",
-        url:"/contact",
-        cName:"navLinks",
-        icon:"fa-regular fa-paper-plane"
-    },
-    
+    }
 ]

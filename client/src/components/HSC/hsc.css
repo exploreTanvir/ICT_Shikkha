@@ -12,8 +12,8 @@
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-7px);
-    transition: all 0.5s ease;
+    transform: translateY(-5px);
+    transition: all 0.8s ease;
   }
   @media (max-width: 575px) {
     width: 22rem;
@@ -25,10 +25,11 @@
   }
 }
 .chapter1 {
-  background: linear-gradient(120deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.4)),
+  background: linear-gradient(90deg, rgb(0 0 0 / 95%), rgba(104, 104, 104, 0.5)),
     url(../../assets/ict1.jpg);
   background-size: cover;
 }
+
 .chapter2 {
   background: linear-gradient(120deg, rgb(0 0 0 / 80%), rgba(4, 8, 4, 0.4)),
     url(../../assets/sattelite.jpg);

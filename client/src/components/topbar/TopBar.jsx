@@ -8,13 +8,13 @@ const TopBar = () => {
             <div className="row">
                 <div className="col-8 d-flex gap-5 align-items-center fs-5">
                     <div className="phone fs-5 ms-5" >                  
-                    <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-phone-volume"></i> +8801818301681</div>
+                    <div className='d-flex align-items-center gap-2'><i className="fa-solid fa-phone-volume"></i> +8801818301681</div>
                     </div>
                     <div className="mail fs-5">                   
-                    <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-envelope"></i> ictsikkha@gmail.com</div>
+                    <div className='d-flex align-items-center gap-2'><i className="fa-solid fa-envelope"></i> ictsikkha@gmail.com</div>
                     </div>
                     <div className="location fs-5">                   
-                    <div className='d-flex align-items-center gap-2'><i class="fa-solid fa-location-dot"></i> মাগুরা পুলিশ লাইন , মাগুরা</div>
+                    <div className='d-flex align-items-center gap-2'><i className="fa-solid fa-location-dot"></i> মাগুরা পুলিশ লাইন , মাগুরা</div>
                     </div>
                 </div>
                 <div className="col-4 d-flex gap-3 align-items-center fs-5 justify-content-end">
@@ -22,32 +22,32 @@ const TopBar = () => {
                     <div className="socialIcon d-flex gap-1 fs-4">
                         <div className='p-1'>
                             <a href="https://www.facebook.com/ictshikkha">
-                                <i class="fa-brands fa-square-facebook"></i>
+                                <i className="fa-brands fa-square-facebook"></i>
                             </a>
                         </div>
                         <div className='p-1'>
                             <a href="/">
-                                <i class="fa-brands fa-linkedin"></i>
+                                <i className="fa-brands fa-linkedin"></i>
                             </a>
                         </div>
                         <div className='p-1'>
                             <a href="https://www.youtube.com/@ictshikkha">
-                                <i class="fa-brands fa-youtube"></i>
+                                <i className="fa-brands fa-youtube"></i>
                             </a>
                         </div>
                         <div className='p-1'>
                             <a href="/">
-                                <i class="fa-brands fa-square-github"></i>
+                                <i className="fa-brands fa-square-github"></i>
                             </a>
                         </div>
                         <div className='p-1'>
                             <a href="/">
-                                <i class="fa-brands fa-square-instagram"></i>
+                                <i className="fa-brands fa-square-instagram"></i>
                             </a>
                         </div>
                         <div className='p-1 me-5'>
                             <a href="/">
-                                <i class="fa-brands fa-square-x-twitter"></i>
+                                <i className="fa-brands fa-square-x-twitter"></i>
                             </a>
                         </div>
                     </div>

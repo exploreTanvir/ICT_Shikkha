@@ -47,7 +47,7 @@ const Footer = () => {
               <i className="fa-location-dot fa-solid me-2"></i> মাগুরা পুলিশ লাইন, মাগুরা।
             </p>
             <p className='d-flex align-items-center'><i className="fa-phone fa-solid me-2"></i> +8801818301681</p>
-            <p className='d-flex align-items-center'><i class="fa-solid fa-envelope me-2"></i>anneshon@gmail.com</p>
+            <p className='d-flex align-items-center'><i className="fa-solid fa-envelope me-2"></i>anneshon@gmail.com</p>
             <div className="lastIcon d-flex align-items-center gap-3 fs-5 ">
               <a href="#"><i className="fa-brands fa-facebook-f "></i></a>
               <a href="#"><i className="fa-brands fa-twitter "></i></a>
