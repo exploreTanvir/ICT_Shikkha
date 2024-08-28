@@ -75,7 +75,7 @@ const Review = () => {
 {ReviewText.map((item,index)=>{
           return(
          <SwiperSlide>
-       <div className="testimonialBox">
+       <div key={index} className="testimonialBox">
         <img src={swipIMG} className='testimonialImg' alt="" />
         
             <div className="content">

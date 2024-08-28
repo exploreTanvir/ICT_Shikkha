@@ -14,7 +14,7 @@ const shuffleArray = (array) => {
 };
 
 function Quiz() {
-  const notify = () => toast("কুইজ শুরু হয়েছে সময় ২ মিনিট");
+
   
 
 
@@ -194,7 +194,7 @@ function Quiz() {
                           <p><strong>প্রশ্ন:</strong> {answer.question}</p>
                           <p><strong>আপনার উত্তর:</strong> {answer.selected}</p>
                           <p><strong>সঠিক উত্তর:</strong> {answer.correct}</p>
-                          <p><strong>বিকল্পসমূহ:</strong> {answer.options.join(", ")}</p>
+                          <p><strong>অপশন গুলো:</strong> {answer.options.join(", ")}</p>
                         </li>
                       ))}
                     </ul>

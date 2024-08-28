@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import comingSoon from "../../../../assets/comingSoon.jpg"
 import { Chpt4SubDetail } from '../../../chapterSub/Chpt4Sub/Chpt4SubDetail'
 import Footer from '../../../Footer/Footer'
 import Nav from '../../../Nav/Nav'
@@ -20,9 +19,9 @@ const HTMLList = () => {
             <h3>ওয়েব ডিজাইন পরিচিতি ও HTML</h3>
             <h3>তালিকা বা লিস্ট (List)</h3>
         </div>
-                <div className='text-center'>
-                    <img className='w-75' src={comingSoon} alt="" />
-                </div>
+        <div className='text-center py-5'>
+       <iframe title='audio' className='w-100' src="https://lottie.host/embed/499764f9-fd43-48b8-ba69-bfd7058d32fe/XZQXXEVLna.json"></iframe>
+       </div>
         
                 </div>
                 <div className="col-lg-3 ">
@@ -30,7 +29,7 @@ const HTMLList = () => {
                 {
                 Chpt4SubDetail.map((item,index)=>{
         return(
-          <Link to={item.name} className="mb-4">
+          <Link key={index} to={item.name} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>
           </Link>
         )

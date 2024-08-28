@@ -30,7 +30,7 @@ const Faq = () => {
   </div>
   {faqMenu.map((item,index)=>{  
  return(
-  <div className="accordion-item">
+  <div key={index} className="accordion-item">
   <h1 className="accordion-header rounded" id={item.flushID}>
     <button className="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target={item.flushCollapsTarget} aria-expanded="false" aria-controls={item.flushCollaps}>
     {item.title}

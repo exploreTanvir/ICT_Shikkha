@@ -39,7 +39,7 @@
   video {
     width: 100%;
   }
-  p {
+ .desc p {
     font-size: 17px;
   }
   .courseRow {

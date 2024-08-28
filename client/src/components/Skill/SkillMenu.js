@@ -7,14 +7,14 @@ export const skillMenu=[
         title:"আইসিটি কুইজ",
         img:skillImg1,
         class:'skillCard1 mt-3 card text-center p-3',
-        btn:"কুইজে অংশ নাও",
+        btn:"কুইজে অংশ নিন",
         src:"/quiz"
     },
     {
         title:"আইসিটি ভিডিও",
         img:skillImg2,
         class:"skillCard2 mt-3 card text-center p-3",
-        btn:"ভিডিও ক্লাস দেখো",
+        btn:"ভিডিও ক্লাস দেখুন",
         src:"/course"
 
     },
@@ -22,8 +22,8 @@ export const skillMenu=[
         title:"আইসিটি বই",
         img:skillImg3,
         class:"skillCard3 mt-3 card text-center p-3",
-        btn:"বই পড়ে দেখো",
-        src:"/HSC"
+        btn:"বই পড়ুন",
+        src:"/ict-books"
     },
     {
         title:"আইসিটি কোর্সসমূহ",

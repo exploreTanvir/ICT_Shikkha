@@ -25,7 +25,7 @@ const Chpt2Sub = () => {
     {
       Chpt2SubDetail.map((item,index)=>{
         return(
-          <Link to={item.name} className="col-lg-4 mb-4 subChapterdetail">
+          <Link key={index} to={item.name} className="col-lg-4 mb-4 subChapterdetail">
              <h2>{item.title}</h2>
           </Link>
         )

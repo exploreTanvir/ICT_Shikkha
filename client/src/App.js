@@ -38,6 +38,11 @@ import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
 import Chpt4Sub from "./components/chapterSub/Chpt4Sub/Chpt4Sub";
 import Chpt5Sub from "./components/chapterSub/Chpt5Sub/Chpt5Sub";
 import Chpt1Audio from "./components/chptAudio/chpt1Audio/Chpt1Audio";
+import Chpt2Audio from "./components/chptAudio/Chpt2Audio/Chpt2Audio";
+import Chpt3Audio from "./components/chptAudio/Chpt3Audio/Chpt3Audio";
+import Chpt4Audio from "./components/chptAudio/Chpt4Audio/Chpt4Audio";
+import Chpt5Audio from "./components/chptAudio/Chpt5Audio/Chpt5Audio";
+import Chptr6Audio from "./components/chptAudio/Chptr6Audio/Chptr6Audio";
 import Privacy from "./components/FooterItem/Privacy/Privacy";
 import Refund from "./components/FooterItem/Refund/Refund";
 import Terms from "./components/FooterItem/Terms/Terms";
@@ -50,9 +55,12 @@ import Courses from "./components/pages/Courses";
 import EditorPage from "./components/pages/EditorPage";
 import GalleryPage from "./components/pages/GalleryPage";
 import Home from './components/pages/Home';
+import ICTBooksPage from "./components/pages/ICTBooksPage";
 import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
+import RoutinePage from "./components/pages/RoutinePage";
 import SingUpPage from "./components/pages/SingUpPage";
+import Chapter6 from "./components/Chapter/chapter6/Chapter6";
 
 const App = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -139,6 +147,16 @@ const App = () => {
           <Route path="/editor" >
             <EditorPage />
           </Route>
+          <Route path="/ict-books" >
+            <ICTBooksPage />
+          </Route>
+          <Route path="/routine" >
+            <RoutinePage />
+          </Route>
+
+
+
+
           <Route path="/chapter-1" >
             <Chpt1Sub />
           </Route>
@@ -153,6 +171,9 @@ const App = () => {
           </Route>
           <Route path="/chapter-5" >
             <Chpt5Sub />
+          </Route>
+          <Route path="/chapter-6" >
+            <Chapter6 />
           </Route>
 
 
@@ -278,6 +299,21 @@ const App = () => {
 
           <Route path="/chapter-audio-1" >
             <Chpt1Audio/>
+          </Route>  
+          <Route path="/chapter-audio-2" >
+            <Chpt2Audio/>
+          </Route>  
+          <Route path="/chapter-audio-3" >
+            <Chpt3Audio/>
+          </Route>  
+          <Route path="/chapter-audio-4" >
+            <Chpt4Audio/>
+          </Route>  
+          <Route path="/chapter-audio-5" >
+            <Chpt5Audio/>
+          </Route>  
+          <Route path="/chapter-audio-6" >
+            <Chptr6Audio/>
           </Route>  
            
           {/* Audio chapter end  */}

@@ -2,12 +2,11 @@
   width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-
 }
 
-.textFormetting  th,
+.textFormetting th,
 td {
-  border: 1px solid #ada7ff;
+  border: 2px solid #ada7ff;
   text-align: center;
   padding: 10px;
 }
@@ -18,5 +17,5 @@ td {
 }
 
 .textFormetting tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e6eefc;
 }

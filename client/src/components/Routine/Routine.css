@@ -1,0 +1,14 @@
+@media (max-width: 575px) {
+  .routineTBody {
+    font-size: 13px !important;
+    td {
+      padding: 4px !important;
+    }
+  }
+  .routineTHead {
+    font-size: 17px !important;
+  }
+  .routineFooter p {
+    font-size: 18px !important;
+  }
+}

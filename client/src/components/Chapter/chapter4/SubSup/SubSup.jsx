@@ -50,7 +50,7 @@ const SubSup = () => {
                 {
       Chpt4SubDetail.map((item,index)=>{
         return(
-          <Link to={item.name} className="mb-4">
+          <Link key={index} to={item.name} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>
           </Link>
         )

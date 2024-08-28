@@ -8,7 +8,7 @@ const AudioBook = () => {
   return (
     <section className='audioBook'>
       <div className="container">
-        <div className="faqTitle text-center mt-5 mb-4">
+        <div className="faqTitle text-center mt-1 mb-4">
           <span>তথ্য ও যোগাযোগ প্রযুক্তি (অডিও বুক)</span> 
         </div>
 
@@ -16,7 +16,7 @@ const AudioBook = () => {
           {
             HscChapterDetail.map((item, index) => {
               return (
-                <Link to={item.chapterAudio} className={item.className} key={index}>
+                <Link to={item.chapterAudio} className={item.class} key={index}>
                   <div className='d-flex justify-content-between w-100 flex-row-reverse'>
                     <h3>{item.title}</h3>
                     <h3 className='audioText'>

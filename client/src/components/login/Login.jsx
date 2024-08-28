@@ -26,7 +26,7 @@ const Login = () => {
               <input type="checkbox" />
               মনে রাখুন
             </div>
-            <a href="#">পাসওয়ার্ড ভুলে গেছেন ?</a>
+            <a href="/">পাসওয়ার্ড ভুলে গেছেন ?</a>
           </div>
           <button>লগ ইন</button>
           <div className="new_account">

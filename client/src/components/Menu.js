@@ -6,7 +6,7 @@ export const Menu=[
         icon:"fa-solid fa-house-user"
     },
     {
-        title:"HSC",
+        title:"হ্যান্ড নোট",
         url:"/hsc",
         cName:"navLinks",
         icon:"fa-solid fa-book-atlas"
@@ -18,16 +18,22 @@ export const Menu=[
         icon:"fa-regular fa-pen-to-square"
     },
     {
-        title:"আমাদের সম্পর্কে",
-        url:"/about",
+        title:"বই",
+        url:"/ict-books", 
         cName:"navLinks",
-        icon:"fa-solid fa-circle-info"
+        icon:"fa-solid fa-book-open"
     },
+    
     {
         title:"এডিটর",
         url:"/editor",
         cName:"navLinks",
         icon:"fa-solid fa-code"
+    },{
+        title:"রুটিন",
+        url:"/routine",
+        cName:"navLinks mb-2",
+        icon:"fa-solid fa-calendar-days"
     },
     {
         title:"কোর্সসমূহ",
@@ -39,17 +45,25 @@ export const Menu=[
     
 ]
 export const subMenu=[
+   
+    {
+        title:"যোগাযোগ",
+        url:"/contact",
+        cName:"navLinks mb-2",
+        icon:"fa-regular fa-comments"
+    },
     {
         title:"অডিও বুক",
         url:"/audio-book",
         cName:"navLinks mb-2 text-center",
         icon:"fa-brands fa-leanpub"
     },
+    
     {
-        title:"যোগাযোগ",
-        url:"/contact",
+        title:"আমাদের সম্পর্কে",
+        url:"/about",
         cName:"navLinks mb-2",
-        icon:"fa-regular fa-paper-plane"
+        icon:"fa-solid fa-circle-info"
     },
     {
         title:"গ্যালারি",
@@ -57,4 +71,6 @@ export const subMenu=[
         cName:"navLinks",
         icon:"fa-regular fa-image"
     }
+    ,
+    
 ]

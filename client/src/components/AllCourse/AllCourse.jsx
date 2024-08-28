@@ -13,11 +13,11 @@ const AllCourse = () => {
             <div className="row">
             {AllCourseMenu.map((item,index)=>{
             return(
-              <div className="col-lg-4 col-sm-12 col-md-6 py-4">
+              <div key={index} className="col-lg-4 col-sm-12 col-md-6 py-4">
               <Link to="/course-detail">
               <div className="card" id="card">
                 <div>
-                 <div className={item.className}></div>
+                 <div className={item.class}></div>
                  <div className="card-body">
                  <h5 className="text-center">{item.tilte}</h5>
                  <div className="d-flex justify-content-between my-3">
@@ -65,7 +65,7 @@ const AllCourse = () => {
            })}
             </div>
         </div>
-        {/* <a href="/course"><div className='topArrow'><i className="fa-solid fa-arrow-up"></i></div></a> */}
+       
     </section>
   )
 }

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="row footerRow py-5 justify-content-around gap-md-5" >
           
           <div className="col-lg-4 col-md-5">
-          <div className='d-flex footerTop align-items-center  gap-3  mt-4'>
+          <div className='d-flex footerTop align-items-center pt-1 gap-3  mt-4'>
           <img src={logo} alt="" className='footerLogo'  />
           <h4 >"বাংলাদেশে আইসিটি শিক্ষায়,<br />
           অন্যতম অনলাইন প্ল্যাটফর্ম"</h4>
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-2 col-md-5 mt-4 ">
-          <h4 className='fw-bold'>নীতিমালা</h4>
+          <h4 className='fw-bold pt-1'>নীতিমালা</h4>
             <Link to="/terms&condition"><p className='mt-3'>টার্মস এবং শর্তাবলী</p></Link>
             <Link to="/privacy-policy"><p>প্রাইভেসি পলিসি</p></Link>
             <Link to="/refund"><p>রিফান্ড পলিসি</p></Link>
@@ -34,7 +34,7 @@ const Footer = () => {
             
           </div>
           <div className="col-lg-2 col-md-5 mt-4 ">
-          <h4 className='fw-bold'>কোর্সসমূহ</h4>
+          <h4 className='fw-bold pt-1'>কোর্সসমূহ</h4>
             <Link to="/"><p className='mt-3'>বেসিক কম্পিউটার প্রশিক্ষন</p></Link>
             <Link to="/contact"><p>
             HSC ICT সম্পূর্ণ একাডেমিক অফলাইন কোর্স 
@@ -42,7 +42,7 @@ const Footer = () => {
             <Link to="/course"><p>ওয়েব ডেভেলপমেন্ট</p></Link>
           </div>
           <div className="col-lg-2 col-md-5  mt-4">
-          <h4 className='fw-bold'>যোগাযোগ</h4>
+          <h4 className='fw-bold pt-1'>যোগাযোগ</h4>
           <p className='mt-3 d-flex align-items-center'>
               <i className="fa-location-dot fa-solid me-2"></i> মাগুরা পুলিশ লাইন, মাগুরা।
             </p>

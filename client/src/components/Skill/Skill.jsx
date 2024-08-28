@@ -7,15 +7,15 @@ const Skill = () => {
   return (
     <section className="skill pb-5">
         <div className="faqTitle text-center pt-5 ">
-         <span>স্কিল ডেভেলপমেন্ট</span> 
+         <span>স্কিল ডেভেলপমেন্ট ও ক্যাটাগরিসমূহ</span> 
          </div>
         <div className="container">
             <div className="row">
                {skillMenu.map((item,index)=>{
                  return(
-                    <div className="col-lg-3 skillCard col-md-6 col-sm-12 pt-3">
+                    <div key={index} className="col-lg-3 skillCard col-md-6 col-sm-12 pt-3">
                <Link to={item.src}>
-               <div className={item.className}>
+               <div className={item.class}>
                      <img src={item.img} alt="" />
                      <h2 className="fw-bold">{item.title}</h2>
                      <div className="skillBtn py-1 d-flex align-items-center justify-content-center">

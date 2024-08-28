@@ -43,8 +43,8 @@ const Nav = () => {
                 ))}
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle  nav-link d-flex align-items-center gap-2 fs-5 btn2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i className="fa-brands fa-leanpub"></i>
-                  অডিও বুক
+                  <i class="fa-solid fa-layer-group"></i>
+                  আরো 
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {subMenu.map((item, index) => (
@@ -65,7 +65,7 @@ const Nav = () => {
                   </ul>
                 </li>
               </ul>
-              <div className="col-1 btnGRP d-flex align-items-center justify-content-end">
+              <div className="col-1 btnGRP d-flex justify-content-end">
                
                 <NavLink
                   to="/login"
