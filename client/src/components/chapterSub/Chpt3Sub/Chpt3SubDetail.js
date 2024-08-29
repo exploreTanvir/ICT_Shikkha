@@ -1,4 +1,6 @@
 export const Chpt3SubDetail=[
+    {title:"লজিক গেট",
+        name:"logic-gate"},
     {title:"সংখ্যা পদ্ধতি",
         name:"numbering-system"
     },
@@ -6,8 +8,7 @@ export const Chpt3SubDetail=[
         name:"code"},
     {title:"বুলিয়ান অ্যালজেবরা",
         name:"boolean-algebra"},
-    {title:"লজিক গেট",
-        name:"logic-gate"},
+   
     {title:"এনকোডার ডিকোডার",
         name:"encoder-decoder"},
     {title:"অ্যাডার",

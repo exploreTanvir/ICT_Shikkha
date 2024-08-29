@@ -1,51 +1,47 @@
-.allCoursesBtn {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  padding: 13px 30px;
-  transition: 0.5s;
-  background: rgb(0, 7, 69);
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  border-radius: 5px;
+.modal-dialog {
+  max-width: 1000px;
 }
-.allCoursesBtn:hover {
-  color: white;
-  border-radius: 5px;
-}
-.allCoursesBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 12, 143);
-  z-index: -1;
-  transform-origin: left;
-  transition: transform 0.5s ease;
-  transform: scaleX(1);
+.modal-header {
+  border-bottom: 0;
 }
 
-.allCoursesBtn:hover::before {
-  transform-origin: right;
-  transition: transform 0.5s ease;
-  transform: scaleX(0);
+.modal-content {
+  padding: 20px;
 }
-.course li {
-  text-align: justify;
+.form-label {
+  font-size: 16px;
 }
-@media (max-width: 575px) {
-  video {
-    width: 100%;
+
+.Instruction {
+  color: rgb(0, 16, 105);
+}
+.paymentContainer {
+  b {
+    color: rgb(1, 33, 114);
   }
- .desc p {
-    font-size: 17px;
+  input,
+  select:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
   }
-  .courseRow {
-    flex-direction: column-reverse;
+}
+
+#copyText:hover {
+  i {
+    color: rgb(216, 81, 81);
+    transition: all 0.5s ease;
   }
-  .course .card {
-    margin-bottom: 30px;
+  b {
+    color: rgb(98, 130, 235);
+    transition: all 0.5s ease;
+  }
+}
+@media screen and (max-width: 575px) {
+  .paymentRight {
+    margin-top: 30px;
+    text-align: center !important;
+  }
+  .modal-content {
+    padding: 0;
   }
 }

@@ -26,8 +26,6 @@ const IctBooks = () => {
                 
             </div>
 
-
-
         <div className="faqTitle text-center my-4">
          <span>HSC ICT টেস্টপেপার</span> 
          </div>

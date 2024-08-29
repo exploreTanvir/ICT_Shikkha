@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  Route,
-  BrowserRouter as Router,
-  Switch
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import AI from "./components/Chapter/chapter1/AI/AI";
@@ -32,6 +28,7 @@ import TextFormetting from "./components/Chapter/chapter4/TextFormetting/TextFor
 import Language from "./components/Chapter/chapter5/Language/Language";
 import Programming from "./components/Chapter/chapter5/Programming/Programming";
 import Translator from "./components/Chapter/chapter5/Translator/Translator";
+import Chapter6 from "./components/Chapter/chapter6/Chapter6";
 import Chpt1Sub from "./components/chapterSub/Chpt1Sub/Chpt1Sub";
 import Chpt2Sub from "./components/chapterSub/Chpt2Sub/Chpt2Sub";
 import Chpt3Sub from "./components/chapterSub/Chpt3Sub/Chpt3Sub";
@@ -60,7 +57,14 @@ import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import RoutinePage from "./components/pages/RoutinePage";
 import SingUpPage from "./components/pages/SingUpPage";
-import Chapter6 from "./components/Chapter/chapter6/Chapter6";
+import ModelTest from "./components/Sugg&Test/ModelTest/ModelTest";
+import Suggestion from "./components/Sugg&Test/Suggestion/Suggestion";
+import Number_system from "./components/Chapter/chapter3/Number/Number_system";
+import Boolean_Algebra from "./components/Chapter/chapter3/Boolean_Algebra/Boolean_Algebra";
+import Encoder_Decoder from "./components/Chapter/chapter3/Encoder_Decoder/Encoder_Decoder";
+import Adder from "./components/Chapter/chapter3/Adder/Adder";
+import Register from "./components/Chapter/chapter3/Register/Register";
+import Code from "./components/Chapter/chapter3/Code/Code";
 
 const App = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -118,161 +122,84 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home}/>
           
-          <Route path="/course">
-            <Courses />
-          </Route>
+          <Route path="/course" component={Courses}/>
           <Route path="/contact" component={Contacts} />
           <Route path="/audio-book" component={AudioBookPage} />
           <Route path="/login" component={LoginPage} />
            
 
-          <Route path="/sing-up">
-            <SingUpPage />
-          </Route>
-          <Route path="/course-detail">
-            <CourseDetail />
-          </Route>
-          <Route path="/about">
-            <AboutPage/>
-          </Route>
-          <Route path="/gallery">
-            <GalleryPage />
-          </Route>
-          <Route path="/quiz" >
-            <QuizPage />
-          </Route>
-          <Route path="/hsc" >
-            <HSC />
-          </Route>
-          <Route path="/editor" >
-            <EditorPage />
-          </Route>
-          <Route path="/ict-books" >
-            <ICTBooksPage />
-          </Route>
-          <Route path="/routine" >
-            <RoutinePage />
-          </Route>
+          <Route path="/sing-up"component={SingUpPage}/>
+          <Route path="/course-detail" component={CourseDetail}/>
+            <Route path="/about" component={AboutPage}/>
+          <Route path="/gallery" component={GalleryPage}/>
+          <Route path="/quiz" component={QuizPage} />
+          <Route path="/hsc" component={HSC} />
+          <Route path="/editor" component={EditorPage} />
+          <Route path="/ict-books" component={ICTBooksPage} />
+          <Route path="/routine" component={RoutinePage} />
 
 
-
-
-          <Route path="/chapter-1" >
-            <Chpt1Sub />
-          </Route>
-          <Route path="/chapter-2" >
-            <Chpt2Sub />
-          </Route>
-          <Route path="/chapter-3" >
-            <Chpt3Sub />
-          </Route>
-          <Route path="/chapter-4" >
-            <Chpt4Sub />
-          </Route>
-          <Route path="/chapter-5" >
-            <Chpt5Sub />
-          </Route>
-          <Route path="/chapter-6" >
-            <Chapter6 />
-          </Route>
+          <Route path="/chapter-1" component={Chpt1Sub} />
+          <Route path="/chapter-2" component={Chpt2Sub} />
+          <Route path="/chapter-3" component={Chpt3Sub} />
+          <Route path="/chapter-4" component={Chpt4Sub} />
+          <Route path="/chapter-5" component={Chpt5Sub} />
+          <Route path="/chapter-6" component={Chapter6} />
+          <Route path="/suggestion" component={Suggestion} />
+          <Route path="/model-test" component={ModelTest} />
+         
 
 
           {/* Chapter One Start  */}
-          <Route path="/global-village" >
-            <Global_Village/>
-          </Route>
-          <Route path="/virtual-reality" >
-            <VR/>
-          </Route>
-          <Route path="/artificial-intelligence" >
-            <AI/>
-          </Route>
-          <Route path="/robotics" >
-            <Robotics/>
-            </Route>
-          <Route path="/cryosurgery" >
-            <CryoSurgery/>
-          </Route>
-          <Route path="/genetic-engineering" >
-            <GeneticEngineering/>
-          </Route>
-          <Route path="/nano-technology" >
-            <NanoTechnology/>
-          </Route>
-          <Route path="/bio-informatics" >
-            <BioInformatics/>
-          </Route>
-
+            
+            <Route path="/global-village" component={Global_Village} />
+          <Route path="/virtual-reality" component={VR} />
+          <Route path="/artificial-intelligence" component={AI} />
+          <Route path="/robotics" component={Robotics} />
+          <Route path="/cryosurgery" component={CryoSurgery} />
+          <Route path="/genetic-engineering" component={GeneticEngineering} />
+          <Route path="/nano-technology" component={NanoTechnology} />
+          <Route path="/bio-informatics" component={BioInformatics} />
           {/* Chapter one end  */}
 
 
           {/* Chapter two Start  */}
-          <Route path="/communication-system" >
-            <Communication_system/>
-          </Route>
-          <Route path="/communication-method" >
-            <Communication_Method/>
-          </Route>
-          <Route path="/wireless" >
-            <Wireless/>
-          </Route>
-          <Route path="/mobile-communication" >
-            <Mobile_Communication/>
-          </Route>
-          <Route path="/computer-network" >
-            <Computer_Network/>
-          </Route>
-          <Route path="/topology" >
-            <Topology/>
-          </Route>
-          <Route path="/cloud-computing" >
-            <Cloud_Computing/>
-          </Route>
+          <Route path="/communication-system" component={Communication_system} />
+          <Route path="/communication-method" component={Communication_Method} />
+          <Route path="/wireless" component={Wireless} />
+          <Route path="/mobile-communication" component={Mobile_Communication} />
+          <Route path="/computer-network" component={Computer_Network} />
+          <Route path="/topology" component={Topology} />
+          <Route path="/cloud-computing" component={Cloud_Computing} />
           {/* Chapter two end  */}
 
 
           {/* Chapter three Start  */}
-          <Route path="/logic-gate" >
-            <LogicGate/>
-          </Route>
+          <Route path="/logic-gate" component={LogicGate} />
+          <Route path="/numbering-system" component={Number_system} />
+          <Route path="/boolean-algebra" component={Boolean_Algebra} />
+          <Route path="/encoder-decoder" component={Encoder_Decoder} />
+          <Route path="/adder" component={Adder} />
+          <Route path="/register" component={Register} />
+          <Route path="/code" component={Code} />
           
           {/* Chapter three end  */}
 
 
           {/* Chapter four start  */}    
-          <Route path="/heading" >
-            <Heading/>
-          </Route>
-          <Route path="/text-formatting" >
-            <TextFormetting/>
-          </Route>
-          <Route path="/sub-sup" >
-            <SubSup/>
-          </Route>
-          <Route path="/list" >
-            <HTMLList/>
-          </Route>
-          <Route path="/hyper-link" >
-            <HyperLink/>
-          </Route>
-          <Route path="/img" >
-            <HTMlImg/>
-          </Route>
-          <Route path="/table" >
-            <Table/>
-          </Route>         
+          <Route path="/heading" component={Heading} />
+          <Route path="/text-formatting"  component={TextFormetting} />
+          <Route path="/sub-sup" component={SubSup} />
+          <Route path="/list" component={HTMLList} />
+          <Route path="/hyper-link" component={HyperLink} />
+          <Route path="/img" component={HTMlImg} />
+          <Route path="/table" component={Table} />        
           {/* Chapter four end  */}
 
           {/* Chapter five start  */}    
-          <Route path="/program" >
-            <Programming/>
-          </Route>
-          <Route path="/language" >
-            <Language/>
-          </Route>         
-          <Route path="/translator" >
-            <Translator/>
-          </Route>         
+          <Route path="/program" component={Programming} />
+          <Route path="/language" component={Language} />        
+          <Route path="/translator" component={Translator} />        
                   
           {/* Chapter five end  */}
 
@@ -281,15 +208,9 @@ const App = () => {
 
           {/* Footer Item start  */}
 
-          <Route path="/terms&condition" >
-            <Terms/>
-          </Route>  
-          <Route path="/privacy-policy" >
-            <Privacy/>
-          </Route>  
-          <Route path="/refund" >
-            <Refund/>
-          </Route>  
+          <Route path="/terms&condition" component={Terms}/> 
+          <Route path="/privacy-policy" component={Privacy} /> 
+          <Route path="/refund" component={Refund} /> 
           {/* Footer Item end  */}
 
 
@@ -297,24 +218,13 @@ const App = () => {
 
           {/* Audio chapter start  */}
 
-          <Route path="/chapter-audio-1" >
-            <Chpt1Audio/>
-          </Route>  
-          <Route path="/chapter-audio-2" >
-            <Chpt2Audio/>
-          </Route>  
-          <Route path="/chapter-audio-3" >
-            <Chpt3Audio/>
-          </Route>  
-          <Route path="/chapter-audio-4" >
-            <Chpt4Audio/>
-          </Route>  
-          <Route path="/chapter-audio-5" >
-            <Chpt5Audio/>
-          </Route>  
-          <Route path="/chapter-audio-6" >
-            <Chptr6Audio/>
-          </Route>  
+          <Route path="/chapter-audio-1" component={Chpt1Audio} />
+          <Route path="/chapter-audio-2" component={Chpt2Audio} />
+          <Route path="/chapter-audio-3" component={Chpt3Audio} />
+          <Route path="/chapter-audio-4" component={Chpt4Audio} />
+          <Route path="/chapter-audio-5" component={Chpt5Audio} />
+          <Route path="/chapter-audio-6" component={Chptr6Audio} />
+          
            
           {/* Audio chapter end  */}
                   

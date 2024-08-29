@@ -21,7 +21,7 @@ const Chpt2Sub = () => {
     </div>         
         
     </div>
-    <div className="row gap-4 jcc">
+    <div className="row justify-content-between jcc">
     {
       Chpt2SubDetail.map((item,index)=>{
         return(

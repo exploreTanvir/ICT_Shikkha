@@ -1,217 +1,289 @@
-import jsVdo from "../../assets/js-13.mp4"
-import "./course.css"
+import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import jsVdo from "../../assets/js-13.mp4";
+import { courseDeta } from "./CourseDetail";
+import "./course.css";
 
 const Course = () => {
-  return (
-    <section className="course py-5">
-         <div className="faqTitle text-center mt-5 mb-4">
-         <span>কোর্স সম্পর্কে বিস্তারিত</span> 
-         </div>
-     
-    <div className="container">
-    
-      <div className="row courseRow">
-        <div className="col-lg-8">
-          
-          <div className="course">
-            <div className="accordion" id="accordionExample">
-              <div className="accordion-item">
-                <h2 className="accordion-header rounded-3" id="faqOne">
-                  <button
-                    className="accordion-button collapsed faqbtn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    কোর্সের জন্য কি পূর্ববর্তী কোনো অভিজ্ঞতা প্রয়োজন?
-                  </button>
-                </h2>
-                <div
-                  id="collapseOne"
-                  className="accordion-collapse collapse show"
-                  aria-labelledby="faqOne"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div className="accordion-body">
-                    <ul type="square">
-                    <li>
-                      জাভাস্ক্রিপ্ট একটি জনপ্রিয় প্রোগ্রামিং ভাষা যা ওয়েব ডেভেলপমেন্টে ব্যবহৃত হয়। জাভাস্ক্রিপ্ট কোর্স করার জন্য কিছু প্রাথমিক পূর্বশর্ত রয়েছে যা আপনার শেখার অভিজ্ঞতাকে আরও সহজ এবং কার্যকর করতে সাহায্য করবে। নিচে জাভাস্ক্রিপ্ট শেখার জন্য প্রয়োজনীয় কিছু পূর্বশর্তের তালিকা দেওয়া হলো:
-                      <ul>
-                        <li>HTML এবং CSS এর মৌলিক ধারণা।</li>
-                        <li> লজিক্যাল চিন্তা ও সমস্যা সমাধানের দক্ষতা।</li>
-                        <li> মৌলিক প্রোগ্রামিং ধারণা।</li>
-                        <li>কম্পিউটার এবং ইন্টারনেট ব্যবহারের দক্ষতা।</li>
-                        <li>অনলাইনে শেখার ইচ্ছা ও ধৈর্য।</li>
-                      </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  const notify = () => toast("সফলভাবে প্রেরন হয়েছে! আমাদের সাপোর্ট টিম কিছু সময়ের মধ্যেই আপনার রিকুয়েস্টটি ভেরিফাই করবে। অনুগ্রহ করে অপেক্ষা করুণ ।");
 
+
+  const handleCopyClick = () => {
+    toast("👌Text copied to clipboard ! ")
+    const textToCopy = document.getElementById("copyText").innerText; 
+    navigator.clipboard.writeText(textToCopy)
+  };
+
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState({
+    accountType: "বিকাশ",
+    accountNumber: "01721554216",
+  });
+
+  const updatePaymentInfo = (event) => {
+    const selectedOption = event.target.options[event.target.selectedIndex];
+    setSelectedPaymentMethod({
+      accountType: selectedOption.text,
+      accountNumber: selectedOption.getAttribute("data-account"),
+    });
+  };
+
+  return (
+    <section className="py-5">
+      <div className="faqTitle text-center mb-4">
+        <span>কোর্স সম্পর্কে বিস্তারিত</span>
+      </div>
+
+      <div className="container">
+        <div className="row courseRow">
+          <div className="col-lg-8 faqRight">
+            <div className="accordion accordion-flush" id="accordionFlushExample">
               <div className="accordion-item">
-                <h2 className="accordion-header rounded-3" id="faqTwo">
+                <h2 className="accordion-header rounded" id="panelsStayOpen-headingOne">
                   <button
-                    className="accordion-button collapsed faqbtn"
+                    className="accordion-button fs-5"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
+                    data-bs-target="#panelsStayOpen-collapseOne"
                     aria-expanded="true"
-                    aria-controls="collapseTwo"
+                    aria-controls="panelsStayOpen-collapseOne"
                   >
                     কোর্সটি যাদের জন্য:
                   </button>
                 </h2>
                 <div
-                  id="collapseTwo"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="faqTwo"
-                  data-bs-parent="#accordionExample"
+                  id="panelsStayOpen-collapseOne"
+                  className="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne"
                 >
                   <div className="accordion-body">
                     <ul type="square">
-                    <li>
-                        যারা পড়াশোনার পাশাপাশি নিজের স্কিল ডেভেলপ করতে চান।
-                      </li>
-                      <li>
-                        যারা ওয়েব ডিজাইন/ডেভেলপমেন্ট শিখে ফ্রিলান্স
-                        মার্কেটপ্লেসে কাজ করতে চান।
-                      </li>
-                      <li>
-                        যারা বিভিন্ন কোম্পানির ওয়েব ডিজাইন/ডেভেলপমেন্ট রিলেটেড
-                        ফিক্সড জব করতে চান।
-                      </li>
-                      
+                      <li>যারা পড়াশোনার পাশাপাশি নিজের স্কিল ডেভেলপ করতে চান।</li>
+                      <li>যারা বিভিন্ন কোম্পানির ওয়েব ডিজাইন/ডেভেলপমেন্ট রিলেটেড ফিক্সড জব করতে চান।</li>
+                      <li>যারা ওয়েব ডিজাইন/ডেভেলপমেন্ট শিখে ফ্রিলান্স মার্কেটপ্লেসে কাজ করতে চান।</li>
                     </ul>
                   </div>
                 </div>
               </div>
+              {courseDeta.map((item, index) => (
+                <div key={index} className="accordion-item">
+                  <h1 className="accordion-header rounded" id={item.flushID}>
+                    <button
+                      className="accordion-button fs-5 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={item.flushCollapsTarget}
+                      aria-expanded="false"
+                      aria-controls={item.flushCollaps}
+                    >
+                      {item.title}
+                    </button>
+                  </h1>
+                  <div
+                    id={item.flushCollaps}
+                    className="accordion-collapse collapse"
+                    aria-labelledby={item.flushID}
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <ul type="square">
+                        <p>{item.item3}</p>
+                        <li>{item.item}</li>
+                        <p>{item.item2}</p>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
 
-              <div className="accordion-item">
-                <h2 className="accordion-header rounded-3" id="faqThree">
-                  <button
-                    className="accordion-button collapsed faqbtn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="true"
-                    aria-controls="collapseThree"
-                  >
-                    কোর্স শেষ করতে যদি সমস্যা হয়, তাহলে কী করা উচিত?
-                  </button>
-                </h2>
+              <div
+                className="modal fade"
+                id="exampleModal"
+                tabIndex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
                 <div
-                  id="collapseThree"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="faqThree"
-                  data-bs-parent="#accordionExample"
+                  className="paymentContainer modal-dialog modal-dialog-centered modal-dialog-scrollable"
                 >
-                  <div className="accordion-body">
-                    <ul type="square">
-                      <li>
-                      যদি কোর্স শেষ করতে কোনো সমস্যায় পড়েন, আপনি আমাদের সহায়ক দলের সাথে যোগাযোগ করতে পারেন। এছাড়াও, ফোরামে অন্যান্য শিক্ষার্থীদের সাথে আপনার সমস্যাগুলো আলোচনা করতে পারেন। আমাদের শিক্ষকরাও আপনার জন্য সহায়ক হতে পারেন।
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header rounded-3" id="faqFour">
-                  <button
-                    className="accordion-button collapsed faqbtn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="true"
-                    aria-controls="collapseFour"
-                  >
-                     কোর্সের সময় অনলাইন পরীক্ষার জন্য প্রস্তুতি কিভাবে নিব?
-                  </button>
-                </h2>
-                <div
-                  id="collapseFour"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="faqFour"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div className="accordion-body">
-                    <ul type="square">
-                    <p>অনলাইন পরীক্ষার জন্য প্রস্তুতি নেওয়ার জন্য:</p>
-        <ul>
-          <li>প্রতিটি মডিউল মনোযোগ দিয়ে পড়ুন।</li>
-          <li>প্র্যাকটিস কুইজগুলো সমাধান করুন।</li>
-          <li>ইনস্ট্রাক্টরের সাথে আপনার প্রশ্নগুলি আলোচনা করুন।</li>
-          <li>পূর্ববর্তী প্রশ্নপত্র এবং নমুনা প্রশ্নপত্র দেখুন।</li>
-        </ul>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header rounded-3" id="faqFive">
-                  <button
-                    className="accordion-button collapsed faqbtn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive"
-                    aria-expanded="true"
-                    aria-controls="collapseFive"
-                  >
-                   কিভাবে আপনি ক্যারিয়ার গাইডেন্স পেতে পারেন?
-                  </button>
-                </h2>
-                <div
-                  id="collapseFive"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="faqFive"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div className="accordion-body">
-                    <ul type="square">
-                    আমরা আমাদের শিক্ষার্থীদের জন্য ক্যারিয়ার গাইডেন্স এবং পরামর্শ প্রদান করি। আপনি আমাদের ক্যারিয়ার সার্ভিস টিমের সাথে যোগাযোগ করতে পারেন অথবা লাইভ ওয়েবিনারে অংশগ্রহণ করতে পারেন।
-                    </ul>
+                  <div className="modal-content">
+                    <div className="modal-header pt-">
+                      <button
+                        type="button"
+                        className="btn-close p-0"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div className="modal-body">
+                      <div className="row">
+                        <div className="col-md-6">
+                          <form>
+                            <div className="mb-3">
+                              <label
+                                htmlFor="paymentMethod"
+                                className="form-label fw-bold"
+                              >
+                                পেমেন্ট মেথড বেছে নিন
+                              </label>
+                              <select
+                                className="form-select"
+                                id="paymentMethod"
+                                onChange={updatePaymentInfo}
+                              >
+                                <option value="বিকাশ" data-account="01721554216">
+                                  বিকাশ
+                                </option>
+                                <option value="রকেট" data-account="0845421541">
+                                  রকেট
+                                </option>
+                                <option value="নগদ" data-account="09542515421">
+                                  নগদ
+                                </option>
+                              </select>
+                            </div>
+                            <div className="mb-3">
+                              <label
+                                htmlFor="senderMobile"
+                                className="form-label fw-bold"
+                              >
+                                অর্থের পরিমান
+                              </label>
+                              <input
+                                type="number"
+                                className="form-control"
+                                id="senderMobile"
+                                placeholder=""
+                              />
+                            </div>
+                            <div className="mb-3">
+                              <label
+                                htmlFor="senderMobile"
+                                className="form-label fw-bold"
+                              >
+                                প্রেরকের মোবাইল নাম্বার
+                              </label>
+                              <input
+                                type="number"
+                                className="form-control"
+                                id="senderMobile"
+                                placeholder=""
+                              />
+                            </div>
+                            <div className="mb-3">
+                              <label
+                                htmlFor="transactionId"
+                                className="form-label fw-bold"
+                              >
+                                ট্রানজেকশন আইডি (TrxID)
+                              </label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="transactionId"
+                                placeholder=""
+                              />
+                            </div>
+                            <button
+                              type="button"
+                              id="liveToastBtn"
+                              className="py-2 w-100 mt-4 btn1"
+                              onClick={notify}
+                            >
+                              প্রেরণ করুন
+                            </button>
+                          </form>
+                        </div>
+                        <div className="col-md-6 px-4 paymentRight">
+                          <h4 className="fw-bold Instruction mb-3 mt-sm-3">
+                            নির্দেশসমূহ অনুসরণ করুন
+                          </h4>
+                          <p>
+                            <b id="accountType">{selectedPaymentMethod.accountType}</b> একাউন্ট এ
+                            আপনার কোর্স ফি পাঠান
+                          </p>
+                          <ul>
+                            <li id="accountNumber">
+                              <b>{selectedPaymentMethod.accountType}</b> পারসোনাল:{" "}
+                             <button id="copyText" onClick={handleCopyClick} className="bg-white border-0"> <b><i className="fa-regular fa-copy ms-3 me-1"></i>{selectedPaymentMethod.accountNumber}</b></button>
+                            
+                            </li>
+                          </ul>
+                          <p>
+                            ফি পাঠানোর পরে, আপনার তালিকাভুক্তির অনুরোধ সম্পূর্ণ করার জন্য
+                            লেনদেন আইডি (TrxID) এবং প্রেরকের মোবাইল নম্বর ব্যবহার করুন।
+                            যখন আমরা আপনার অনুরোধ পাই, আমরা এটি 10-15 মিনিটের মধ্যে
+                            সক্রিয় করব, তারপর আপনি কোর্সটি শুরু করতে পারবেন।
+                          </p>
+                          <p>
+                            আরও সাহায্যের জন্য আমাদের হেল্পলাইনে যোগাযোগ করুন : <br />
+                            <b
+                              ><i className="fa-solid fa-headset"></i> হেল্পলাইন :
+                              ০১৪১৮৭৮৪৪৫</b>
+                          </p>
+                          <p>
+                            <b><i className="fa-solid fa-phone-volume"></i> মোবাইল:</b>
+                            <i>০১৮৫৫৮৮২২৫</i> <br />
+                            <b><i className="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপ:</b>
+                            <i>০১৮৮২৫৫৫২২</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col-lg-4 col-md-12">
-          <div className="card" id="card">
-            <div className="card-body">
-              <video className="video w-100" controls  src={jsVdo}>
-                <source />
-              </video>
-              <h5 className="card-title my-3">৳ ****</h5>
-              <div>
-                <button type="button" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>এনরোল করুন</button>
+          <div className="col-lg-4 col-md-12">
+            <div className="card">
+              <div className="card-body">
+                <video className="video w-100" controls src={jsVdo}>
+                  <source />
+                </video>
+                <h5 className="card-title my-3">৳ ****</h5>
+                <div>
+                  <button
+                    type="button"
+                    className="allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    এনরোল করুন
+                  </button>
                 </div>
-              <div className="desc mt-4">
-                <p>
-                  <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ***
-                  জন
-                </p>
-                <p>
-                  <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে ** ঘন্টা
-                </p>
-                <p>
-                  <i className="fa-regular fa-circle-play me-2"></i>*** টি ভিডিও
-                </p>
-                <p>
-                  <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা * মাস
-                </p>
+                <div className="desc mt-4">
+                  <p>
+                    <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ***
+                    জন
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে ** ঘন্টা
+                  </p>
+                  <p>
+                    <i className="fa-regular fa-circle-play me-2"></i>*** টি ভিডিও
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা * মাস
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      closeOnClick
+      rtl
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
       </div>
-    </div>
-    
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default Course
+export default Course;
