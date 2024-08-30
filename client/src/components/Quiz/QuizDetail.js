@@ -75,7 +75,82 @@ export const question=[
           {
             question: " কম্পিউটার সিম্যুলেশন প্রয়ােগের ক্ষেত্র কোনটি? [চ, বাে, ‘১৭] ",
             options: ["ভার্চুয়াল রিয়েলিটি", "ক্রায়ােসার্জারি", "ইন্টারনেট ", "ভিডিও কনফারেন্সিং "],
-            answer: "ভার্চুয়াল রিয়েলিটি ",
+            answer: "ভার্চুয়াল রিয়েলিটি",
+          },
+          {
+            question: " কনটেন্ট ম্যানেজমেন্ট সিস্টেম (CMS) কী?",
+            options: ["একটি প্রোগ্রামিং ভাষা", "একটি নেটওয়ার্ক প্রোটোকল", "একটি সফটওয়্যার প্ল্যাটফর্ম", "একটি হার্ডওয়্যার ডিভাইস"],
+            answer: "একটি সফটওয়্যার প্ল্যাটফর্ম",
+          },
+          {
+            question: " ইন্টারনেটের মাধ্যমে সংযুক্ত কম্পিউটারগুলি কোন প্রোটোকল ব্যবহার করে?",
+            options: ["SMTP", "FTP", "TCP/IP", "HTTP"],
+            answer: "TCP/IP",
+          },
+          {
+            question: "সফটওয়্যার ডেভেলপমেন্ট লাইফ সাইকেল (SDLC) এর কোন পর্যায়ে প্রকল্পের কার্যকারিতা মূল্যায়ন করা হয়?",
+            options: ["নকশা", "বাস্তবায়ন", "রক্ষণাবেক্ষণ", "পরিকল্পনা"],
+            answer: "রক্ষণাবেক্ষণ",
+          },
+          {
+            question: "কোন প্রোগ্রামিং ভাষা মূলত ওয়েব ডেভেলপমেন্টের জন্য ব্যবহৃত হয়?",
+            options: ["JavaScript", "Java", "Python", "C"],
+            answer: "JavaScript",
+          },
+          {
+            question: "ডেটাবেস ম্যানেজমেন্ট সিস্টেম (DBMS) এর উদাহরণ কোনটি?",
+            options: ["Photoshop", "MySQL", "CorelDRAW", "MS Word"],
+            answer: "MySQL",
+          },
+          {
+            question: "কোনটি একটি অপারেটিং সিস্টেম?",
+            options: ["Adobe Photoshop", "Linux", "Microsoft Word", "Microsoft Excel"],
+            answer: "Linux",
+          },
+          {
+            question: "কোনটি প্রাইমারি মেমোরি?",
+            options: ["পেন ড্রাইভ", "CD-ROM", "RAM", "হার্ড ডিস্ক"],
+            answer: "RAM",
+          },
+          {
+            question: "কোনটি ওয়েব পেজ ডিজাইনের জন্য ব্যবহৃত হয়?",
+            options: ["HTML", "Python", "C++", "SQL"],
+            answer: "HTML",
+          },
+          {
+            question: "CPU এর প্রধান কাজ কী?",
+            options: ["ডেটা ম্যানেজমেন্ট", "ডেটা ট্রান্সফার", "ডেটা প্রসেসিং", "ডেটা সংরক্ষণ"],
+            answer: "ডেটা প্রসেসিং",
+          },
+          {
+            question: "কোন প্রোটোকল ইমেইল পাঠাতে ব্যবহৃত হয়?",
+            options: ["SMTP", "TCP/IP", "HTTP", "FTP"],
+            answer: "SMTP",
+          },
+          {
+            question: "ইন্টারনেটে কোন ডোমেইন নাম সবচেয়ে সাধারণ?",
+            options: [".com", ".org", ".edu", ".gov"],
+            answer: ".com",
+          },
+          {
+            question: "মাইক্রোসফট এক্সেল কোন ধরনের সফটওয়্যার?",
+            options: ["গ্রাফিক্স সফটওয়্যার", "ডাটাবেজ সফটওয়্যার", "স্প্রেডশিট সফটওয়্যার", "প্রেজেন্টেশন সফটওয়্যার"],
+            answer: "স্প্রেডশিট সফটওয়্যার",
+          },
+          {
+            question: "মাইক্রোসফট এক্সেল কোন ধরনের সফটওয়্যার?",
+            options: ["গ্রাফিক্স সফটওয়্যার", "ডাটাবেজ সফটওয়্যার", "স্প্রেডশিট সফটওয়্যার", "প্রেজেন্টেশন সফটওয়্যার"],
+            answer: "স্প্রেডশিট সফটওয়্যার",
+          },
+          {
+            question: "কোনটি ওয়েব ব্রাউজার নয়?",
+            options: ["Adobe Acrobat", "Safari", "Mozilla Firefox", "Google Chrome"],
+            answer: "Adobe Acrobat",
+          },
+          {
+            question: "LAN এর পূর্ণরূপ কী?",
+            options: ["Logical Area Network", "Large Area Network", "Long Area Network", "Local Area Network"],
+            answer: "Local Area Network",
           },
         
     

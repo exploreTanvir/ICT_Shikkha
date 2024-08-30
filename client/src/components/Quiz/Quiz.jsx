@@ -95,7 +95,7 @@ function Quiz() {
       {
         question: questions[currentQuestion].question,
         options: questions[currentQuestion].options,
-        selected: 'Timed Out',
+        selected: 'সময় শেষ হয়েছে উত্তর দেওয়া হয়নি',
         correct: correctAnswer,
       },
     ]);

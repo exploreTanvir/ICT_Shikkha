@@ -1,3 +1,12 @@
+.faqImg {
+  height: 30rem;
+  width: 39rem;
+  width: 100%;
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
 .chapterCard {
   background-repeat: no-repeat;
   height: 15rem;
@@ -70,7 +79,8 @@
   background-size: cover;
 }
 .HSC {
-  background: url(../../assets/bg3.png);
+  background: 
+    url(../../assets/faqBG3.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

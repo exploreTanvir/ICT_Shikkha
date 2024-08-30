@@ -14,7 +14,7 @@ const HSC = () => {
         <Nav/>
 <div className="HSC audioBook">
 <div className="container">
-<div className="faqTitle text-center my-3">
+<div className="faqTitle text-center py-3">
          <span>HSC ICT হ্যান্ড নোট</span> 
          </div>
     <div className="row gap-4 flex-wrap pb-3 justify-content-center">

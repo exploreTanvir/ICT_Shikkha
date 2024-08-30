@@ -25,7 +25,10 @@
   outline: 0;
   border-radius: 5px;
 }
-
+.editorTitle {
+  background: #00012e;
+  border-radius: 5px;
+}
 .editor label {
   display: flex;
   align-items: center;
@@ -35,8 +38,20 @@
 .htmlIcon {
   color: #ff8f17;
 }
+.cssIcon {
+  color: #64a5ff;
+}
+.jsIcon {
+  color: #ffea00;
+}
 @media (max-width: 575px) {
   .right {
     margin-top: 10px;
   }
+}
+
+.editorTitle label.active {
+  border: 1px solid rgb(170, 170, 170);
+  border-top: 0;
+  border-bottom: 0;
 }

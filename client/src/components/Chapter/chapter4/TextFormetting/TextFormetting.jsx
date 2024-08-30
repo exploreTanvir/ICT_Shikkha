@@ -62,7 +62,7 @@ const TextFormetting = () => {
         </p>
         
         
-        <Editor text="<!DOCTYPE html>
+        <Editor cText="" jsText=""  text="<!DOCTYPE html>
                         <html>
                         <head>
                             <title>Text Formatting</title>

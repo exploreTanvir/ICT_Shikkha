@@ -32,7 +32,7 @@ const Heading = () => {
         </p>
         
         
-        <Editor text={`<!DOCTYPE html>
+        <Editor cText="" jsText="" text={`<!DOCTYPE html>
   <html>
     <head>
       <title>Html Heading</title>

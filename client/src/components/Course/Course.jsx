@@ -10,7 +10,7 @@ const Course = () => {
 
 
   const handleCopyClick = () => {
-    toast("👌Text copied to clipboard ! ")
+    toast("👌সফলভাবে কপি হয়েছে ! ")
     const textToCopy = document.getElementById("copyText").innerText; 
     navigator.clipboard.writeText(textToCopy)
   };
