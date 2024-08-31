@@ -15,8 +15,9 @@ const Home = () => {
         <Nav/>
       <Hero/>
       <Skill/>
-      <Review/>
+ 
       <Faq/>
+      <Review/>
       
      
       <Contact/>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
+import course1 from "../../assets/python.jpg"
 import "./AllCourse.css"
 import { AllCourseMenu } from "./AllCourseMenu"
 
@@ -17,7 +18,9 @@ const AllCourse = () => {
               <Link to="/course-detail">
               <div className="card" id="card">
                 <div>
-                 <div className={item.class}></div>
+                 <div className={item.class}>
+                  <img src={item.courseImg} alt="" />
+                 </div>
                  <div className="card-body">
                  <h5 className="text-center">{item.tilte}</h5>
                  <div className="d-flex justify-content-between my-3">

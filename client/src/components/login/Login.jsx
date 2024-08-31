@@ -30,7 +30,7 @@ const Login = () => {
           </div>
           <button>লগ ইন</button>
           <div className="new_account">
-           কোন একাউন্ট নেই ? <Link to="/singUP">সাইন আপ</Link>
+           কোন একাউন্ট নেই ? <Link to="/sing-up">সাইন আপ</Link>
           </div>
         </form>
       </main>

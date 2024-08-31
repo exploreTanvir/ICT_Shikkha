@@ -159,3 +159,15 @@
 .dropdown-menu {
   width: 13rem;
 }
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none; 
+}

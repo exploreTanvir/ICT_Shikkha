@@ -43,7 +43,7 @@ const Nav = () => {
                 ))}
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle  nav-link d-flex align-items-center gap-2 fs-5 btn2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-layer-group"></i>
+                  <i className="fa-solid fa-layer-group"></i>
                   আরো 
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,7 +66,6 @@ const Nav = () => {
                 </li>
               </ul>
               <div className="col-1 btnGRP d-flex justify-content-end">
-               
                 <NavLink
                   to="/login"
                   className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4"

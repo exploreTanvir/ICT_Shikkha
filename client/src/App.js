@@ -17,7 +17,13 @@ import Computer_Network from "./components/Chapter/chapter2/Computer_Network/Com
 import Mobile_Communication from "./components/Chapter/chapter2/Mobile/Mobile_Communication";
 import Topology from "./components/Chapter/chapter2/Topology/Topology";
 import Wireless from "./components/Chapter/chapter2/Wireless/Wireless";
+import Adder from "./components/Chapter/chapter3/Adder/Adder";
+import Boolean_Algebra from "./components/Chapter/chapter3/Boolean_Algebra/Boolean_Algebra";
+import Code from "./components/Chapter/chapter3/Code/Code";
+import Encoder_Decoder from "./components/Chapter/chapter3/Encoder_Decoder/Encoder_Decoder";
 import LogicGate from "./components/Chapter/chapter3/LogicGate/LogicGate";
+import Number_system from "./components/Chapter/chapter3/Number/Number_system";
+import Register from "./components/Chapter/chapter3/Register/Register";
 import Heading from "./components/Chapter/chapter4/Heading/Heading";
 import HTMlImg from "./components/Chapter/chapter4/HTMLImg/HTMlImg";
 import HTMLList from "./components/Chapter/chapter4/HTMLList/HTMLList";
@@ -59,14 +65,16 @@ import RoutinePage from "./components/pages/RoutinePage";
 import SingUpPage from "./components/pages/SingUpPage";
 import ModelTest from "./components/Sugg&Test/ModelTest/ModelTest";
 import Suggestion from "./components/Sugg&Test/Suggestion/Suggestion";
-import Number_system from "./components/Chapter/chapter3/Number/Number_system";
-import Boolean_Algebra from "./components/Chapter/chapter3/Boolean_Algebra/Boolean_Algebra";
-import Encoder_Decoder from "./components/Chapter/chapter3/Encoder_Decoder/Encoder_Decoder";
-import Adder from "./components/Chapter/chapter3/Adder/Adder";
-import Register from "./components/Chapter/chapter3/Register/Register";
-import Code from "./components/Chapter/chapter3/Code/Code";
 
 const App = () => {
+
+
+  const handleRightClick = (event) => {
+    event.preventDefault();
+    alert('Right-click is disabled!');
+  };
+
+  
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   const scrollToTop = () => {
@@ -117,7 +125,8 @@ const App = () => {
   // }, []);
 
   return (
-    <div>
+    <div> 
+       {/* onContextMenu={handleRightClick} */}
       <Router>
         <Switch>
           <Route exact path="/" component={Home}/>
@@ -130,7 +139,7 @@ const App = () => {
 
           <Route path="/sing-up"component={SingUpPage}/>
           <Route path="/course-detail" component={CourseDetail}/>
-            <Route path="/about" component={AboutPage}/>
+          <Route path="/about" component={AboutPage}/>
           <Route path="/gallery" component={GalleryPage}/>
           <Route path="/quiz" component={QuizPage} />
           <Route path="/hsc" component={HSC} />

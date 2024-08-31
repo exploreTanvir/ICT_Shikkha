@@ -43,7 +43,7 @@ const SubSup = () => {
                         <p> f<sub>n</sub> = f<sub>n-1</sub> + <sub>n-2</sub> </p>
                         </body>
                         </html>`}/>
-                         <p className='mt-3'>নিজে করে দেখোঃ <br/><b>fn-1 = x ( y2 + z2 ) n-1 + zn</b></p>
+                         <p className='mt-3'>নিজে করে দেখোঃ <br/><b>f<sub>n-1</sub> = x.( y<sup>2</sup> + z<sup>2</sup> )<sup>n-1</sup> + z<sub>n</sub></b></p>
                 </div>
                 <div className="col-lg-3 ">
                 <div className="chapterLeft">
