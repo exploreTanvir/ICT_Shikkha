@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import jsVdo from "../../assets/js-13 (2).mp4";
-import { courseDeta } from "./CourseDetail";
+import { AllCourseMenu } from "../AllCourse/AllCourseMenu";
 import "./course.css";
+import { courseDeta } from './CourseDetail';
+import bkash from '../../assets/bkash.png';
 
 const Course = () => {
+
+  const { courseId } = useParams();
+  const course = AllCourseMenu[courseId];
+
+
   const notify = () => toast("সফলভাবে প্রেরন হয়েছে! আমাদের সাপোর্ট টিম কিছু সময়ের মধ্যেই আপনার রিকুয়েস্টটি ভেরিফাই করবে। অনুগ্রহ করে অপেক্ষা করুণ ।");
 
 
@@ -60,7 +67,10 @@ const Course = () => {
                     <ul type="square">
                       <li>যারা পড়াশোনার পাশাপাশি নিজের স্কিল ডেভেলপ করতে চান।</li>
                       <li>যারা বিভিন্ন কোম্পানির ওয়েব ডিজাইন/ডেভেলপমেন্ট রিলেটেড ফিক্সড জব করতে চান।</li>
-                      <li>যারা ওয়েব ডিজাইন/ডেভেলপমেন্ট শিখে ফ্রিলান্স মার্কেটপ্লেসে কাজ করতে চান।</li>
+                      <li>যারা প্রযুক্তির প্রতি আগ্রহী এবং একটি সফল ক্যারিয়ার গড়তে চান।</li>
+                      <li>যারা প্রোগ্রামিং ভাষায় দক্ষতা অর্জন করতে চান এবং সফটওয়্যার ডেভেলপমেন্টের পথে এগোতে চান।</li>
+                      <li>যারা এক্সপার্ট টিউটর থেকে সরাসরি শেখার মাধ্যমে দ্রুত প্রফেশনাল স্কিল অর্জন করতে চান।</li>
+                      <li>যারা তাদের বর্তমান কাজের পাশাপাশি অতিরিক্ত আয়ের উৎস তৈরি করতে চান।</li>
                     </ul>
                   </div>
                 </div>
@@ -132,7 +142,7 @@ const Course = () => {
                                 onChange={updatePaymentInfo}
                               >
                                 <option value="বিকাশ" data-account="01721554216">
-                                  বিকাশ
+                                 <img src={bkash} alt="" /> বিকাশ
                                 </option>
                                 <option value="রকেট" data-account="0845421541">
                                   রকেট
@@ -153,7 +163,8 @@ const Course = () => {
                                 type="number"
                                 className="form-control"
                                 id="senderMobile"
-                                placeholder=""
+                                placeholder={course.price}
+                                value={course.price}
                               />
                             </div>
                             <div className="mb-3">
@@ -235,13 +246,24 @@ const Course = () => {
               </div>
             </div>
           </div>
+
+
+
           <div className="col-lg-4 col-md-12">
-            <div className="card">
-              <div className="card-body">
-                <video className="video w-100" controls src={jsVdo}>
-                  <source />
-                </video>
-                <h5 className="card-title my-3">৳ ****</h5>
+            <div className="card" id="card">
+              <div>
+              <div className={course.class}>
+                  <img src={course.courseImg} alt="" />
+                 </div>
+                <div className="px-3">
+                <h4 className="text-center courseTitle mt-3">{course.tilte}</h4>
+               <div className="d-flex align-items-center justify-content-between py-2">
+               <h5 className="card-title mb-3">৳ {course.price} <del className="fs-6 text-black-50">{course.pastPrice}</del></h5>
+               <div className="d-flex gap-2 align-items-center">
+                    <h6>{course.instructorName}</h6>
+                    <img className="Instructor" src={course.instructor} alt="" />
+                  </div>
+               </div>
                 <div>
                   <button
                     type="button"
@@ -254,24 +276,29 @@ const Course = () => {
                 </div>
                 <div className="desc mt-4">
                   <p>
-                    <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন ***
-                    জন
+                    <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন {course.people} জন
                   </p>
                   <p>
-                    <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে ** ঘন্টা
+                    <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে {course.time}
                   </p>
                   <p>
-                    <i className="fa-regular fa-circle-play me-2"></i>*** টি ভিডিও
+                    <i className="fa-regular fa-circle-play me-2"></i>{course.vdo} টি ভিডিও
                   </p>
                   <p>
-                    <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা * মাস
+                    <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা {course.mnth} মাস
                   </p>
+                </div>
                 </div>
               </div>
             </div>
-          </div>
+
+
+
         </div>
 
+
+
+        </div>
         <ToastContainer
       position="top-right"
       autoClose={5000}

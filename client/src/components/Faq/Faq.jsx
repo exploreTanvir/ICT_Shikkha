@@ -6,14 +6,14 @@ const Faq = () => {
   return (
     <section className="faq">
         <div className="container">
-         <div className="faqTitle text-center mt-5 mb-4">
+         <div className="faqTitle text-center mt-5 mb-4 wow fadeInUp">
          <span>কিছু সচরাচর প্রশ্ন</span> 
          </div>
           <div className="row ">
-            <div className="col-lg-6 col-md-0 d-md-none d-lg-block faqLeft overflow-hidden d-flex align-items-center">
+            <div className="col-lg-6 wow fadeInLeft col-md-0 d-md-none d-lg-block faqLeft overflow-hidden d-flex align-items-center">
               <img src={faqImg} className="faqImg animated1 overflow-hidden" alt="" />
             </div>
-            <div className="col-lg-6 faqRight col-md-12">   
+            <div className="col-lg-6 wow fadeInRight faqRight col-md-12">   
                  <div className="accordion accordion-flush" id="accordionFlushExample">
 
 <div className="accordion-item">

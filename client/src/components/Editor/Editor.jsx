@@ -49,7 +49,7 @@ const Editor = (props) => {
             <div className="container">
             
                 <div className="row">
-                    <div className="left col-lg-6">
+                    <div className="left col-lg-6 wow fadeInLeft" >
                         <div className='d-flex flex-column'>
                             <div className='editorTitle d-flex gap-4 ps-4'>
                                 <label
@@ -86,7 +86,7 @@ const Editor = (props) => {
                             </textarea>
                         </div>
                     </div>
-                    <div className="right col-lg-6">
+                    <div className="right col-lg-6 wow fadeInRight">
                         <label className='html rounded'>
                             <i className="fs-5 mx-2 fa-solid fa-code"></i> Output
                         </label>

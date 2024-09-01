@@ -51,7 +51,7 @@ const Review = () => {
   };
   return (
     <>
-    <div className="faqTitle text-center mt-5 mb-4">
+    <div className="faqTitle text-center mt-5 mb-4 wow fadeInUp">
          <span>আমাদের সম্পর্কে ছাত্রদের মন্তব্য</span> 
          </div>
     <section className="review">

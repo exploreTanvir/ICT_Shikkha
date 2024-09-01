@@ -138,11 +138,11 @@ const App = () => {
            
 
           <Route path="/sing-up"component={SingUpPage}/>
-          <Route path="/course-detail" component={CourseDetail}/>
+          <Route path="/course-detail/:courseId" component={CourseDetail}/>
           <Route path="/about" component={AboutPage}/>
           <Route path="/gallery" component={GalleryPage}/>
           <Route path="/quiz" component={QuizPage} />
-          <Route path="/hsc" component={HSC} />
+          <Route path="/hand-note" component={HSC} />
           <Route path="/editor" component={EditorPage} />
           <Route path="/ict-books" component={ICTBooksPage} />
           <Route path="/routine" component={RoutinePage} />

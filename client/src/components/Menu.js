@@ -7,7 +7,7 @@ export const Menu=[
     },
     {
         title:"হ্যান্ড নোট",
-        url:"/hsc",
+        url:"/hand-note",
         cName:"navLinks",
         icon:"fa-solid fa-book-atlas"
     },

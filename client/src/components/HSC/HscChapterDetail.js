@@ -1,6 +1,6 @@
 export const HscChapterDetail=[
     {
-        class:"py-3 col-lg-3 chapterCard chapter1",
+        class:"py-3 col-lg-3 chapterCard chapter1 wow fadeInLeft",
         title:"প্রথম অধ্যায়",
         url:"/chapter-audio-1",
         desc:"তথ্য ও যোগাযোগ প্রযুক্তি,",
@@ -9,7 +9,7 @@ export const HscChapterDetail=[
         chapterAudio:"chapter-audio-1"
     },
     {
-        class:"py-3 col-lg-3 chapterCard chapter2",
+        class:"py-3 col-lg-3 chapterCard chapter2 wow fadeInDown",
         title:"দ্বিতীয় অধ্যায়",
         url:"/chapter-audio-2",
         desc:"কমিউনিকেশন সিস্টেম",
@@ -18,7 +18,7 @@ export const HscChapterDetail=[
         chapterAudio:"chapter-audio-2"
     },
     {
-        class:"py-3 col-lg-3 chapterCard chapter3",
+        class:"py-3 col-lg-3 chapterCard chapter3 wow fadeInRight",
         title:"তৃতীয় অধ্যায়",
         url:"/chapter-audio-3",
         desc:"সংখ্যা পদ্ধতি ও",
@@ -27,7 +27,7 @@ export const HscChapterDetail=[
         chapterAudio:"chapter-audio-3"
     },
     {
-        class:"py-3 col-lg-3 chapterCard chapter4",
+        class:"py-3 col-lg-3 chapterCard chapter4 wow fadeInLeft",
         title:"চতুর্থ অধ্যায়",
         url:"/chapter-audio-4",
         desc:"ওয়েব ডিজাইন পরিচিতি",
@@ -36,7 +36,7 @@ export const HscChapterDetail=[
         chapterAudio:"chapter-audio-4"
     },
     {
-        class:"py-3 col-lg-3 chapterCard chapter5",
+        class:"py-3 col-lg-3 chapterCard chapter5 wow fadeInUp",
         title:"পঞ্চম অধ্যায়",
         url:"/chapter-audio-5",
         desc:"প্রোগ্রামিং ভাষা  ",
@@ -44,7 +44,7 @@ export const HscChapterDetail=[
         chapterAudio:"chapter-audio-5"
        },
     {
-        class:"py-3 col-lg-3 chapterCard chapter6",
+        class:"py-3 col-lg-3 chapterCard chapter6 wow fadeInRight",
         title:"ষষ্ঠ অধ্যায়",
         url:"/chapter-audio-6",
         desc:"ডেটাবেজ ম্যানেজমেন্ট",
@@ -55,13 +55,13 @@ export const HscChapterDetail=[
 ]
 export const HscSuggestion=[
     {
-        class:"py-4  chapterSuggestion suggestion",
+        class:"py-4  chapterSuggestion suggestion wow fadeInLeft",
         title:"পরীক্ষার সাজেশন",
         desc:"২০২৪ সালের এইচএসসি আইসিটি পরীক্ষার জন্য বিশেষ সাজেশন পেতে এখনই এখানে ক্লিক করুন!",
         chapter:'suggestion',
     },
     {
-        class:"py-4 chapterSuggestion modelTest",
+        class:"py-4 chapterSuggestion modelTest wow fadeInRight",
         title:"মডেল টেস্ট",
         desc:"এইচএসসি ২০২৪ আইসিটি পরীক্ষার জন্য স্পেশাল মডেল টেস্ট নিতে এখনই এখানে ক্লিক করুন!",
         chapter:'model-test',

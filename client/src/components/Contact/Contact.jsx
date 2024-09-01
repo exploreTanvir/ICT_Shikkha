@@ -67,12 +67,12 @@ const Contact = () => {
 
   return (
     <section className="contact">
-      <div className="faqTitle text-center pt-5 pb-4">
+      <div className="faqTitle text-center pt-5 pb-4 wow fadeInUp">
          <span>আমাদের সাথে যোগাযোগের মাধ্যম</span> 
       </div>
       <div className="container">
         <div className="row pt-2 pb-5">
-          <div className="left-form col-md-12 col-lg-6 col-sm-12">
+          <div className="left-form col-md-12 wow fadeInLeft col-lg-6 col-sm-12">
             <div className="row gap-4 mb-4 contactRow">
 
               <div className="sub-form col-md-5 col-sm-12">
@@ -112,7 +112,7 @@ const Contact = () => {
               </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit} action="/POST" method="post" enctype="multipart/form-data" className="left-form col-md-12 col-lg-6 col-sm-12">
+        <form onSubmit={handleSubmit} action="/POST" method="post" enctype="multipart/form-data" className="left-form col-md-12 col-lg-6 col-sm-12 wow fadeInRight">
           <div>
             <div className="row gy-4">
               <div className="col-lg-6">

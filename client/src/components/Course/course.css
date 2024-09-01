@@ -44,4 +44,10 @@
   .modal-content {
     padding: 0;
   }
+  .courseRow {
+    flex-direction: column-reverse;
+  }
+}
+.courseTitle {
+  color: darkblue;
 }

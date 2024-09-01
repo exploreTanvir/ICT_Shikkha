@@ -4,12 +4,12 @@ const Routine = () => {
   return (
     <section className='Routine'>
         <div className="container">
-        <div className="faqTitle text-center mt-5 mb-4">
+        <div className="faqTitle text-center mt-5 mb-4 wow fadeInUp">
          <span>আমাদের ক্লাসের সময়সূচী</span> 
          </div>
           <div className="row">
             <h4 className="text-body-secondary text-center">ব্যাচঃ এইস.এস.সি-২০২৫ ব্যাচ রুটিন</h4>
-            <div className="col-lg-12">
+            <div className="col-lg-12 wow fadeInDown">
             <table className='textFormetting'>
             <thead className="fs-4 routineTHead">
                     <tr>

@@ -6,7 +6,7 @@ export const courseDeta=[
        item2:"HTML এবং CSS এর মৌলিক ধারণা। লজিক্যাল চিন্তা ও সমস্যা সমাধানের দক্ষতা। মৌলিক প্রোগ্রামিং ধারণা। কম্পিউটার এবং ইন্টারনেট ব্যবহারের দক্ষতা। অনলাইনে শেখার ইচ্ছা ও ধৈর্য।",
         flushID:"flush-headingThree",
         flushCollaps:"flush-collapseThree",
-        flushCollapsTarget:"#flush-collapseThree"
+        flushCollapsTarget:"#flush-collapseThree",
     },
     {
         title:"কোর্স শেষ করতে যদি সমস্যা হয়, তাহলে কী করা উচিত?",

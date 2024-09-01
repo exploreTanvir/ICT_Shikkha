@@ -1,13 +1,22 @@
 
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
+import banner from "../../assets/banner.jpg"
+import banner2 from "../../assets/banner2.jpg"
 import "./skill.css"
 import { skillMenu } from "./SkillMenu"
 
 const Skill = () => {
   return (
     <section className="skill pb-5">
-        <div className="faqTitle text-center pt-5 ">
-         <span>স্কিল ডেভেলপমেন্ট ও ক্যাটাগরিসমূহ</span> 
+      <Link to="/hand-note">
+      <img className="banner wow fadeInUp" src={banner} alt="" />
+      </Link>
+      <Link to="/hand-note">
+      <img className="banner2 wow fadeInUp" src={banner2} alt="" />
+      </Link>
+     
+        <div className="faqTitle text-center pt-5 wow fadeInUp">
+         <span>স্কিল ডেভেলপমেন্ট ও ক্যাটাগরি</span> 
          </div>
         <div className="container">
             <div className="row">

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
-import course1 from "../../assets/python.jpg"
 import "./AllCourse.css"
 import { AllCourseMenu } from "./AllCourseMenu"
 
@@ -14,8 +13,8 @@ const AllCourse = () => {
             <div className="row">
             {AllCourseMenu.map((item,index)=>{
             return(
-              <div key={index} className="col-lg-4 col-sm-12 col-md-6 py-4">
-              <Link to="/course-detail">
+              <div key={index} className="col-lg-4 wow fadeInUp col-sm-12 col-md-6 py-4">
+              <Link to={`/course-detail/${index}`}>
               <div className="card" id="card">
                 <div>
                  <div className={item.class}>
@@ -25,7 +24,7 @@ const AllCourse = () => {
                  <h5 className="text-center">{item.tilte}</h5>
                  <div className="d-flex justify-content-between my-3">
                  <div className="d-flex align-items-end gap-2"> 
-                 <h5 className="card-title">{item.price}
+                 <h5 className="card-title">৳ {item.price}
                     </h5>
                     <h6><s className="pastPrice">{item.pastPrice}</s></h6>
                  </div>
@@ -41,21 +40,21 @@ const AllCourse = () => {
                   <div className="desc mt-4">
                     <div className="d-flex courseDetails justify-content-between align-items-center">
                     <p>
-                      <i className="fa-solid fa-user-group me-2"></i>{item.people}
+                      <i className="fa-solid fa-user-group me-2"></i>কোর্সটি করছেন {item.people} জন
                     </p>
                     <p>
-                      <i className="fa-regular fa-circle-play me-2"></i>{item.vdo}
+                      <i className="fa-regular fa-circle-play me-2"></i>{item.vdo} টি ভিডিও
                     </p>
                     </div>
     
     
                     <div className="d-flex courseDetails justify-content-between align-items-center">
                     <p>
-                      <i className="fa-solid fa-stopwatch me-2"></i>{item.time}
+                      <i className="fa-solid fa-stopwatch me-2"></i>সময় লাগবে {item.time}
                     </p>
                     
                     <p>
-                      <i className="fa-solid fa-calendar-days me-2"></i>{item.mnth}
+                      <i className="fa-solid fa-calendar-days me-2"></i>সময়সীমা {item.mnth} মাস
                     </p>
                     </div>
                   </div>
