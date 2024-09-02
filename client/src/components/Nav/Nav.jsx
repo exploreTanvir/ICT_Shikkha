@@ -24,7 +24,7 @@ const Nav = () => {
               <i className="fa-solid fa-bars-staggered"></i>
             </button>
             <div className="collapse navbar-collapse col-lg-11" id="navbarSupportedContent">
-              <ul className="navbar-nav col-11 d-flex gap-4 justify-content-center">
+              <ul className="navbar-nav col-lg-11 d-flex gap-4 justify-content-center">
                 {Menu.map((item, index) => (
                   <li className="nav-item" key={index}>
                     <NavLink
@@ -65,7 +65,7 @@ const Nav = () => {
                   </ul>
                 </li>
               </ul>
-              <div className="col-1 btnGRP d-flex justify-content-end">
+              <div className="col-lg-1 btnGRP d-flex justify-content-end">
                 <NavLink
                   to="/login"
                   className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4"

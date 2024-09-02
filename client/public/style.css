@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Tiro Bangla", roboto;
+  font-family: "Hind Siliguri";
   scroll-behavior: smooth !important;
 }
 a {
@@ -11,7 +11,6 @@ span {
   font-weight: 700;
   font-size: 3rem;
   color: rgb(0, 12, 143);
-  font-family: "Hind Siliguri";
   position: relative;
   overflow: hidden;
 
@@ -84,6 +83,10 @@ span {
 .btn1:hover {
   color: white;
   border-radius: 5px;
+  i {
+    transform: rotate(-35deg);
+    transition: all 0.5s ease;
+  }
 }
 .course:hover {
   transform: translateY(-5px);

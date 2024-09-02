@@ -32,7 +32,7 @@
         position: absolute;
         left: -40px;
         border-radius: 5px;
-        top: 10px;
+        top: 17px;
       }
       &::after {
         content: "";
@@ -42,7 +42,7 @@
         position: absolute;
         right: -40px;
         border-radius: 5px;
-        top: 10px;
+        top: 17px;
       }
     }
   }

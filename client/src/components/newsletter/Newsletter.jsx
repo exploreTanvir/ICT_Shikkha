@@ -45,7 +45,7 @@ const Newsletter = () => {
                     <input className="w-100 newsInput" name="email"
                   value={newsData.email}
                   onChange={handleChange} required placeholder="আপনার ইমেইল" />
-                <button  onClick={notify} type="submit" className='fs-5 newsBtn  d-flex  justify-content-around align-items-center gap-2 course'>সাবস্ক্রাইব<i className="fa fa-arrow-right "></i></button>
+                <button  onClick={notify} type="submit" className='fs-5 btn1  d-flex  justify-content-around align-items-center gap-2 course'>সাবস্ক্রাইব<i className="fa fa-arrow-right "></i></button>
                 </form>
             </div>
         </div>

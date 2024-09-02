@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import AI from "./components/Chapter/chapter1/AI/AI";
@@ -52,6 +52,7 @@ import Terms from "./components/FooterItem/Terms/Terms";
 import HSC from "./components/HSC/HSC";
 import AboutPage from "./components/pages/AboutPage";
 import AudioBookPage from "./components/pages/AudioBookPage";
+import BlogPage from "./components/pages/BlogPage";
 import Contacts from "./components/pages/Contact";
 import CourseDetail from "./components/pages/CourseDetail";
 import Courses from "./components/pages/Courses";
@@ -146,7 +147,7 @@ const App = () => {
           <Route path="/editor" component={EditorPage} />
           <Route path="/ict-books" component={ICTBooksPage} />
           <Route path="/routine" component={RoutinePage} />
-
+          <Route path="/blog" component={BlogPage} />
 
           <Route path="/chapter-1" component={Chpt1Sub} />
           <Route path="/chapter-2" component={Chpt2Sub} />

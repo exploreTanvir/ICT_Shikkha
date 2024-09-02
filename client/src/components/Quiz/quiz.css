@@ -33,7 +33,7 @@
   overflow: hidden;
   padding: 5px 9px;
   transition: 0.5s;
-  background: rgb(0, 12, 143);
+  background: rgb(0, 7, 69);
   color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 5px;
@@ -42,6 +42,10 @@
 .reset-btn:hover {
   color: white;
   border-radius: 5px;
+  i {
+    transform: rotate(-35deg);
+    transition: all 0.5s ease;
+  }
 }
 .reset-btn::before {
   content: "";
@@ -52,7 +56,7 @@
   width: 100%;
   height: 100%;
 
-  background: #6c52ff;
+  background: rgb(0, 12, 143);
   z-index: -1;
   transform-origin: left;
   transition: transform 0.5s ease;

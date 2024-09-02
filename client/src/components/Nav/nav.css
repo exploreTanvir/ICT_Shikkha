@@ -10,6 +10,9 @@
     color: rgb(40, 1, 83);
     font-weight: 400;
   }
+  .navbar-nav {
+    font-family: "Tiro Bangla", roboto !important;
+  }
   .btn2 {
     position: relative;
     z-index: 1;
@@ -103,8 +106,14 @@
   text-decoration: none !important;
 }
 .nav-item {
-  padding: 0 4px;
+  padding: 0 5px;
+  font-family: "Tiro Bangla", roboto !important;
 }
+/* @media (max-width: 1400px) {
+  .nav-item {
+    padding: 0 5px !important;
+  }
+} */
 .navbar-toggler:focus {
   outline: none !important;
   border: 0;

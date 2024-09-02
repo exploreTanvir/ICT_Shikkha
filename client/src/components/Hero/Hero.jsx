@@ -25,7 +25,7 @@ const Hero = () => {
               <p className='d-flex align-items-center gap-2'><i className="fa-regular fa-circle-check bg-danger rounded-circle text-white"></i> MentorShip</p>
             </div>
             <div className="btn-grp d-flex mt-3">
-              <a href="https://web.facebook.com/ictshikkha" className='fbBtn d-flex align-items-center btn1 gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i className="fa fa-arrow-right"></i></a>
+              <a href="https://www.facebook.com/groups/950573548353552" className='fbBtn d-flex align-items-center btn1 gap-2 fs-5 me-4'>আমাদের গ্রুপে যুক্ত হোন <i className="fa fa-arrow-right"></i></a>
               <Link to="/quiz" className='fs-5 btn1 d-flex align-items-center gap-2 fbBtn2'>কুইজে অংশ নিন<i className="fa fa-arrow-right"></i></Link>
             </div>
           </div>

@@ -67,6 +67,10 @@
   border-radius: 5px;
   &:hover {
     color: white;
+    i {
+      transform: rotate(-35deg);
+      transition: all 0.5s ease;
+    }
   }
   &::before {
     content: "";
@@ -75,7 +79,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #4154f1;
+    background: rgb(0, 12, 143);
     z-index: -1;
     transform-origin: left;
     transition: transform 0.5s ease;

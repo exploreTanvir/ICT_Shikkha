@@ -68,7 +68,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <div className="faqTitle text-center pt-5 pb-4 wow fadeInUp">
-         <span>আমাদের সাথে যোগাযোগের মাধ্যম</span> 
+         <span>যোগাযোগের মাধ্যম</span> 
       </div>
       <div className="container">
         <div className="row pt-2 pb-5">

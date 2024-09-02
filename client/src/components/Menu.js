@@ -72,5 +72,12 @@ export const subMenu=[
         icon:"fa-regular fa-image"
     }
     ,
+    {
+        title:"ব্লগ",
+        url:"/blog",
+        cName:"navLinks",
+        icon:"fa-solid fa-newspaper"
+    }
+    ,
     
 ]

@@ -47,6 +47,9 @@
   .courseRow {
     flex-direction: column-reverse;
   }
+  .faqRight {
+    margin-top: 10px;
+  }
 }
 .courseTitle {
   color: darkblue;

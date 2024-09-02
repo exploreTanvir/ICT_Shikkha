@@ -153,6 +153,11 @@
   .card a:hover {
     color: rgb(254, 254, 255);
     border-radius: 5px;
+
+    i {
+      transform: rotate(-35deg);
+      transition: all 0.5s ease;
+    }
   }
   .card a::before {
     content: "";

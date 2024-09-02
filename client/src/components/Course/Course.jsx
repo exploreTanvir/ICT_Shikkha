@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import bkash from '../../assets/bkash.png';
 import { AllCourseMenu } from "../AllCourse/AllCourseMenu";
 import "./course.css";
 import { courseDeta } from './CourseDetail';
-import bkash from '../../assets/bkash.png';
 
 const Course = () => {
 
@@ -201,7 +201,7 @@ const Course = () => {
                               className="py-2 w-100 mt-4 btn1"
                               onClick={notify}
                             >
-                              প্রেরণ করুন
+                              প্রেরণ করুন <i className="fa fa-arrow-right ms-2"></i>
                             </button>
                           </form>
                         </div>
@@ -271,7 +271,7 @@ const Course = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
-                    এনরোল করুন
+                    এনরোল করুন <i className="fa fa-arrow-right ms-2 courseIcon"></i>
                   </button>
                 </div>
                 <div className="desc mt-4">

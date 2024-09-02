@@ -147,12 +147,12 @@ function Quiz() {
               {!quizStarted ? (
                 <div>
                   <h2>কুইজ শুরু করার জন্য "শুরু করুন" বাটন চাপুন</h2>
-                  <button onClick={handleStart} className="fs-3 start-btn reset-btn" >শুরু করুন</button>
+                  <button onClick={handleStart} className="fs-3 start-btn reset-btn" >শুরু করুন  <i className="fa fa-arrow-right"></i></button>
                 </div>
               ) : !quizFinished ? (
                 <>
                   <div className='d-flex justify-content-around align-items-center mb-3'>
-                    <button onClick={handleReset} className="reset-btn">রিস্টার্ট কুইজ</button>
+                    <button onClick={handleReset} className="reset-btn">রিস্টার্ট কুইজ <i class="fa-solid fa-spinner ms-1"></i></button>
                     <p>স্কোর : {score} / {questions.length}</p>
                     <p>সময় বাকি : {Math.floor(totalTimeLeft / 60)}:{totalTimeLeft % 60 < 10 ? `0${totalTimeLeft % 60}` : totalTimeLeft % 60}</p>
                   </div>

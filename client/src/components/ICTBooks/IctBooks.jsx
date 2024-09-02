@@ -5,7 +5,7 @@ const IctBooks = () => {
   return (
     <div className='ictBooks'>
         <div className="container">
-        <div className="faqTitle text-center mt-1 mb-4">
+        <div className="faqTitle text-center pt-2 mb-4">
          <span>HSC ICT বই</span> 
          </div>
             <div className="row d-flex justify-content-center">
