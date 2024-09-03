@@ -1,4 +1,3 @@
-import About from '../About/About';
 import Blog from '../Blog/Blog';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';

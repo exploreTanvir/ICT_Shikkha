@@ -7,9 +7,9 @@
   background: rgb(0, 12, 143);
 }
 .reviewModal {
-  background: #6f037b;
+  background: #03177b;
   &:hover {
-    background: #a801ae;
+    background: #0126ae;
   }
 }
 .swiper {

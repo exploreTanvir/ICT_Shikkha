@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import blogImg from '../../assets/blog2.webp';
-import blogImg4 from '../../assets/How-to-Transform-Blog-Articles-into-Animated-Videos-in-X-Easy-Steps.jpg';
-import { default as blogImg1, default as blogImg2 } from '../../assets/ict4.jpg';
-import blogImg3 from '../../assets/postponed-concept_23-2148508247.avif';
+import vr from '../../assets/vr.webp';
 import "./Blog.css";
+import { blogDetail, blogDetail2, blogDetail3 } from './BlogDetail';
 
 const Blog = () => {
   const [showMore, setShowMore] = useState(false);
@@ -16,18 +14,18 @@ const Blog = () => {
     <section className='blog'>
       <div className="container">
         <div className="faqTitle text-center mt-2 mb-4">
-          <span>আমাদের ব্লগসমূহ</span> 
+          <span>আমাদের ব্লগ</span> 
         </div>
         <div className="row pt-3 pb-3">
-          <div className="col-lg-7 d-flex gap-4">
+          <div className="col-lg-7 d-flex gap-4 pb-3">
             <div className="col-lg-12">
               <div className="card blogCard" id="card">
                 <div className='cardImg blogimage'>
-                  <img src={blogImg1} alt="" />
+                  <img src={vr} alt="" />
                 </div>
                 <div className='px-2 py-3'>
-                  <h5 className='py-2'>ক্যারিয়ার গ্রোথ নিয়ে কিছু কথা</h5>
-                  <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে কর্মক্ষেত্রে তোমার কাজের তুমি যেক্ষেত্রেই কাজ - বলো তো? যদি তোমার উত্তর হয়ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে কর্মক্ষেত্রে তোমার কাজের তুমি যেক্ষেত্রেই কাজ - বলো তো? যদি তোমার উত্তর হয়ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে কর্মক্ষেত্রে তোমার কাজের তুমি যেক্ষেত্রেই কাজ - বলো তো? যদি তোমার উত্তর হয়... </p>
+                  <h5 className='py-2'>ভার্চুয়াল রিয়েলিটি (VR) এবং অগমেন্টেড রিয়েলিটি (AR): ভবিষ্যতের ইন্টার‌্যাক্টিভ অভিজ্ঞতা</h5>
+                  <p>ভার্চুয়াল রিয়েলিটি (VR) এবং অগমেন্টেড রিয়েলিটি (AR) প্রযুক্তি বর্তমানে বিনোদন, শিক্ষা, এবং ব্যবসায়িক ক্ষেত্রে নতুন সম্ভাবনা সৃষ্টি করছে। VR সম্পূর্ণ একটি সিমুলেটেড পরিবেশ তৈরি করে যেখানে ব্যবহারকারী সম্পূর্ণভাবে অন্য একটি দুনিয়ায় প্রবেশ করতে পারেন, যেমন ভিডিও গেমস বা ভার্চুয়াল ট্যুর। অন্যদিকে, AR বাস্তব জগতের উপরে ডিজিটাল উপাদানগুলি যুক্ত করে, যেমন মোবাইল অ্যাপ্লিকেশন বা স্মার্ট গ্লাস। এই ব্লগ পোস্টে VR এবং AR এর মূল পার্থক্য, তাদের ব্যবহারিক প্রয়োগ এবং ভবিষ্যতের সম্ভাবনা নিয়ে আলোচনা করা যাবে... </p>
                   <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
                     আরও পড়ুন<i className="fa fa-arrow-right "></i>
                   </button>
@@ -36,131 +34,74 @@ const Blog = () => {
             </div>
           </div>
           <div className="col-lg-5 blogImgs">
-            <div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
-              <img className='w-50' src={blogImg} alt="" />
+            {blogDetail3.map((item,index)=>{
+              return(
+                <div>
+
+<div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
+              <img className='w-50 blogmiddleImg' src={item.blogImg} alt="" />
               <div>
-                <h6>ক্যারিয়ার গ্রোথ কি? সেই প্রক্রিয়াক্যারিয়ার..</h6>
-                <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে...</p>
+                <h6>{item.blogTitle}</h6>
+                <p>{item.blogDesc}</p>
               </div>
             </div>
             <hr />
-            <div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
-              <img className='w-50' src={blogImg2} alt="" />
-              <div>
-                <h6>ক্যারিয়ার গ্রোথ কি? সেই প্রক্রিয়াক্যারিয়ার..</h6>
-                <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে...</p>
-              </div>
-            </div>
-            <hr />
-            <div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
-              <img className='w-50' src={blogImg3} alt="" />
-              <div>
-                <h6>ক্যারিয়ার গ্রোথ কি? সেই প্রক্রিয়াক্যারিয়ার..</h6>
-                <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে...</p>
-              </div>
-            </div>
-            <hr />
-            <div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
-              <img className='w-50' src={blogImg4} alt="" />
-              <div>
-                <h6>ক্যারিয়ার গ্রোথ কি? সেই প্রক্রিয়াক্যারিয়ার..</h6>
-                <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া - যার মাধ্যমে সময়ের সাথে সাথে...</p>
-              </div>
-            </div>
-            <hr />
+                </div>
+              )
+            })}
+
           </div>
 
           <div className="col-lg-12 blogDetail d-flex gap-4 pt-3">
-            <div className="col-lg-4">
+            
+              
+              {blogDetail.map((item,index)=>{
+            return(
+              <div className="col-lg-4">
               <div className="card blogCard" id="card">
-                <div className='cardImg'>
-                  <img src={blogImg} alt="" />
+                  <div className='cardImg'>
+                  <img src={item.blogImg} alt="" />
                 </div>
                 <div className='px-2 py-3'>
-                  <h5 className='py-2'>ক্যারিয়ার গ্রোথ নিয়ে কিছু কথা</h5>
-                  <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া...</p>
+                  <h5 className='py-2'>{item.blogTitle}</h5>
+                  <p>{item.blogDesc}</p>
                   <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
                     আরও পড়ুন<i className="fa fa-arrow-right "></i>
                   </button>
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="card blogCard" id="card">
-                <div className='cardImg blogImg'>
-                  <img src={blogImg3} alt="" />
                 </div>
-                <div className='px-2 py-3'>
-                  <h5 className='py-2'>ইংরেজিতে কমিউনেকেশনের দক্ষতা কি করে..</h5>
-                  <p>আচ্ছা, তুমি যেক্ষেত্রেই কাজ করো না কেন...</p>
-                  <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
-                    আরও পড়ুন<i className="fa fa-arrow-right "></i>
-                  </button>
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="card blogCard" id="card">
-                <div className='cardImg blogImg'>
-                  <img src={blogImg4} alt="" />
-                </div>
-                <div className='px-2 py-3'>
-                  <h5 className='py-2'>ইংরেজিতে কমিউনেকেশনের দক্ষতা কি করে..</h5>
-                  <p>আচ্ছা, তুমি যেক্ষেত্রেই কাজ করো না কেন...</p>
-                  <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
-                    আরও পড়ুন<i className="fa fa-arrow-right "></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+                )
+              })}
+             
+            
+           
           </div>
 
          
           {showMore && (
            <div>
              <div className="col-lg-12 blogDetail d-flex gap-4 py-4">
+              
+             {blogDetail2.map((item,index)=>{
+            return(
               <div className="col-lg-4">
-                <div className="card blogCard" id="card">
+              <div className="card blogCard" id="card">
                   <div className='cardImg'>
-                    <img src={blogImg} alt="" />
-                  </div>
-                  <div className='px-2 py-3'>
-                    <h5 className='py-2'>ক্যারিয়ার গ্রোথ নিয়ে কিছু কথা</h5>
-                    <p>ক্যারিয়ার গ্রোথ কি? ক্যারিয়ার গ্রোথ হল সেই প্রক্রিয়া...</p>
-                    <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
-                      আরও পড়ুন<i className="fa fa-arrow-right "></i>
-                    </button>
-                  </div>
+                  <img src={item.blogImg} alt="" />
                 </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="card blogCard" id="card">
-                  <div className='cardImg blogImg'>
-                    <img src={blogImg3} alt="" />
-                  </div>
-                  <div className='px-2 py-3'>
-                    <h5 className='py-2'>ইংরেজিতে কমিউনেকেশনের দক্ষতা কি করে..</h5>
-                    <p>আচ্ছা, তুমি যেক্ষেত্রেই কাজ করো না কেন...</p>
-                    <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
-                      আরও পড়ুন<i className="fa fa-arrow-right "></i>
-                    </button>
-                  </div>
+                <div className='px-2 py-3'>
+                  <h5 className='py-2'>{item.blogTitle}</h5>
+                  <p>{item.blogDesc}</p>
+                  <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
+                    আরও পড়ুন<i className="fa fa-arrow-right "></i>
+                  </button>
                 </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="card blogCard" id="card">
-                  <div className='cardImg blogImg'>
-                    <img src={blogImg4} alt="" />
-                  </div>
-                  <div className='px-2 py-3'>
-                    <h5 className='py-2'>ইংরেজিতে কমিউনেকেশনের দক্ষতা কি করে..</h5>
-                    <p>আচ্ছা, তুমি যেক্ষেত্রেই কাজ করো না কেন...</p>
-                    <button className='fs-5 btn1 d-flex  justify-content-around align-items-center gap-2 course'>
-                      আরও পড়ুন<i className="fa fa-arrow-right "></i>
-                    </button>
-                  </div>
                 </div>
-              </div>
+                </div>
+                )
+              })}
+             
             </div>
              
            </div>

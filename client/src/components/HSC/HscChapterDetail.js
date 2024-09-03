@@ -39,7 +39,7 @@ export const HscChapterDetail=[
         class:"py-3 col-lg-3 chapterCard chapter5 wow fadeInUp",
         title:"পঞ্চম অধ্যায়",
         url:"/chapter-audio-5",
-        desc:"প্রোগ্রামিং ভাষা  ",
+        desc:"প্রোগ্রামিং ভাষা",
         chapter:'chapter-5',
         chapterAudio:"chapter-audio-5"
        },
