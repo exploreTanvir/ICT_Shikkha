@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Cell, Pie, PieChart } from 'recharts';
 import './quiz.css';
 import { question } from './QuizDetail';
+
+
 
 const shuffleArray = (array) => {
   let shuffled = array.slice();
@@ -14,6 +17,24 @@ const shuffleArray = (array) => {
 };
 
 function Quiz() {
+
+ 
+  const COLORS = ['#0088FE', '#FF8042','#007812'];
+
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  
+    return (
+      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
+  
+
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
@@ -25,6 +46,7 @@ function Quiz() {
   const [timerActive, setTimerActive] = useState(false);
   const [numQuestions, setNumQuestions] = useState(10);
   const [timeLimit, setTimeLimit] = useState(2);
+  const [skippedQuestions, setSkippedQuestions] = useState(0);
   const [filter, setFilter] = useState('all');
 
   const getRandomQuestions = () => {
@@ -61,7 +83,7 @@ function Quiz() {
     ]);
 
     if (option === correctAnswer) {
-      setScore(score + 1);
+      setScore(score + 1);  
     }
 
     setSelectedOption(option);
@@ -92,6 +114,8 @@ function Quiz() {
       },
     ],100);
 
+
+    setSkippedQuestions(skippedQuestions + 1);
     setSelectedOption('');
 
     setTimeout(() => {
@@ -140,6 +164,8 @@ function Quiz() {
     setTotalTimeLeft(timeLimit * 60);
     setTimerActive(false);
     setQuizStarted(false);
+    setSelectedOption('');
+    setSkippedQuestions(0);
   };
 
   const handleStart = () => {
@@ -153,9 +179,18 @@ function Quiz() {
   const filteredAnswers = userAnswers.filter(answer => {
     if (filter === 'all') return true;
     if (filter === 'correct') return answer.isCorrect;
+    if (filter === 'skipped') return answer.selected === 'স্কিপ করা হয়েছে';
+
     if (filter === 'wrong') return !answer.isCorrect && answer.selected !== 'স্কিপ করা হয়েছে';
     return false;
   });
+
+  const data = [
+    { name: 'Group A', value:score },
+    { name: 'Group B', value: questions.length-score-skippedQuestions },
+    { name: 'Group c', value: skippedQuestions},
+
+  ];
 
   return (
     <div className="quiz">
@@ -166,18 +201,19 @@ function Quiz() {
               {!quizStarted ? (
                 <div>
                   <h2>কুইজ শুরু করার জন্য "শুরু করুন" বাটন চাপুন</h2>
-                  <div className="settings">
-                    <label>
+                  <div className="settings d-flex justify-content-center gap-3">
+                    <p className='fw-bold bg-white px-3 py-2 rounded'>
                       প্রশ্নের সংখ্যা:
                       <input
                         type="number"
+                        className='ms-2 px-2 fw-bold'
                         value={numQuestions}
                         onChange={(e) => setNumQuestions(e.target.value)}
                         min="1"
                         max={question.length}
                       />
-                    </label>
-                    <label>
+                    </p>
+                    <p className='fw-bold bg-white px-3 py-2 rounded'>
                       সময় (মিনিট):
                       <input
                         type="number"
@@ -185,8 +221,9 @@ function Quiz() {
                         onChange={(e) => setTimeLimit(e.target.value)}
                         min="1"
                         max="60"
+                        className='ms-2 px-2 fw-bold'
                       />
-                    </label>
+                    </p>
                   </div>
                   <button onClick={handleStart} className="fs-3 start-btn reset-btn">
                     শুরু করুন <i className="fa fa-arrow-right"></i>
@@ -241,17 +278,65 @@ function Quiz() {
                 </>
               ) : (
                 <div>
-                  <h2>কুইজ শেষ হয়েছে!</h2>
-                  <h4>তোমার ফাইনাল স্কোর : {score} / {questions.length}</h4>
+                 <div className='d-flex justify-content-between align-items-center pieChartBox'>
+                <div className='d-flex flex-column align-items-start'>
+                <div>
+                <button onClick={handleReset} className="text-start reset-btn">
+                      রিস্টার্ট কুইজ <i className="fa-solid fa-spinner ms-1"></i>
+                    </button>
+                
+                 <h2>চুড়ান্ত ফলাফল : {score} / {questions.length}</h2>
+                 </div>
                   <div className="answer-buttons">
-                    <button onClick={() => setFilter('all')} className="filter-btn">সবগুলো</button>
-                    <button onClick={() => setFilter('correct')} className="filter-btn">সঠিক</button>
-                    <button onClick={() => setFilter('wrong')} className="filter-btn">ভুল</button>
-                    
+                    <button onClick={() => setFilter('all')} className="filter-btn">সবগুলো ({questions.length})</button>
+                    <button onClick={() => setFilter('correct')} className="filter-btn">সঠিক ({score})</button>
+                    <button onClick={() => setFilter('wrong')} className="filter-btn">ভুল ({questions.length-score-skippedQuestions})</button>            
+                    <button onClick={() => setFilter('skipped')} className="filter-btn">স্কিপ ({skippedQuestions})</button>            
+                            
+                                          
                   </div>
+                </div>
+               
+                  <div className='d-flex flex-column pieBox align-items-end'>
+                  <PieChart width={200} height={200}>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+        </PieChart>
+
+                 
+                 
+                <div className='d-flex align-items-baseline'>
+                <div className='d-flex align-items-baseline gap-2 me-3'>
+                  <p>সঠিক : </p>
+                 <div className='pieChartColor'></div>
+                 </div>
+                <div className='d-flex align-items-baseline gap-2 me-3'>
+                  <p>ভুল : </p>
+                 <div className='pieChartColor2'></div>
+                 </div>
+                <div className='d-flex align-items-baseline gap-2 me-3'>
+                  <p>স্কিপ : </p>
+                 <div className='pieChartColor3'></div>
+                 </div>
+                 </div>
+                </div>
+                  
+                 </div>
                   <div className="answers-summary">
                     <h4>প্রশ্ন এবং আপনার উত্তর:</h4>
-                    <ul>
+                    <ol>
                       {filteredAnswers.map((answer, index) => (
                         <li
                           key={index}
@@ -263,15 +348,16 @@ function Quiz() {
                               : 'incorrect-answer'
                           }
                         >
+                         
                           <p><strong>প্রশ্ন:</strong> {answer.question}</p>
                           <p><strong>আপনার উত্তর:</strong> {answer.selected}</p>
                           <p><strong>সঠিক উত্তর:</strong> {answer.correct}</p>
                           <p><strong>অপশন গুলো:</strong> {answer.options.join(", ")}</p>
                         </li>
                       ))}
-                    </ul>
+                    </ol>
                   </div>
-                  <button onClick={handleReset} className="reset-btn">রিস্টার্ট কুইজ</button>
+                
                 </div>
               )}
             </div>

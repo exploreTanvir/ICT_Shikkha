@@ -102,14 +102,14 @@ const Review = () => {
        </Swiper>
 
     </section>
-    <button
+    {/* <button
   type="button"
   className="btn reviewModal text-white w-100 mt-1 fw-bold fs-4"
   data-bs-toggle="modal"
   data-bs-target="#exampleModal"
 >
 <i className="fa-solid fa-pen-to-square"></i>  রিভিউ যুক্ত করুন
-</button>
+</button> */}
 
 <div
   className="modal fade"

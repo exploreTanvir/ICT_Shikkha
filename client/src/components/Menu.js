@@ -81,3 +81,20 @@ export const subMenu=[
     ,
     
 ]
+export const profile=[
+   
+    {
+        title:"প্রোফাইল",
+        url:"/contact",
+        cName:"navLinks mb-2",
+        icon:"fa-solid fa-user"
+    },
+    {
+        title:"কোর্সসমূহ",
+        url:"/audio-book",
+        cName:"navLinks mb-2 text-center",
+        icon:"fa-brands fa-algolia"
+    },
+    
+  
+]

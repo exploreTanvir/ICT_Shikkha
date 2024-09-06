@@ -4,12 +4,12 @@
   align-items: center;
   position: relative;
   width: 100%;
-  background: rgb(0, 12, 143);
+  background: rgb(1, 16, 180);
 }
 .reviewModal {
-  background: #03177b;
+  background: rgb(1, 16, 180);
   &:hover {
-    background: #0126ae;
+    background: rgb(1, 16, 180);
   }
 }
 .swiper {

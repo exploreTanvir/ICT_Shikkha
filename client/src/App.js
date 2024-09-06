@@ -138,7 +138,7 @@ const App = () => {
           <Route path="/login" component={LoginPage} />
            
 
-          <Route path="/sing-up"component={SingUpPage}/>
+          <Route path="/sign-up"component={SingUpPage}/>
           <Route path="/course-detail/:courseId" component={CourseDetail}/>
           <Route path="/about" component={AboutPage}/>
           <Route path="/gallery" component={GalleryPage}/>

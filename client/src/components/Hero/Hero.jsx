@@ -31,6 +31,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
       <div className="img1 animated1"><img src={img1} alt="" /></div>
       <div className="img2 animated2"><img src={img2} alt="" /></div>
       <div className="img3 animated3"><img className='w-75' src={img3} alt="" /></div>
