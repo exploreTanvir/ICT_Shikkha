@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import logo from "../../assets/logo.png";
 import { Menu, profile, subMenu } from "../Menu";
 import "./nav.css";
@@ -7,8 +8,9 @@ const Nav = () => {
   const isLoggedIn = !!localStorage.getItem("token"); // Check if user is logged in
 
   const handleLogout = () => {
+    localStorage.removeItem("token");
     setTimeout(() => {
-      window.location.href = "/#"; // Redirect using window.location
+      window.location.href = "/#/login"; 
     }, 1000);
   };
 
@@ -39,7 +41,7 @@ const Nav = () => {
                   <li className="nav-item" key={index}>
                     <NavLink
                       to={item.url}
-                      exact={item.url === "/"} // Apply exact match only for the home route
+                      exact={item.url === "/"} 
                       className={({ isActive }) =>
                         `${item.cName} nav-link d-flex align-items-center gap-2 fs-5 btn2 ${
                           isActive ? "active" : ""
@@ -52,7 +54,7 @@ const Nav = () => {
                   </li>
                 ))}
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle nav-link d-flex align-items-center gap-2 fs-5 btn2"
                     href="#"
                     id="navbarDropdown"
@@ -62,7 +64,7 @@ const Nav = () => {
                   >
                     <i className="fa-solid fa-layer-group"></i>
                     আরো 
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                     {subMenu.map((item, index) => (
                       <li className="nav-item" key={index}>
@@ -84,10 +86,8 @@ const Nav = () => {
               </ul>
               <div className="col-lg-1 btnGRP d-flex justify-content-end">
                 {isLoggedIn ? (
-                  <div className="dropdown">
-                    
-                    <li className="nav-item dropdown list-unstyled">
-                  <a
+                  <li className="nav-item dropdown list-unstyled">
+                  <Link
                     className="nav-link dropdown-toggle nav-link d-flex align-items-center gap-2 fs-5 btn2"
                     href="#"
                     id="navbarDropdown"
@@ -97,10 +97,10 @@ const Nav = () => {
                   >
                     <i className="fa fa-user"></i>
                      
-                  </a>
-                  <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
+                  </Link>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                     {profile.map((item, index) => (
-                      <li className="nav-item " key={index}>
+                      <li className="nav-item" key={index}>
                         <NavLink
                           to={item.url}
                           className={({ isActive }) =>
@@ -112,16 +112,14 @@ const Nav = () => {
                           <i className={item.icon}></i>
                           {item.title}
                         </NavLink>
-                        
                       </li>
-                      
                     ))}
-                    <button onClick={handleLogout} className="dropdown-item">
-                          লগ আউট
-                        </button>
+                     <button onClick={handleLogout} className="dropdown-item d-flex align-items-center gap-2 justify-content-center fs-5 btn2 ">
+                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        লগ আউট
+                      </button>
                   </ul>
                 </li>
-                  </div>
                 ) : (
                   <NavLink
                     to="/login"

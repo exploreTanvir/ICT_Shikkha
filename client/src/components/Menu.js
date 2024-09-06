@@ -85,13 +85,13 @@ export const profile=[
    
     {
         title:"প্রোফাইল",
-        url:"/contact",
+        url:"/profile",
         cName:"navLinks mb-2",
         icon:"fa-solid fa-user"
     },
     {
-        title:"কোর্সসমূহ",
-        url:"/audio-book",
+        title:"আমার কোর্স",
+        url:"/course",
         cName:"navLinks mb-2 text-center",
         icon:"fa-brands fa-algolia"
     },

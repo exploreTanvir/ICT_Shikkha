@@ -7,7 +7,7 @@ import "./login.css";
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState(""); // New success state
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,17 +32,17 @@ const Login = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setTimeout(() => {
-      window.location.href = "/#"; 
+      window.location.href = "/#/login"; 
     }, 1000);
   };
 
-  // Check if user is logged in
+  
   const isLoggedIn = !!localStorage.getItem("token");
 
   return (
     <section className='login'>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
+      {error && <p  className="text-center" style={{ color: "red" }}>{error}</p>}
+      {success && <p className="text-center"  style={{ color: "green" }}>{success}</p>}
       <div className="loginform">
         <main>
           <header id="login">
@@ -81,12 +81,13 @@ const Login = () => {
               <a href="/">পাসওয়ার্ড ভুলে গেছেন ?</a>
             </div>
             <button type="submit">লগ ইন</button>
+            
             <div className="new_account">
               কোন একাউন্ট নেই ? <Link to="/sign-up">সাইন আপ</Link>
             </div>
           </form>
 
-          {/* Logout Button */}
+         
           {isLoggedIn && (
             <button onClick={handleLogout} className="logout-button">
               লগ আউট
