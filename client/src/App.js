@@ -2,6 +2,16 @@ import { useEffect, useState } from "react";
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import AIDetail from "./components/BlogDetail/AIDetail";
+import BigDataDetail from "./components/BlogDetail/BigDataDetail";
+import BlockChainDetail from "./components/BlogDetail/BlockChainDetail";
+import CareerDetail from "./components/BlogDetail/CareerDetail";
+import CloudDetail from "./components/BlogDetail/CloudDetail";
+import DataScienceDetail from "./components/BlogDetail/DataScienceDetail";
+import EthicalHackingDetail from "./components/BlogDetail/EthicalHackingDetail";
+import InternetDetail from "./components/BlogDetail/InternetDetail";
+import IotDetail from "./components/BlogDetail/IotDetail";
+import VRDetail from "./components/BlogDetail/VRDetail";
 import AI from "./components/Chapter/chapter1/AI/AI";
 import BioInformatics from "./components/Chapter/chapter1/BioInformatics/Bio_Informatics";
 import CryoSurgery from "./components/Chapter/chapter1/CryoSurgery/CryoSurgery";
@@ -70,10 +80,10 @@ import Suggestion from "./components/Sugg&Test/Suggestion/Suggestion";
 const App = () => {
 
 
-  const handleRightClick = (event) => {
-    event.preventDefault();
-    alert('Right-click is disabled!');
-  };
+  // const handleRightClick = (event) => {
+  //   event.preventDefault();
+  //   alert('Right-click is disabled!');
+  // };
 
   
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -148,6 +158,16 @@ const App = () => {
           <Route path="/ict-books" component={ICTBooksPage} />
           <Route path="/routine" component={RoutinePage} />
           <Route path="/blog" component={BlogPage} />
+          <Route path="/blog-detail/vr" component={VRDetail} />
+          <Route path="/blog-detail/cloud-computing" component={CloudDetail} />
+          <Route path="/blog-detail/career-growth" component={CareerDetail} />
+          <Route path="/blog-detail/ai-ml" component={AIDetail} />
+          <Route path="/blog-detail/block-chain" component={BlockChainDetail} />
+          <Route path="/blog-detail/iot" component={IotDetail} />
+          <Route path="/blog-detail/big-data" component={BigDataDetail} />
+          <Route path="/blog-detail/5g" component={InternetDetail} />
+          <Route path="/blog-detail/data-science" component={DataScienceDetail} />
+          <Route path="/blog-detail/hacking" component={EthicalHackingDetail} />
 
           <Route path="/chapter-1" component={Chpt1Sub} />
           <Route path="/chapter-2" component={Chpt2Sub} />

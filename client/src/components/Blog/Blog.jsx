@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import vr from '../../assets/vr.webp';
 import "./Blog.css";
 import { blogDetail, blogDetail2, blogDetail3 } from './BlogDetail';
@@ -19,6 +20,7 @@ const Blog = () => {
         <div className="row pt-3 pb-3">
           <div className="col-lg-7 d-flex gap-4 pb-3">
             <div className="col-lg-12">
+              <Link to="/blog-detail/vr">
               <div className="card blogCard" id="card">
                 <div className='cardImg blogimage'>
                   <img src={vr} alt="" />
@@ -35,7 +37,7 @@ const Blog = () => {
                   </div>
                   </div>
                 </div>
-              </div>
+              </div></Link>
             </div>
           </div>
           <div className="col-lg-5 blogImgs">
@@ -43,13 +45,15 @@ const Blog = () => {
               return(
                 <div>
 
-<div className="col-lg-12 d-flex justify-content-center gap-3 mb-2 align-items-center ms-4">
+                  <Link to={item.url}>
+                  <div className="col-lg-12 d-flex justify-content-center text-black gap-3 mb-2 align-items-center ms-4">
               <img className='w-50 blogmiddleImg' src={item.blogImg} alt="" />
               <div>
                 <h6>{item.blogTitle}</h6>
                 <p>{item.blogDesc}</p>
               </div>
             </div>
+                  </Link>
             <hr />
                 </div>
               )
@@ -63,7 +67,8 @@ const Blog = () => {
               {blogDetail.map((item,index)=>{
             return(
               <div className="col-lg-4">
-              <div className="card blogCard" id="card">
+            <Link to={item.url}>
+            <div className="card blogCard" id="card">
                   <div className='cardImg'>
                   <img src={item.blogImg} alt="" />
                 </div>
@@ -80,6 +85,7 @@ const Blog = () => {
                   </div>
                 </div>
                 </div>
+            </Link>
                 </div>
                 )
               })}
@@ -96,6 +102,7 @@ const Blog = () => {
              {blogDetail2.map((item,index)=>{
             return(
               <div className="col-lg-4">
+              <Link to={item.url}>
               <div className="card blogCard" id="card">
                   <div className='cardImg'>
                   <img src={item.blogImg} alt="" />
@@ -113,6 +120,7 @@ const Blog = () => {
                   </div>
                 </div>
                 </div>
+              </Link>
                 </div>
                 )
               })}

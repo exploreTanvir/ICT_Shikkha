@@ -40,7 +40,7 @@ const Newsletter = () => {
         <div className="container text-center">
             <div className="row align-items-center justify-content-center wow fadeInUp">
                 <h3 className="mt-2">আমাদের সাথে যুক্ত হোন</h3>
-                <p>নতুন এক্সপার্ট টিপস ও আপডেট পেতে এখনই যুক্ত হোন। আপনার ইমেইল দিয়ে সহজেই যোগ দিন।</p>
+                <p className="text-center">নতুন এক্সপার্ট টিপস ও আপডেট পেতে এখনই যুক্ত হোন। আপনার ইমেইল দিয়ে সহজেই যোগ দিন।</p>
                 <form onSubmit={handleSubmit} action="/POST" method="post"  className="d-flex justify-content-end">
                     <input className="w-100 newsInput" name="email"
                   value={newsData.email}

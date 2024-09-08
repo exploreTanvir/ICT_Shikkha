@@ -1,0 +1,10 @@
+.BlogDetail  {
+  h4{font-weight: 600;
+  color: rgb(0, 0, 140);}
+  p {
+    text-align: justify;
+  }
+  li {
+    margin-bottom: 12px;
+  }
+}

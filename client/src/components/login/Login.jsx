@@ -21,7 +21,7 @@ const Login = () => {
       setSuccess("Login successful! Redirecting...");
       setError("");
       setTimeout(() => {
-        window.location.href = "/#/course"; 
+        window.location.href = "/#/"; 
       }, 1000);
     } catch (err) {
       setError(err.response.data.message);
@@ -32,7 +32,7 @@ const Login = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setTimeout(() => {
-      window.location.href = "/#/login"; 
+      window.location.href = "/#/"; 
     }, 1000);
   };
 
@@ -78,12 +78,12 @@ const Login = () => {
                 <input type="checkbox" />
                 মনে রাখুন
               </div>
-              <a href="/">পাসওয়ার্ড ভুলে গেছেন ?</a>
+              <a href="/"><u>পাসওয়ার্ড ভুলে গেছেন ?</u></a>
             </div>
             <button type="submit">লগ ইন</button>
             
             <div className="new_account">
-              কোন একাউন্ট নেই ? <Link to="/sign-up">সাইন আপ</Link>
+              কোন একাউন্ট নেই ? <Link to="/sign-up"><u>সাইন আপ</u> করুণ</Link>
             </div>
           </form>
 

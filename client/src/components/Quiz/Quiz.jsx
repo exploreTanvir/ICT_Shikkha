@@ -169,12 +169,22 @@ function Quiz() {
   };
 
   const handleStart = () => {
+    const token = localStorage.getItem("token");
+  
+    if (!token) {
+      toast.error("কুইজ শুরু করতে আপনাকে প্রথমে লগইন করতে হবে ! ");
+     
+      return;
+    }
+  
+   
     setQuestions(getRandomQuestions());
     setTotalTimeLeft(timeLimit * 60);
     toast(`কুইজ শুরু হয়েছে, সময় ${timeLimit} মিনিট`);
     setQuizStarted(true);
     setTimerActive(true);
   };
+  
 
   const filteredAnswers = userAnswers.filter(answer => {
     if (filter === 'all') return true;

@@ -68,7 +68,7 @@ export const subMenu=[
     {
         title:"গ্যালারি",
         url:"/gallery",
-        cName:"navLinks",
+        cName:"navLinks mb-2",
         icon:"fa-regular fa-image"
     }
     ,

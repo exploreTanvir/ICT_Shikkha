@@ -11,18 +11,18 @@ export const skillMenu=[
         src:"/quiz"
     },
     {
-        title:"আইসিটি ভিডিও",
+        title:"আইসিটি ব্লগ",
         img:skillImg2,
         class:"skillCard2 mt-3 card text-center p-3 wow fadeInUp",
-        btn:"ভিডিও ক্লাস দেখুন",
-        src:"/course"
+        btn:"ব্লগগুলো দেখুন",
+        src:"/blog"
 
     },
     {
-        title:"আইসিটি বই",
+        title:"আইসিটি হ্যান্ডনোট",
         img:skillImg3,
         class:"skillCard3 mt-3 card text-center p-3 wow fadeInUp",
-        btn:"বই পড়ুন",
+        btn:"হ্যান্ড নোট দেখুন",
         src:"/ict-books"
     },
     {

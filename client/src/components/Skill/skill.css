@@ -139,6 +139,10 @@
     a {
       border: none;
     }
+    i {
+      transform: rotate(-25deg);
+      transition: all 0.5s ease;
+    }
   }
 
   .card a {

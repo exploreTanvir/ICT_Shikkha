@@ -29,7 +29,7 @@ const Registration = () => {
       setError("");
 
       setTimeout(() => {
-        window.location.href = "/#/login"; 
+        window.location.href = "/#/"; 
       }, 2000); 
     } catch (err) {
       setError(err.response.data.message || "An error occurred during registration.");
@@ -101,7 +101,7 @@ const Registration = () => {
            
 
             <div className="new_account">
-              ইতিমধ্যে একটি অ্যাকাউন্ট আছে ? <Link to="/login">লগ ইন</Link>
+              ইতিমধ্যে একটি অ্যাকাউন্ট আছে ? <Link to="/login"><u>লগ ইন</u> করুন</Link>
             </div>
           </form>
         </main>
