@@ -11,6 +11,7 @@ const QuizPage = () => {
         <Nav/>
       <Quiz/>
       <Newsletter/>
+      
       <Footer/>
     </div>
   )

@@ -142,18 +142,18 @@
   background-color: #e2e3e5;
 }
 .pieChartColor {
-  height: 15px;
-  width: 40px;
+  height: 23px;
+  width: 45px;
   background: #0088fe;
 }
 .pieChartColor2 {
-  height: 15px;
-  width: 40px;
+  height: 23px;
+  width: 45px;
   background: #ff8042;
 }
 .pieChartColor3 {
-  height: 15px;
-  width: 40px;
+  height: 23px;
+  width: 45px;
   background: #007812;
 }
 @media (max-width: 575px) {
@@ -163,4 +163,37 @@
   .pieBox {
     align-items: center !important;
   }
+}
+.instructions-container {
+  padding: 20px;
+  background-color: #f0f4fc;
+  border-radius: 8px;
+  font-family: "Arial", sans-serif;
+}
+
+.header-main {
+  font-size: 24px;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sub-header {
+  font-size: 20px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+
+
+.instruction-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+.highlight-text {
+  color: #2980b9;
+  font-weight: bold;
 }

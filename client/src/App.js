@@ -74,6 +74,7 @@ import LoginPage from "./components/pages/LoginPage";
 import QuizPage from "./components/pages/QuizPage";
 import RoutinePage from "./components/pages/RoutinePage";
 import SingUpPage from "./components/pages/SingUpPage";
+import Profile from "./components/Profile/Profile";
 import ModelTest from "./components/Sugg&Test/ModelTest/ModelTest";
 import Suggestion from "./components/Sugg&Test/Suggestion/Suggestion";
 
@@ -158,6 +159,7 @@ const App = () => {
           <Route path="/ict-books" component={ICTBooksPage} />
           <Route path="/routine" component={RoutinePage} />
           <Route path="/blog" component={BlogPage} />
+          <Route path="/profile" component={Profile} />
           <Route path="/blog-detail/vr" component={VRDetail} />
           <Route path="/blog-detail/cloud-computing" component={CloudDetail} />
           <Route path="/blog-detail/career-growth" component={CareerDetail} />

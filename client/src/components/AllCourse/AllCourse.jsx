@@ -36,7 +36,7 @@ const AllCourse = () => {
 
                  </div>
                  </div>
-                  <Link to="/course-detail" className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন <i className="fa fa-arrow-right ms-2 courseIcon"></i></Link>
+                  <Link to={`/course-detail/${index}`} className='allCoursesBtn d-flex align-items-center fs-5 justify-content-center me-4'>বিস্তারিত দেখুন <i className="fa fa-arrow-right ms-2 courseIcon"></i></Link>
                   <div className="desc mt-4">
                     <div className="d-flex courseDetails justify-content-between align-items-center">
                     <p>

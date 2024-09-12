@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
 
-
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -13,8 +12,21 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate email
+    if (!validateEmail(formData.email)) {
+      setError("অনুগ্রহ করে সঠিক ইমেইল প্রদান করুন");
+      setSuccess("");
+      return;
+    }
+
     try {
       const res = await axios.post("http://localhost:5000/api/auth/login", formData);
       localStorage.setItem("token", res.data.token);
@@ -25,7 +37,7 @@ const Login = () => {
       }, 1000);
     } catch (err) {
       setError(err.response.data.message);
-      setSuccess(""); 
+      setSuccess("");
     }
   };
 
@@ -36,13 +48,12 @@ const Login = () => {
     }, 1000);
   };
 
-  
   const isLoggedIn = !!localStorage.getItem("token");
 
   return (
     <section className='login'>
-      {error && <p  className="text-center" style={{ color: "red" }}>{error}</p>}
-      {success && <p className="text-center"  style={{ color: "green" }}>{success}</p>}
+      {error && <p className="text-center" style={{ color: "red" }}>{error}</p>}
+      {success && <p className="text-center" style={{ color: "green" }}>{success}</p>}
       <div className="loginform">
         <main>
           <header id="login">
@@ -87,7 +98,6 @@ const Login = () => {
             </div>
           </form>
 
-         
           {isLoggedIn && (
             <button onClick={handleLogout} className="logout-button">
               লগ আউট
@@ -96,7 +106,7 @@ const Login = () => {
         </main>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Login;

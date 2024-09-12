@@ -14,11 +14,11 @@ const QR = () => {
                    
                 </div>
                 <div className="col-lg-2 text-center">
-                    <img className='w-100 mb-3' src={fbGrp} alt="" />
+                    <img className='w-100 mb-3 qrImg' src={fbGrp} alt="" />
                     <a target='blank' href="https://www.facebook.com/groups/950573548353552" className='fbBtn justify-content-center d-flex align-items-center btn1 gap-2 fs-5'>ফেসবুক গ্রুপ <i className="fa fa-arrow-right"></i></a>
                 </div>
                 <div className="col-lg-2 text-center">
-                    <img className='w-100 mb-3' src={fbPage} alt="" />
+                    <img className='w-100 mb-3 qrImg' src={fbPage} alt="" />
                     <a target='blank' href="https://www.facebook.com/ictshikkha" className='fbBtn justify-content-center d-flex align-items-center btn1 gap-2 fs-5'>ফেসবুক পেজ <i className="fa fa-arrow-right"></i></a>
                 </div>
             </div>

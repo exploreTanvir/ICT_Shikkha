@@ -15,27 +15,29 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = formData;
-
+  
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-
+  
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", { name, email, password });
-      localStorage.setItem("token", res.data.token);
-
+      // Make the registration request
+      await axios.post("http://localhost:5000/api/auth/register", { name, email, password });
+  
+      // Success message
       setSuccess("Registration successful! Redirecting to login...");
       setError("");
-
+  
       setTimeout(() => {
-        window.location.href = "/#/"; 
+        window.location.href = "/#/login"; 
       }, 2000); 
     } catch (err) {
-      setError(err.response.data.message || "An error occurred during registration.");
+      setError(err.response?.data?.message || "An error occurred during registration.");
       setSuccess(""); 
     }
   };
+  
 
   return (
     <section className='registration'>
