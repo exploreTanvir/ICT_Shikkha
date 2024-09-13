@@ -19,7 +19,7 @@ const Newsletter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/d', {
+    fetch('http://localhost:5000/api/auth/newsLetter', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

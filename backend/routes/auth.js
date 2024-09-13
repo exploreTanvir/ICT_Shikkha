@@ -3,6 +3,9 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const formDataSchema = require("../models/userDetail");
+const NewsDataSchema = require("../models/newsLetter");
+const ReviewsDataSchema = require("../models/review");
 const router = express.Router();
 
 // Register a new user
@@ -59,5 +62,45 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
+// Form Data
+router.post('/user', (req, res) => {
+  const formData = new formDataSchema(req.body);
+
+  console.log(req.body)
+
+  formData.save()
+    .then(() => res.json({ message: 'Data saved successfully!' }))
+    .catch(err => res.status(400).json({ error: err.message }));
+});
+
+// NewsLetter
+router.post('/newsLetter', (req, res) => {
+  const newsData = new NewsDataSchema(req.body);
+
+    newsData.save()
+    .then(() => res.json({ message: 'Data saved successfully!' }))
+    .catch(err => res.status(400).json({ error: err.message }));
+});
+
+// Reviews
+router.post('/reviews', (req, res) => {
+  const reviewData = new ReviewsDataSchema(req.body);
+
+    reviewData.save()
+    .then(() => res.json({ message: 'Data saved successfully!' }))
+    .catch(err => res.status(400).json({ error: err.message }));
+});
+
+// ChapterDetail
+router.get('/ChapterDetail', async (req, res) => {
+  try {
+    const items = await ChapterDetail.find();
+    res.json(items);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
+
+
 
 module.exports = router;

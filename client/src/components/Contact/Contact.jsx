@@ -30,7 +30,7 @@ const Contact = () => {
 
     selectDivision.onchange = (e) => {
       selectDistrict.disabled = false;
-      selectDistrict.length = 1; // Reset district options
+      selectDistrict.length = 1; 
       const districts = divisionsDistrictInfo[e.target.value];
 
       for (let i = 0; i < districts.length; i++) {
@@ -49,7 +49,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/', {
+    fetch('http://localhost:5000/api/auth/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

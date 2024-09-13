@@ -34,7 +34,7 @@ const Review = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/reviews', {
+    fetch('http://localhost:5000/api/auth/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -102,14 +102,14 @@ const Review = () => {
        </Swiper>
 
     </section>
-    {/* <button
+    <button
   type="button"
-  className="btn reviewModal text-white w-100 mt-1 fw-bold fs-4"
+  className="btn reviewModal text-white w-100 my-2 fw-bold fs-4"
   data-bs-toggle="modal"
   data-bs-target="#exampleModal"
 >
 <i className="fa-solid fa-pen-to-square"></i>  রিভিউ যুক্ত করুন
-</button> */}
+</button>
 
 <div
   className="modal fade"
@@ -135,6 +135,11 @@ const Review = () => {
         <div className="row">
           <div className="col-md-12">
             <form onSubmit={handleSubmit} action="/POST" method="post" enctype="multipart/form-data" >
+              <div className="mb-3">
+                <label for="name" className="form-label fw-bold"
+                  >আপনার ছবি দিন :</label>
+                <input type="file" name="" id="" />
+              </div>
               <div className="mb-3">
                 <label for="name" className="form-label fw-bold"
                   >আপনার নাম :</label>

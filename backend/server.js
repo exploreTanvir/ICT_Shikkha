@@ -3,14 +3,17 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+
+
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({extended:true}))
 app.use(cors());
 
-// Connect to MongoDB
+
 const connectDB=async()=>{
   try {
-      await mongoose.connect("mongodb://127.0.0.1:27017/mern-auth")
+      await mongoose.connect("mongodb://127.0.0.1:27017/ictshikkha")
       console.log("DB is connected")
   } catch (error) {
       console.log("DB is not connected")

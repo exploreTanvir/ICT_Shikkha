@@ -15,10 +15,10 @@ const HSC = () => {
         const token = localStorage.getItem("token");
       
         if (!token) {
-          e.preventDefault();  // Prevent navigation
+          e.preventDefault(); 
           toast.error("সাজেশন ও মডেল টেস্ট দিতে আপনাকে প্রথমে লগইন করতে হবে !");
         } else {
-          history.push(path);  // Navigate to the selected suggestion or test
+          history.push(path);  
         }
     };
 
