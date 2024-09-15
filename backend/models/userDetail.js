@@ -7,7 +7,6 @@ const formDataSchema=new mongoose.Schema({
     message: String,
     email:{
       type:String,
-      unique:true
   },
     subject: String,
     division: String,

@@ -22,10 +22,10 @@ const Registration = () => {
     }
   
     try {
-      // Make the registration request
+      
       await axios.post("http://localhost:5000/api/auth/register", { name, email, password });
   
-      // Success message
+      
       setSuccess("Registration successful! Redirecting to login...");
       setError("");
   

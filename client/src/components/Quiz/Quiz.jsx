@@ -178,12 +178,12 @@ function Quiz() {
   };
 
   const handleStart = () => {
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
 
-    if (!token) {
-      toast.error("কুইজ শুরু করতে আপনাকে প্রথমে লগইন করতে হবে !");
-      return;
-    }
+    // if (!token) {
+    //   toast.error("কুইজ শুরু করতে আপনাকে প্রথমে লগইন করতে হবে !");
+    //   return;
+    // }
 
     setQuestions(getRandomQuestions());
     setTotalTimeLeft(timeLimit * 60);

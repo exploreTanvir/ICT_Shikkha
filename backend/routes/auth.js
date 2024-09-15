@@ -65,9 +65,6 @@ router.post("/login", async (req, res) => {
 // Form Data
 router.post('/user', (req, res) => {
   const formData = new formDataSchema(req.body);
-
-  console.log(req.body)
-
   formData.save()
     .then(() => res.json({ message: 'Data saved successfully!' }))
     .catch(err => res.status(400).json({ error: err.message }));
@@ -76,7 +73,6 @@ router.post('/user', (req, res) => {
 // NewsLetter
 router.post('/newsLetter', (req, res) => {
   const newsData = new NewsDataSchema(req.body);
-
     newsData.save()
     .then(() => res.json({ message: 'Data saved successfully!' }))
     .catch(err => res.status(400).json({ error: err.message }));

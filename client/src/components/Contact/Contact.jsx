@@ -13,7 +13,7 @@ const Contact = () => {
     phone: '',
     message: '',
     email: '',
-    subject: '',
+    school: '',
     division: '',
     district: '',
   });
@@ -64,6 +64,7 @@ const Contact = () => {
         console.error('Error:', error);
       });
   };
+  
 
   return (
     <section className="contact">
@@ -133,7 +134,7 @@ const Contact = () => {
               </div>
               <div className="col-lg-6">
                 <input
-                  required type="text" name="subject" value={formData.subject} onChange={handleChange} className="form-control" placeholder="সাবজেক্ট"/>                
+                  required type="text" name="subject" value={formData.subject} onChange={handleChange} className="form-control" placeholder="স্কুল/কলেজ"/>                
               </div>
               <div className="col-lg-6">
                 <div className="select-wrapper">

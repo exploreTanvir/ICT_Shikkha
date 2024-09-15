@@ -1,5 +1,5 @@
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
@@ -12,14 +12,14 @@ const HSC = () => {
     const history = useHistory();
 
     const handleStart = (e, path) => {
-        const token = localStorage.getItem("token");
+        // const token = localStorage.getItem("token");
       
-        if (!token) {
-          e.preventDefault(); 
-          toast.error("সাজেশন ও মডেল টেস্ট দিতে আপনাকে প্রথমে লগইন করতে হবে !");
-        } else {
-          history.push(path);  
-        }
+        // if (!token) {
+        //   e.preventDefault(); 
+        //   toast.error("সাজেশন ও মডেল টেস্ট দিতে আপনাকে প্রথমে লগইন করতে হবে !");
+        // } else {
+        //   history.push(path);  
+        // }
     };
 
     return (

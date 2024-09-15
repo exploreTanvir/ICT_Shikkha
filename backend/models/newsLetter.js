@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 
 const NewsDataSchema=new mongoose.Schema({
-    email: String
+    email: String,
+    date:{type:Date,
+      default:Date.now()
+  },
   }
   )
 
