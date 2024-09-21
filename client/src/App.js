@@ -60,6 +60,7 @@ import Privacy from "./components/FooterItem/Privacy/Privacy";
 import Refund from "./components/FooterItem/Refund/Refund";
 import Terms from "./components/FooterItem/Terms/Terms";
 import HSC from "./components/HSC/HSC";
+import LiveClass from "./components/LiveClass/LiveClass";
 import AboutPage from "./components/pages/AboutPage";
 import AudioBookPage from "./components/pages/AudioBookPage";
 import BlogPage from "./components/pages/BlogPage";
@@ -147,6 +148,7 @@ const App = () => {
           <Route path="/contact" component={Contacts} />
           <Route path="/audio-book" component={AudioBookPage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/live-class" component={LiveClass} />
            
 
           <Route path="/sign-up"component={SingUpPage}/>

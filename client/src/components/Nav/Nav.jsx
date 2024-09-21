@@ -1,12 +1,30 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import logo from "../../assets/logo.png";
-import { Menu, profile, subMenu } from "../Menu";
+import { profile } from "../Menu";
 import "./nav.css";
 
 const Nav = () => {
   const isLoggedIn = !!localStorage.getItem("token"); // Check if user is logged in
 
+
+  const [data, setData] = useState([]);
+  const [datatwo, setDataTwo] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/menu")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
+  
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/submenu")
+        .then(res => res.json())
+        .then(data => setDataTwo(data))
+        .catch(err => console.log(err));
+}, []);
+  
   const handleLogout = () => {
     localStorage.removeItem("token");
     setTimeout(() => {
@@ -37,7 +55,7 @@ const Nav = () => {
             </button>
             <div className="collapse navbar-collapse col-lg-11" id="navbarSupportedContent">
               <ul className="navbar-nav col-lg-11 d-flex gap-4 justify-content-center">
-                {Menu.map((item, index) => (
+                {data.map((item, index) => (
                   <li className="nav-item" key={index}>
                     <NavLink
                       to={item.url}
@@ -66,7 +84,7 @@ const Nav = () => {
                     আরো 
                   </Link>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {subMenu.map((item, index) => (
+                    {datatwo.map((item, index) => (
                       <li className="nav-item" key={index}>
                         <NavLink
                           to={item.url}

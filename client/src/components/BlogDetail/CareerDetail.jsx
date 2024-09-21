@@ -1,5 +1,5 @@
 import React from 'react';
-import vr from '../../assets/careerGrowth.webp';
+import vr from '../../assets/careerGrowth.png';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
 import Newsletter from '../newsletter/Newsletter';

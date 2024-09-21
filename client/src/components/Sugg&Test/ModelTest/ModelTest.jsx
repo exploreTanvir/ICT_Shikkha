@@ -1,18 +1,33 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from '../../Footer/Footer'
-import { HscChapterDetail, HscSuggestion } from '../../HSC/HscChapterDetail'
 import Nav from '../../Nav/Nav'
 import Newsletter from '../../newsletter/Newsletter'
 import TopBar from '../../topbar/TopBar'
 
 const ModelTest = () => {
     const [showAnswers, setShowAnswers] = useState(false);
+    const [data, setData] = useState([]);
+    const [datatwo, setDataTwo] = useState([]);
 
     const toggleAnswers = () => {
         setShowAnswers(!showAnswers);
     };
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/hsc")
+            .then(res => res.json())
+            .then(data => setData(data))
+            .catch(err => console.log(err));
+    }, []);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/suggestion")
+            .then(res => res.json())
+            .then(data => setDataTwo(data))
+            .catch(err => console.log(err));
+    }, []);
   return (
         <div>
             <TopBar/>
@@ -343,7 +358,7 @@ const ModelTest = () => {
                 <div className="chapterLeft">
                <div className='mb-5'>
                {
-                HscSuggestion.map((item,index)=>{
+                datatwo.map((item,index)=>{
         return(
           <Link key={index} to={item.chapter} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>
@@ -354,7 +369,7 @@ const ModelTest = () => {
                </div>
                <h4 className='text-center text-black-50'>HSC ICT হ্যান্ড নোট</h4>
                 {
-                HscChapterDetail.map((item,index)=>{
+                data.map((item,index)=>{
         return(
           <Link key={index} to={item.chapter} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>

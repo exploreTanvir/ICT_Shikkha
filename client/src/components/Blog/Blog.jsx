@@ -1,11 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import vr from '../../assets/vr.webp';
 import "./Blog.css";
-import { blogDetail, blogDetail2, blogDetail3 } from './BlogDetail';
 
 const Blog = () => {
   const [showMore, setShowMore] = useState(false);
+  const [data, setData] = useState([]);
+  const [datatwo, setDataTwo] = useState([]);
+  const [datathree, setDataThree] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/blogdetailone")
+            .then(res => res.json())
+            .then(data => setData(data))
+            .catch(err => console.log(err));
+    }, []);
+
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/blogdetailtwo")
+            .then(res => res.json())
+            .then(data => setDataTwo(data))
+            .catch(err => console.log(err));
+    }, []);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/blogdetailthree")
+            .then(res => res.json())
+            .then(data => setDataThree(data))
+            .catch(err => console.log(err));
+    }, []);
+
 
   const handleShowMore = () => {
     setShowMore(true);
@@ -14,7 +39,7 @@ const Blog = () => {
   return (
     <section className='blog'>
       <div className="container">
-        <div className="faqTitle text-center mt-2 mb-4">
+        <div className="faqTitle text-center mt-5 mb-4">
           <span>আমাদের ব্লগ</span> 
         </div>
         <div className="row pt-3 pb-3">
@@ -41,8 +66,8 @@ const Blog = () => {
             </div>
           </div>
           <div className="col-lg-5 blogImgs">
-            {blogDetail3.map((item,index)=>{
-              return(
+            {data.map((item,index)=>{
+              return( 
                 <div>
 
                   <Link to={item.url}>
@@ -52,6 +77,7 @@ const Blog = () => {
                 <h6>{item.blogTitle}</h6>
                 <p>{item.blogDesc}</p>
               </div>
+              
             </div>
                   </Link>
             <hr />
@@ -64,7 +90,7 @@ const Blog = () => {
           <div className="col-lg-12 blogDetail d-flex gap-4 pt-3">
             
               
-              {blogDetail.map((item,index)=>{
+              {datatwo.map((item,index)=>{
             return(
               <div className="col-lg-4">
             <Link to={item.url}>
@@ -99,7 +125,7 @@ const Blog = () => {
            <div>
              <div className="col-lg-12 blogDetail d-flex gap-4 py-4">
               
-             {blogDetail2.map((item,index)=>{
+             {datathree.map((item,index)=>{
             return(
               <div className="col-lg-4">
               <Link to={item.url}>

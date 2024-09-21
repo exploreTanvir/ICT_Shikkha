@@ -1,12 +1,26 @@
 
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import Footer from '../../Footer/Footer'
-import { HscChapterDetail, HscSuggestion } from '../../HSC/HscChapterDetail'
 import Nav from '../../Nav/Nav'
 import Newsletter from '../../newsletter/Newsletter'
 import TopBar from '../../topbar/TopBar'
 
 const Suggestion = () => {
+  const [data, setData] = useState([]);
+  const [datatwo, setDataTwo] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/hsc")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
+useEffect(() => {
+  fetch("http://localhost:5000/api/auth/suggestion")
+      .then(res => res.json())
+      .then(data => setDataTwo(data))
+      .catch(err => console.log(err));
+}, []);
   return (
         <div>
             <TopBar/>
@@ -51,7 +65,7 @@ const Suggestion = () => {
         <h4 className='mt-4'><b>সংখ্যা পদ্ধতি ও লজিক গেট :</b></h4>     
       <ul>
           <li >
-         <b>অ্বাইনারি ও দশমিক সংখ্যা পদ্ধতি :</b> বাইনারি থেকে দশমিক এবং দশমিক থেকে বাইনারি রূপান্তর।
+         <b>বাইনারি ও দশমিক সংখ্যা পদ্ধতি :</b> বাইনারি থেকে দশমিক এবং দশমিক থেকে বাইনারি রূপান্তর।
           </li>
           <li >
           <b>লজিক গেট :</b> AND, OR, NOT, NAND, NOR গেটের কাজ।
@@ -103,7 +117,7 @@ const Suggestion = () => {
                 <div className="chapterLeft">
                <div className='mb-5'>
                {
-                HscSuggestion.map((item,index)=>{
+                datatwo.map((item,index)=>{
         return(
           <Link key={index} to={item.chapter} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>
@@ -114,7 +128,7 @@ const Suggestion = () => {
                </div>
                <h4 className='text-center text-black-50'>HSC ICT হ্যান্ড নোট</h4>
                 {
-                HscChapterDetail.map((item,index)=>{
+                data.map((item,index)=>{
         return(
           <Link key={index} to={item.chapter} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>

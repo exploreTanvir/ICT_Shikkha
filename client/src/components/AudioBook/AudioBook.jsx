@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import audioImg from '../../assets/audioImg.png';
-import { HscChapterDetail } from '../HSC/HscChapterDetail';
 import "./AudioBook.css";
 
 const AudioBook = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/hsc")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
   return (
     <section className='audioBook'>
       <div className="container">
@@ -14,7 +20,7 @@ const AudioBook = () => {
 
         <div className="row gap-4 pb-3 justify-content-center">
           {
-            HscChapterDetail.map((item, index) => {
+            data.map((item, index) => {
               return (
                 <Link to={item.chapterAudio} className={item.class} key={index}>
                   <div className='d-flex justify-content-between w-100 flex-row-reverse'>
@@ -26,7 +32,7 @@ const AudioBook = () => {
                   <div className="play-icon">
                   <img src={audioImg} className='audioImg shadow w-25' alt="" />
                   </div>
-                  <h4>{item.desc}<br />{item.desc2}</h4>
+                  <h4>{item.description}<br />{item.desc2}</h4>
                  
                  
                 </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import vr from '../../assets/ai.webp';
+import vr from '../../assets/ai.png';
 import vr2 from '../../assets/ai2.png';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';

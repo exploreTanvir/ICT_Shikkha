@@ -1,0 +1,5 @@
+.blogImgs {
+  @media (max-width: 575px) {
+    overflow: hidden !important;
+  }
+}

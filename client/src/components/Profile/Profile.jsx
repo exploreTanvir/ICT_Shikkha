@@ -2,7 +2,6 @@ import axios from "axios"; // Import Axios for making HTTP requests
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "../Footer/Footer";
-import { Menu } from "../Menu";
 import Nav from "../Nav/Nav";
 import Newsletter from "../newsletter/Newsletter";
 import TopBar from "../topbar/TopBar";
@@ -23,6 +22,15 @@ function Profile() {
       });
   }, []);
 
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/menu")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
+  
+
   return (
     <>
       <TopBar />
@@ -39,7 +47,7 @@ function Profile() {
           })}
           <nav className="sidebar-nav">
             <ul>
-              {Menu.map((item, index) => {
+              {data.map((item, index) => {
                 return (
                   <li key={index}>
                     <Link to={item.url}>{item.title}</Link>

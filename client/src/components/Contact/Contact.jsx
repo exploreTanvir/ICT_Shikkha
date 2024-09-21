@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -5,18 +6,26 @@ import "./contact.css";
 import { divisionsDistrictInfo } from "./district";
 
 
+
 const Contact = () => {
   const notify = () => toast("👌 সফলভাবে মেসেজ প্রেরন হয়েছে! ধন্যবাদ  ");
 
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    message: '',
-    email: '',
-    school: '',
-    division: '',
-    district: '',
-  });
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [phone, setPhone] = useState()
+  const [collage, setCollage] = useState()
+  const [divisions, setDivisions] = useState()
+  const [district, setDistrict] = useState()
+  const [message, setMessage] = useState()
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/contactdetail")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
 
   useEffect(() => {
     const selectDivision = document.getElementById("divisions");
@@ -39,31 +48,18 @@ const Contact = () => {
     };
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    fetch('http://localhost:5000/api/auth/user', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
+  const handleSubmit=(event)=>{
+    event.preventDefault();
+      axios.post("http://localhost:5000/api/auth/user",{name,email,phone,collage,divisions,district,message})
+      .then(res=>{
+        console.log(res)
       })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  };
+      .catch(err=>{
+        console.log(err)
+      })
+  }
   
 
   return (
@@ -72,80 +68,57 @@ const Contact = () => {
          <span>যোগাযোগের মাধ্যম</span> 
       </div>
       <div className="container">
-        <div className="row pt-2 pb-5">
+        <div className="row pt-2 pb-5 align-items-center">
           <div className="left-form col-md-12 wow fadeInLeft col-lg-6 col-sm-12">
             <div className="row gap-4 mb-4 contactRow">
 
-              <div className="sub-form col-md-5 col-sm-12">
-                <i className="fa-solid fa-location-dot"></i>
-                <h3>ঠিকানা</h3>
+              {data.map((item,index)=>{
+                return(
+                  <div className={item.class}>
+                <i className={item.subClass}></i>
+                <h3>{item.title}</h3>
                 <p>
-                  মাগুরা পুলিশ লাইন,মাগুরা
+                  {item.description}
                 </p>
               </div>
-              <div className="sub-form col-md-5 col-sm-12">
-                <i className="fa-solid fa-phone"></i>
-                <h3>ফোন করো</h3>
-                <p>
-                  01818301681
-                </p>
-                <p>
-                  01712700934
-                </p>
-              </div>
+                )
+              })}
+              
           </div>
-            <div className="row gap-4 contactRow">
-
-              <div className="sub-form col-md-5 col-sm-12">
-                <i className="fa-solid fa-envelope"></i>
-                <h3>ইমেইল করো</h3>
-                <p>
-                  ictshikkha@gmail.com
-                </p>
-              </div>
-              <div className="sub-form col-md-5 col-sm-12">
-                <i className="fa-regular fa-clock"></i>
-                <h3>অফিস টাইম</h3>
-                <p>
-                  শনিবার - বৃহস্পতিবার
-                </p>
-
-              </div>
-          </div>
+            
         </div>
         <form onSubmit={handleSubmit} action="/POST" method="post" enctype="multipart/form-data" className="left-form col-md-12 col-lg-6 col-sm-12 wow fadeInRight">
           <div>
             <div className="row gy-4">
               <div className="col-lg-6">
                 <input type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  name="name"  
+                  onChange={e=>setName(e.target.value)}
                   required  id="name" className="form-control" placeholder="নাম"/> 
               </div>
               <div className="col-lg-6 ">
                 <input type="email"
                   name="email"
-                  required value={formData.email} className="form-control" onChange={handleChange}  placeholder="ইমেইল" />
+                  required className="form-control" onChange={e=>setEmail(e.target.value)}  placeholder="ইমেইল" />
               </div>
               <div className="col-lg-6">
                 <input
-                  required type="phone" name="phone" value={formData.phone} onChange={handleChange} className="form-control" placeholder="মোবাইল নাম্বার"/>                
+                  required type="phone" name="phone"  onChange={e=>setPhone(e.target.value)} className="form-control" placeholder="মোবাইল নাম্বার"/>                
               </div>
               <div className="col-lg-6">
                 <input
-                  required type="text" name="subject" value={formData.subject} onChange={handleChange} className="form-control" placeholder="স্কুল/কলেজ"/>                
+                  required type="text" name="collage"  onChange={e=>setCollage(e.target.value)} className="form-control" placeholder="স্কুল/কলেজ"/>                
               </div>
               <div className="col-lg-6">
                 <div className="select-wrapper">
-                  <select name="division" id="divisions" className="selected-Info" value={formData.division} onChange={handleChange} >
+                  <select name="divisions" id="divisions" className="selected-Info" onChange={e=>setDivisions(e.target.value)} >
                     <option>-- আপনার বিভাগ --</option>
                   </select>
                 </div>             
               </div>
               <div className="col-lg-6">
                 <div className="select-wrapper">
-                  <select name="district" id="district" className="selected-Info" value={formData.district} onChange={handleChange}>
+                  <select name="district" id="district" className="selected-Info" onChange={e=>setDistrict(e.target.value)}>
                     <option>-- আপনার জেলা --</option>
                   </select>  
                  
@@ -153,8 +126,8 @@ const Contact = () => {
               </div>
               <div className="col-md-12">
                 <textarea       
-                  value={formData.message}
-                  onChange={handleChange}
+                 
+                  onChange={e=>setMessage(e.target.value)}
                   required name="message"   
                   className="form-control" 
                   rows="7" 

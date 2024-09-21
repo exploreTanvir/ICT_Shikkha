@@ -1,54 +1,46 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import "./Review.css";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import "./Review.css";
 
-// Import Swiper styles
 import "./Review.css";
 
 
-// import required modules
 import { EffectCoverflow } from 'swiper/modules';
 import swipIMG from "../../assets/157248-removebg-preview.png";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ReviewText } from '../ReviewText';
+import { ReviewText } from './../ReviewText';
 
 const Review = () => {
   const notify = () => toast("👌 সফলভাবে রিভিউ প্রেরন হয়েছে! শিঘ্রই আপনার রিভিউটি যুক্ত করা হবে! ");
 
-  const [reviewsData, setReviewsData] = useState({
-    name: '',
-    title:'',
-    work:''
-  });
+  const [name, setName] = useState()
+  const [message, setMessage] = useState()
+  const [batch, setBatch] = useState()
+//   const [data, setData] = useState([]);
 
-  const handleChange = (e) => {
-    setReviewsData({
-      ...reviewsData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+//   useEffect(() => {
+//     fetch("http://localhost:5000/api/auth/reviewText")
+//         .then(res => res.json())
+//         .then(data => setData(data))
+//         .catch(err => console.log(err));
+// }, []);
 
-    fetch('http://localhost:5000/api/auth/reviews', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(reviewsData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
+
+
+  const handleSubmit=(event)=>{
+    event.preventDefault();
+      axios.post("http://localhost:5000/api/auth/reviews",{name,message,batch})
+      .then(res=>{
+        console.log(res)
       })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  };
+      .catch(err=>{
+        console.log(err)
+      })
+  }
   return (
     <>
     <div className="faqTitle text-center mt-5 mb-4 wow fadeInUp">
@@ -136,23 +128,21 @@ const Review = () => {
           <div className="col-md-12">
             <form onSubmit={handleSubmit} action="/POST" method="post" enctype="multipart/form-data" >
               <div className="mb-3">
-                <label for="name" className="form-label fw-bold"
+                {/* <label for="name" className="form-label fw-bold"
                   >আপনার ছবি দিন :</label>
-                <input type="file" name="" id="" />
+                <input type="file" name="" id="" /> */}
               </div>
               <div className="mb-3">
                 <label for="name" className="form-label fw-bold"
                   >আপনার নাম :</label>
-                  <input name='name' value={reviewsData.name}
-                  onChange={handleChange} className=' px-3 py-1 w-100 rounded border-1' type="text" placeholder='বাংলায় আপনার নাম লিখুন... ' />
+                  <input name='name' onChange={e=>setName(e.target.value)} className=' px-3 py-1 w-100 rounded border-1' type="text" placeholder='বাংলায় আপনার নাম লিখুন... ' />
               </div>
 
               <div className="mb-3">
                 <label for="reviewText" className="form-label fw-bold">আপনার রিভিউ লিখুন : </label>
                 <textarea
                 name='title'
-                value={reviewsData.msg}
-                onChange={handleChange}
+                onChange={e=>setMessage(e.target.value)}
                   className="form-control shadow-sm"
                   id="reviewText"
                   rows="4"
@@ -162,7 +152,7 @@ const Review = () => {
 
               <div className="mb-3">
                 <label for="rating" className="form-label fw-bold">আপনার ব্যাচ নং সিলেক্ট করুণ : </label>
-                <select className="form-select" name='work' value={reviewsData.work} onChange={handleChange} id="rating">
+                <select className="form-select" name='work' onChange={e=>setBatch(e.target.value)} id="rating">
                   <option value="ব্যাচ-১">ব্যাচ-১</option>
                   <option value="ব্যাচ-২">ব্যাচ-২</option>
                   <option value="ব্যাচ-৩">ব্যাচ-৩</option>

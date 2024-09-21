@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min"
-import "./AllCourse.css"
-import { AllCourseMenu } from "./AllCourseMenu"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import "./AllCourse.css";
 
 const AllCourse = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/allcourse")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
   return (
     <section className="allCourse ">
         <div className="container">
@@ -11,7 +18,7 @@ const AllCourse = () => {
          <span>আমাদের সকল কোর্সসমূহ</span> 
          </div>
             <div className="row">
-            {AllCourseMenu.map((item,index)=>{
+            {data.map((item,index)=>{
             return(
               <div key={index} className="col-lg-4 wow fadeInUp col-sm-12 col-md-6 py-4">
               <Link to={`/course-detail/${index}`}>

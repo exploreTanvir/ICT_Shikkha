@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import faqImg from "../../assets/faqImg4.jpg"
 import "./faq.css"
-import { faqMenu } from "./faqMenu"
 
 const Faq = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/faq")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
+
   return (
     <section className="faq">
         <div className="container">
@@ -28,7 +36,7 @@ const Faq = () => {
       </div>
     </div>
   </div>
-  {faqMenu.map((item,index)=>{  
+  {data.map((item,index)=>{  
  return(
   <div key={index} className="accordion-item">
   <h1 className="accordion-header rounded" id={item.flushID}>

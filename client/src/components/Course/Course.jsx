@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import bkash from '../../assets/bkash.png';
-import { AllCourseMenu } from "../AllCourse/AllCourseMenu";
 import "./course.css";
 import { courseDeta } from './CourseDetail';
 
 const Course = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/allcourse")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
 
   const { courseId } = useParams();
-  const course = AllCourseMenu[courseId];
+  const course = data.find(item => item.index === courseId);
+
 
 
   const notify = () => toast("সফলভাবে প্রেরন হয়েছে! আমাদের সাপোর্ট টিম কিছু সময়ের মধ্যেই আপনার রিকুয়েস্টটি ভেরিফাই করবে। অনুগ্রহ করে অপেক্ষা করুণ ।");
@@ -246,8 +253,6 @@ const Course = () => {
               </div>
             </div>
           </div>
-
-
 
           <div className="col-lg-4 col-md-12">
             <div className="card" id="card">

@@ -1,4 +1,5 @@
-import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../../components/Footer/Footer';
@@ -6,10 +7,9 @@ import Nav from '../../components/Nav/Nav';
 import Newsletter from '../../components/newsletter/Newsletter';
 import TopBar from '../../components/topbar/TopBar';
 import "./hsc.css";
-import { HscChapterDetail, HscSuggestion } from './HscChapterDetail';
 
 const HSC = () => {
-    const history = useHistory();
+    // const history = useHistory();
 
     const handleStart = (e, path) => {
         // const token = localStorage.getItem("token");
@@ -22,6 +22,24 @@ const HSC = () => {
         // }
     };
 
+
+    const [data, setData] = useState([]);
+    const [datatwo, setDataTwo] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/hsc")
+            .then(res => res.json())
+            .then(data => setData(data))
+            .catch(err => console.log(err));
+    }, []);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/api/auth/suggestion")
+            .then(res => res.json())
+            .then(data => setDataTwo(data))
+            .catch(err => console.log(err));
+    }, []);
+
     return (
       <div>
           <TopBar/>
@@ -32,14 +50,14 @@ const HSC = () => {
                   <span>HSC ICT হ্যান্ড নোট</span> 
               </div>
               <div className="row gap-4 flex-wrap pb-3 justify-content-center">
-                  {HscChapterDetail.map((item, index) => (
+                  {data.map((item, index) => (
                       <Link to={item.chapter} className={item.class} key={index}>
                           <h2>{item.title}</h2>
                           <h3 className="play-icon">
                             <i className="fa-solid fa-book-open-reader me-2"></i>
                             পড়ুন  
                           </h3>
-                          <h3>{item.desc}<br />{item.desc2}</h3>
+                          <h3>{item.description}<br />{item.desc2}</h3>
                       </Link>
                   ))}
               </div>
@@ -47,7 +65,7 @@ const HSC = () => {
                   <span>সাজেশন এবং মডেল টেস্ট</span>
               </div>
               <div className="row hscSuggestionRow justify-content-between pb-4">
-                  {HscSuggestion.map((item, index) => (
+                  {datatwo.map((item, index) => (
                       <Link 
                         onClick={(e) => handleStart(e, item.chapter)} 
                         key={index} 
@@ -59,7 +77,7 @@ const HSC = () => {
                               <i className="fa-solid fa-book-open-reader me-2"></i>
                               দেখুন  
                           </h3>
-                          <h3>{item.desc}<br />{item.desc2}</h3>
+                          <h3>{item.description}<br />{item.desc2}</h3>
                       </Link>
                   ))}
               </div>

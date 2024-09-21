@@ -1,11 +1,17 @@
-import React from "react";
-import galleryImg1 from "../../assets/ictImg1.jpg";
-import galleryImg2 from "../../assets/ictImg2.jpg";
-import galleryImg3 from "../../assets/ictImg3.jpg";
+import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
- 
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/galleryimg")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
+
 
   return (
     <section>
@@ -14,15 +20,16 @@ const Gallery = () => {
       </div>
       <div className="container">
         <div className="row pb-2 justify-content-center">
-          <div className="col-lg-3 gallery d-flex align-items-end gallery1 p-0 wow fadeInLeft">
-            <img src={galleryImg1} alt="" />
+          {
+            data.map((item,index)=>{
+              return(
+                <div className={item.class}>
+            <img src={item.img} alt="" />
           </div>
-          <div className="col-lg-3 d-flex gallery align-items-end gallery1 p-0 wow fadeInDown">
-            <img src={galleryImg2} alt="" />
-          </div>
-          <div className="col-lg-3 d-flex gallery align-items-end gallery1 p-0 wow fadeInRight">
-            <img src={galleryImg3} alt="" />
-          </div>
+              )
+            })
+          }
+          
         </div>
       </div>
     </section>

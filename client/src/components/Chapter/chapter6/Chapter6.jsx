@@ -1,12 +1,20 @@
 
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import { HscChapterDetail } from '../../HSC/HscChapterDetail'
-import Nav from '../../Nav/Nav'
-import TopBar from '../../topbar/TopBar'
-import Newsletter from '../../newsletter/Newsletter'
 import Footer from '../../Footer/Footer'
+import Nav from '../../Nav/Nav'
+import Newsletter from '../../newsletter/Newsletter'
+import TopBar from '../../topbar/TopBar'
 
 const Chapter6 = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/auth/hsc")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err));
+}, []);
   return (
         <div>
             <TopBar/>
@@ -27,7 +35,7 @@ const Chapter6 = () => {
                 <div className="col-lg-3 ">
                 <div className="chapterLeft">
                 {
-                HscChapterDetail.map((item,index)=>{
+                data.map((item,index)=>{
         return(
           <Link key={index} to={item.chapter} className="mb-4">
              <h4 className='chapterOne'>{item.title}</h4>

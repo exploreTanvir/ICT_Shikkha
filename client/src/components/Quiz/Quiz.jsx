@@ -178,7 +178,7 @@ function Quiz() {
   };
 
   const handleStart = () => {
-    // const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token");
 
     // if (!token) {
     //   toast.error("কুইজ শুরু করতে আপনাকে প্রথমে লগইন করতে হবে !");
