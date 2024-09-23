@@ -21,7 +21,7 @@ const AllCourse = () => {
             {data.map((item,index)=>{
             return(
               <div key={index} className="col-lg-4 wow fadeInUp col-sm-12 col-md-6 py-4">
-              <Link to={`/course-detail/${index}`}>
+              <Link to={`/course-detail/${item.id}`}>
               <div className="card" id="card">
                 <div>
                  <div className={item.class}>

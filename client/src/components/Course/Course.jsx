@@ -16,7 +16,7 @@ const Course = () => {
 }, []);
 
   const { courseId } = useParams();
-  const course = data.find(item => item.index === courseId);
+  const course = data.find(item => item.id === Number(courseId));
 
 
 
@@ -49,7 +49,7 @@ const Course = () => {
       </div>
 
       <div className="container">
-        <div className="row courseRow">
+        {course?<div className="row courseRow">
           <div className="col-lg-8 faqRight">
             <div className="accordion accordion-flush" id="accordionFlushExample">
               <div className="accordion-item">
@@ -303,7 +303,7 @@ const Course = () => {
 
 
 
-        </div>
+        </div>: <div className="text-center">কোর্সটি পাওয়া যায়নি।</div>}
         <ToastContainer
       position="top-right"
       autoClose={5000}
