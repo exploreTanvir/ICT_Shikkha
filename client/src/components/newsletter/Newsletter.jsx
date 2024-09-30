@@ -10,7 +10,7 @@ const Newsletter = () => {
    
   const handleSubmit=(event)=>{
     event.preventDefault();
-      axios.post("http://localhost:5000/api/auth/newsletter",{email})
+      axios.post("http://localhost:5000/newsletter",{email})
       .then(res=>{
         console.log(res)
       })

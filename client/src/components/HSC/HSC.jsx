@@ -27,14 +27,14 @@ const HSC = () => {
     const [datatwo, setDataTwo] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/hsc")
+        fetch("http://localhost:5000/hsc")
             .then(res => res.json())
             .then(data => setData(data))
             .catch(err => console.log(err));
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/suggestion")
+        fetch("http://localhost:5000/suggestion")
             .then(res => res.json())
             .then(data => setDataTwo(data))
             .catch(err => console.log(err));

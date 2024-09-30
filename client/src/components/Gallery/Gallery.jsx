@@ -6,7 +6,7 @@ const Gallery = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/galleryimg")
+    fetch("http://localhost:5000/galleryimg")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));

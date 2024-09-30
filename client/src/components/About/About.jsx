@@ -9,22 +9,17 @@ const About = () => {
     const [datatwo, setDataTwo] = useState([]);
 
 
-  useEffect(() => {
-    fetch("http://localhost:5000/api/auth/abouttext")
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(err => console.log(err));
-}, []);
+
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/abouttext")
+    fetch("http://localhost:5000/abouttext")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));
 }, []);
 
 useEffect(() => {
-    fetch("http://localhost:5000/api/auth/aboutostad")
+    fetch("http://localhost:5000/aboutostad")
         .then(res => res.json())
         .then(data => setDataTwo(data))
         .catch(err => console.log(err));

@@ -15,7 +15,7 @@ const Blog = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/blogdetail")
+    fetch("http://localhost:5000/blogdetail")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));

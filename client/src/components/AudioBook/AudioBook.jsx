@@ -6,7 +6,7 @@ import "./AudioBook.css";
 const AudioBook = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/hsc")
+    fetch("http://localhost:5000/hsc")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));

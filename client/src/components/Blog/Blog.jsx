@@ -10,7 +10,7 @@ const Blog = () => {
   const [datathree, setDataThree] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/blogdetailone")
+        fetch("http://localhost:5000/blogdetailone")
             .then(res => res.json())
             .then(data => setData(data))
             .catch(err => console.log(err));
@@ -18,14 +18,14 @@ const Blog = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/blogdetailtwo")
+        fetch("http://localhost:5000/blogdetailtwo")
             .then(res => res.json())
             .then(data => setDataTwo(data))
             .catch(err => console.log(err));
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/blogdetailthree")
+        fetch("http://localhost:5000/blogdetailthree")
             .then(res => res.json())
             .then(data => setDataThree(data))
             .catch(err => console.log(err));

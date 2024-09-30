@@ -8,7 +8,7 @@ const Skill = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/skills")
+        fetch("http://localhost:5000/skills")
             .then(res => res.json())
             .then(data => setData(data))
             .catch(err => console.log(err));

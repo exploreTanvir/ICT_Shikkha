@@ -18,12 +18,12 @@ const Login = () => {
   };
 
   const handleSubmit = async (e) => {
-   
     e.preventDefault();
     try {
       const res = await axios.post('http://localhost:5000/login', values);
       if (res.data.success) {
         alert('Login successful!');
+        localStorage.setItem('isLoggedIn', true);  // Store login status
         history.push("/");
       } else {
         setError(res.data.message);
@@ -33,12 +33,11 @@ const Login = () => {
       console.error("Login error:", err);
       setError('Login failed. Please try again.');
       toast('Login failed. Please try again.');
-
     }
-   
-
-    setErrors(Validation(values))
+  
+    setErrors(Validation(values));
   };
+  
 
   return (
     <div className="login-container d-flex justify-content-center align-items-center bg-info vh-100">

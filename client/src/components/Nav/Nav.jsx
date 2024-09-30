@@ -1,25 +1,30 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { profile } from './../Menu';
 import "./nav.css";
 
 const Nav = () => {
   const [data, setData] = useState([]);
   const [datatwo, setDataTwo] = useState([]);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/menu")
+    fetch("http://localhost:5000/menu")
       .then(res => res.json())
       .then(data => setData(data))
       .catch(err => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/auth/submenu")
+    
+    fetch("http://localhost:5000/submenu")
       .then(res => res.json())
       .then(data => setDataTwo(data))
       .catch(err => console.log(err));
+
+    // Check login status
+    const loggedInStatus = localStorage.getItem('isLoggedIn');
+    if (loggedInStatus) {
+      setIsLoggedIn(true);
+    }
   }, []);
 
   return (
@@ -91,14 +96,49 @@ const Nav = () => {
                 </ul>
               </li>
             </ul>
+
             <div className="col-lg-1 btnGRP d-flex justify-content-end">
-             <NavLink
-                  to="/login"
-                  className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4"
-                >
+              {isLoggedIn ? (
+                 <li className="nav-item dropdown list-unstyled">
+                 <Link
+                   className="nav-link dropdown-toggle nav-link d-flex align-items-center gap-2 fs-5 btn2"
+                   href="#"
+                   id="navbarDropdown"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false"
+                 >
+                   <i className="fa fa-user"></i>
+                    
+                 </Link>
+                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                   {profile.map((item, index) => (
+                     <li className="nav-item" key={index}>
+                       <NavLink
+                         to={item.url}
+                         className={({ isActive }) =>
+                           `${item.cName} nav-link d-flex align-items-center gap-2 justify-content-center fs-5 btn2 ${
+                             isActive ? "active" : ""
+                           }`
+                         }
+                       >
+                         <i className={item.icon}></i>
+                         {item.title}
+                       </NavLink>
+                     </li>
+                   ))}
+                    <button className="dropdown-item d-flex align-items-center gap-2 justify-content-center fs-5 btn2 ">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                       লগ আউট
+                     </button>
+                 </ul>
+               </li>
+              ) : (
+                <NavLink to="/login" className="link fs-6 btn1 d-flex align-items-center gap-2 course me-4">
                   লগ ইন
                   <i className="fa fa-arrow-right"></i>
                 </NavLink>
+              )}
             </div>
           </div>
         </div>
@@ -108,3 +148,6 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+

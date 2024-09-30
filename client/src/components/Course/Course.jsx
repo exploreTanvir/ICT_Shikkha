@@ -9,7 +9,7 @@ import { courseDeta } from './CourseDetail';
 const Course = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/allcourse")
+    fetch("http://localhost:5000/allcourse")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));

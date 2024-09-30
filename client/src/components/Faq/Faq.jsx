@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import faqImg from "../../assets/faqImg4.jpg"
-import "./faq.css"
+import faqImg from "../../assets/faqImg4.jpg";
+import "./faq.css";
 
 const Faq = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/faq")
+    fetch("http://localhost:5000/faq")
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.log(err));
@@ -47,7 +47,7 @@ const Faq = () => {
   <div id={item.flushCollaps} className="accordion-collapse collapse" aria-labelledby={item.flushID} data-bs-parent="#accordionFlushExample">
     <div className="accordion-body">
       <p>
-      {item.desc}
+      {item.description}
       </p>
     </div>
   </div>

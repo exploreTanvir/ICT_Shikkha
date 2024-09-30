@@ -52,7 +52,7 @@ const Contact = () => {
 
   const handleSubmit=(event)=>{
     event.preventDefault();
-      axios.post("http://localhost:5000/api/auth/user",{name,email,phone,collage,divisions,district,message})
+      axios.post("http://localhost:5000/user",{name,email,phone,collage,divisions,district,message})
       .then(res=>{
         console.log(res)
       })

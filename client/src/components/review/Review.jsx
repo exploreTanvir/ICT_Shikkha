@@ -23,7 +23,7 @@ const Review = () => {
 
 
 //   useEffect(() => {
-//     fetch("http://localhost:5000/api/auth/reviewText")
+//     fetch("http://localhost:5000/reviewText")
 //         .then(res => res.json())
 //         .then(data => setData(data))
 //         .catch(err => console.log(err));
@@ -33,7 +33,7 @@ const Review = () => {
 
   const handleSubmit=(event)=>{
     event.preventDefault();
-      axios.post("http://localhost:5000/api/auth/reviews",{name,message,batch})
+      axios.post("http://localhost:5000/reviews",{name,message,batch})
       .then(res=>{
         console.log(res)
       })

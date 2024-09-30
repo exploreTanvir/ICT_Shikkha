@@ -5,7 +5,7 @@ import suggestionImg from '../../assets/book6.png'
 const IctBooks = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/ictbooks")
+        fetch("http://localhost:5000/ictbooks")
             .then(res => res.json())
             .then(data => setData(data))
             .catch(err => console.log(err));
