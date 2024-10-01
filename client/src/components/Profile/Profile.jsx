@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 import Newsletter from "../newsletter/Newsletter";
@@ -8,32 +8,39 @@ import TopBar from "../topbar/TopBar";
 import './Profile.css';
 
 function Profile() {
-  // State for storing profile information
-  const [profileDetails, setProfileDetails] = useState({});
+  const [profileDetails, setProfileDetails] = useState({ name: '', email: '' });
   const [data, setData] = useState([]);
 
-  // Fetch the profile data from MongoDB via the backend
   useEffect(() => {
-    const token = localStorage.getItem('token'); // Retrieve token from localStorage
+    const token = localStorage.getItem('token');
     if (token) {
+      console.log("Token found, making request...");
       axios
         .get("http://localhost:5000/login", {
           headers: {
-            Authorization: `Bearer ${token}`, // Pass the token in the Authorization header
+            Authorization: `Bearer ${token}`,
           },
         })
         .then((response) => {
-          setProfileDetails(response.data); // Store fetched profile data in the state
+          console.log("Profile data received:", response.data);
+          if (response.data) {
+            setProfileDetails({
+              name: response.data.name,
+              email: response.data.email,
+            });
+          }
         })
         .catch((error) => {
           console.error("Error fetching profile data:", error);
         });
+    } else {
+      console.log("No token found in localStorage");
     }
   }, []);
 
   // Fetch the menu data
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/menu")
+    fetch("http://localhost:5000/menu")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));
@@ -45,8 +52,8 @@ function Profile() {
       <Nav />
       <div className="app-container">
         <div className="sidebar">
-          <p><strong>Name:</strong> {profileDetails.name}</p>
-          <p><strong>Email:</strong> {profileDetails.email}</p>
+          <p><strong>Name:</strong> {profileDetails.name || "Loading..."}</p>
+          <p><strong>Email:</strong> {profileDetails.email || "Loading..."}</p>
           <nav className="sidebar-nav">
             <ul>
               {data.map((item, index) => (
@@ -59,8 +66,8 @@ function Profile() {
         </div>
         <div className="profile-container">
           <h2>প্রোফাইল</h2>
-          <p><strong>Name:</strong> {profileDetails.name}</p>
-          <p><strong>Email:</strong> {profileDetails.email}</p>
+          <p><strong>Name:</strong> {profileDetails.name || "Loading..."}</p>
+          <p><strong>Email:</strong> {profileDetails.email || "Loading..."}</p>
         </div>
       </div>
       <Newsletter />

@@ -1,11 +1,12 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
-
+const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+const JWT_SECRET = 'your_jwt_secret_key';
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -22,7 +23,7 @@ db.connect((err) => {
   console.log("Connected to the MySQL database.");
 });
 
-const authRoutes = require("./routes/auth");
+
 
 
 // Signup route

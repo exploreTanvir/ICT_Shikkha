@@ -27,6 +27,12 @@ const Nav = () => {
     }
   }, []);
 
+  const handleLogout = () => {
+    // Clear login status from localStorage
+    localStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);  // Update state to reflect logout
+  };
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -127,10 +133,13 @@ const Nav = () => {
                        </NavLink>
                      </li>
                    ))}
-                    <button className="dropdown-item d-flex align-items-center gap-2 justify-content-center fs-5 btn2 ">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                       লগ আউট
-                     </button>
+                    <button 
+                      className="dropdown-item d-flex align-items-center gap-2 justify-content-center fs-5 btn2" 
+                      onClick={handleLogout}
+                    >
+                      <i className="fa-solid fa-arrow-right-from-bracket"></i>
+                      লগ আউট
+                    </button>
                  </ul>
                </li>
               ) : (
@@ -148,6 +157,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-
-
